@@ -1,0 +1,74 @@
+{
+    "name": "hiqdev/hiqdev.com-core",
+    "type": "yii2-extension",
+    "description": "hiqdev.com site",
+    "keywords": [
+        "hiqdev",
+        "site"
+    ],
+    "homepage": "https://github.com/hiqdev/hiqdev.com-core",
+    "license": "BSD-3-Clause",
+    "support": {
+        "email": "support@hiqdev.com",
+        "source": "https://github.com/hiqdev/hiqdev.com-core",
+        "issues": "https://github.com/hiqdev/hiqdev.com-core/issues",
+        "wiki": "https://github.com/hiqdev/hiqdev.com-core/wiki",
+        "forum": "http://forum.hiqdev.com/"
+    },
+    "authors": [
+        {
+            "name": "Andrii Vasyliev",
+            "role": "Project lead",
+            "email": "sol@hiqdev.com",
+            "homepage": "http://hipanel.com/"
+        },
+        {
+            "name": "Dmitry Naumenko",
+            "role": "Lead backend developer",
+            "email": "silverfire@hiqdev.com",
+            "homepage": "http://silverfire.me/"
+        },
+        {
+            "name": "Andrey Klochok",
+            "role": "Lead frontend developer",
+            "email": "tafid@hiqdev.com",
+            "homepage": "http://hiqdev.com/"
+        },
+        {
+            "name": "Yuriy Myronchuk",
+            "role": "QA Lead",
+            "email": "bladeroot@hiqdev.com",
+            "homepage": "http://hiqdev.com/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2-debug": "~2.0.1",
+        "hiqdev/hisite-core": "<2.0 || dev-master",
+        "hiqdev/yii2-theme-hyde": "<2.0 || dev-master",
+        "hiqdev/yii2-asset-hiqdev": "<2.0 || dev-master",
+        "sadovojav/yii2-image-thumbnail": "dev-master"
+    },
+    "require-dev": {
+        "hiqdev/hidev-php": "<2.0 || dev-master",
+        "hiqdev/hidev-hiqdev": "<2.0 || dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "hiqdev\\com\\": "src"
+        }
+    },
+    "extra": {
+        "config-plugin": {
+            "params": "src/config/params.php",
+            "hisite": "src/config/hisite.php"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

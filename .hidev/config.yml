@@ -1,0 +1,16 @@
+package:
+    type:           yii2-extension
+    name:           hiqdev.com-core
+    title:          hiqdev.com site
+    headline:       hiqdev.com
+    keywords:       hiqdev, site
+    namespace:      hiqdev\com
+    description:    |
+        HiQDev own site.
+
+        This package provides:
+
+        - news
+        - packages
+        - projects
+
