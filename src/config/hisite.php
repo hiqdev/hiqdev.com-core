@@ -11,15 +11,15 @@
 return [
     'id' => 'hiqdev.com',
     'name' => 'HiQDev',
+    'container' => [
+        'definitions' => [
+            \hiqdev\thememanager\menus\AbstractMainMenu::class => \hiqdev\com\menus\MainMenu::class,
+        ],
+    ],
     'components' => [
         'themeManager' => [
             'pathMap' => [
                 '$themedViewPaths' => ['@hiqdev/com/views'],
-            ],
-        ],
-        'menuManager' => [
-            'items' => [
-                'main' => \hiqdev\com\menus\MainMenu::class,
             ],
         ],
         'i18n' => [

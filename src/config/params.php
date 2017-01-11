@@ -9,4 +9,5 @@
  */
 
 return [
+    'site.description' => "We're developing <a href='/hipanel'>HiPanel</a>, <a href='/hidev'>HiDev</a> and other Yii2 projects",
 ];
