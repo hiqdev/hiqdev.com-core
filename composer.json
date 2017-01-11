@@ -46,6 +46,7 @@
         "hiqdev/hisite-core": "<2.0 || dev-master",
         "hiqdev/yii2-theme-hyde": "<2.0 || dev-master",
         "hiqdev/yii2-asset-hiqdev": "<2.0 || dev-master",
+        "hiqdev/yii2-module-pages": "<2.0 || dev-master",
         "sadovojav/yii2-image-thumbnail": "dev-master"
     },
     "require-dev": {
