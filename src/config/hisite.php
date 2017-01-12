@@ -16,6 +16,14 @@ return [
             \hiqdev\thememanager\menus\AbstractMainMenu::class => \hiqdev\com\menus\MainMenu::class,
         ],
     ],
+    'modules' => [
+        'pages' => [
+            'storage' => [
+                'class' => 'creocoder\\flysystem\\LocalFilesystem',
+                'path' => '@hiqdev/com/views/site',
+            ],
+        ]
+    ],
     'components' => [
         'themeManager' => [
             'pathMap' => [
