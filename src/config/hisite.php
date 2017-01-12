@@ -19,7 +19,7 @@ return [
     'modules' => [
         'pages' => [
             'storage' => [
-                'class' => 'creocoder\\flysystem\\LocalFilesystem',
+                'class' => \creocoder\flysystem\LocalFilesystem::class,
                 'path' => '@hiqdev/com/views/site',
             ],
         ]
