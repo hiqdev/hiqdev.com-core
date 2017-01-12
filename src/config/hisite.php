@@ -20,7 +20,7 @@ return [
         'pages' => [
             'storage' => [
                 'class' => \creocoder\flysystem\LocalFilesystem::class,
-                'path' => '@hiqdev/com/views/site',
+                'path' => '@hiqdev/com/pages',
             ],
         ]
     ],
