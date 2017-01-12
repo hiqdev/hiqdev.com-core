@@ -24,19 +24,19 @@ class MainMenu extends \hiqdev\yii2\menus\Menu
         return [
             'news' => [
                 'label' => Yii::t('hiqdev:com', 'News'),
-                'url' => ['/'],
+                'url' => ['/pages/render/index', 'page' => 'index'],
             ],
             'about' => [
                 'label' => Yii::t('hiqdev:com', 'About'),
-                'url' => ['/site/about'],
+                'url' => ['/pages/render/index', 'page' => 'about'],
             ],
             'packages' => [
                 'label' => Yii::t('hiqdev:com', 'Packages'),
-                'url' => ['/packages'],
+                'url' => ['/pages/render/index', 'page' => 'packages'],
             ],
             'projects' => [
                 'label' => Yii::t('hiqdev:com', 'Projects'),
-                'url' => '/projects',
+                'url' => ['/pages/render/index', 'page' => 'projects'],
             ],
         ];
     }
