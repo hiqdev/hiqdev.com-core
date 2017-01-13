@@ -1,6 +1,5 @@
 <?php
 
-use hiqdev\themes\hyde\data\Pagination;
 use hiqdev\themes\hyde\widgets\LinkPager;
 use yii\helpers\Html;
 
