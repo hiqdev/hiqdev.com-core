@@ -3,7 +3,7 @@
 use hiqdev\themes\hyde\widgets\LinkPager;
 use yii\helpers\Html;
 
-$this->title = 'Pages';
+$this->title = Yii::$app->name;
 
 $dataProvider = new \yii\data\ArrayDataProvider([
     'allModels' => [
