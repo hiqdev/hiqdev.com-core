@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Released HiDev 0.4.0
 date: 2016-05-21 15:00
 ---

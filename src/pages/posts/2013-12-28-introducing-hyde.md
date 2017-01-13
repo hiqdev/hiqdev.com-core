@@ -1,6 +1,5 @@
 ---
 date: 2013-12-28 00:00:00
-layout: post
 title: Introducing Hyde
 ---
 

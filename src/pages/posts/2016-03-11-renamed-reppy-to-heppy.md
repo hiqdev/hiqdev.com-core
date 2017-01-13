@@ -1,5 +1,4 @@
 ---
-layout: post
 title: rEPPy became hEPPy
 date: 2016-03-11 18:00
 ---

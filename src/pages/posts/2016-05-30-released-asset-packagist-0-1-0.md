@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Released Asset Packagist 0.1.0
 date: 2016-05-30 18:00
 ---

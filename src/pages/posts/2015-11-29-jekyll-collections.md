@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Jekyll collections
 date: 2015-11-29 16:48
 ---

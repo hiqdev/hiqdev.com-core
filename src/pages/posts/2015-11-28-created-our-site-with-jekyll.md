@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Created our site with Dr. Jekyll and Mr. Hyde
 date: 2015-11-28 22:07:37
 categories: jekyll update
