@@ -23,7 +23,7 @@ class MainMenu extends \hiqdev\yii2\menus\Menu
     {
         return [
             'news' => [ 'label' => Yii::t('hiqdev:com', 'News'),
-                'url' => ['/pages/render/index', 'page' => 'index'],
+                'url' => ['/pages/render/index', 'page' => 'posts'],
             ],
             'about' => [
                 'label' => Yii::t('hiqdev:com', 'About'),
