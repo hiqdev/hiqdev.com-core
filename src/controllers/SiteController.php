@@ -8,8 +8,16 @@
  * @copyright Copyright (c) 2016-2017, HiQDev (http://hiqdev.com/)
  */
 
-namespace hiqdev\site\controllers;
+namespace hiqdev\com\controllers;
+
+use Yii;
 
 class SiteController extends \hisite\controllers\SiteController
 {
+    public function actionTest()
+    {
+        $a = Yii::$app->github->get('orgs/hiqdev/repos');
+        var_dump($a);
+        die();
+    }
 }

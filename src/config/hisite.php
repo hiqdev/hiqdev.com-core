@@ -11,6 +11,7 @@
 return [
     'id' => 'hiqdev.com',
     'name' => 'HiQDev',
+    'controllerNamespace' => 'hiqdev\\com\\controllers',
     'container' => [
         'definitions' => [
             \hiqdev\thememanager\menus\AbstractMainMenu::class => \hiqdev\com\menus\MainMenu::class,
@@ -36,6 +37,12 @@ return [
                     'class' => \yii\i18n\PhpMessageSource::class,
                     'basePath' => '@hiqdev/com/messages',
                 ],
+            ],
+        ],
+        'github' => [
+            'class' => \hiqdev\com\github\Api::class,
+            'config' => [
+                'base_uri' => 'https://api.github.com',
             ],
         ],
     ],
