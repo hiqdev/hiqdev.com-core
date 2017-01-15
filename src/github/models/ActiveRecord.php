@@ -10,14 +10,13 @@
 
 namespace hiqdev\com\github\models;
 
-class Repo extends ActiveRecord
+use Yii;
+
+class ActiveRecord extends \hiqdev\hiart\ActiveRecord
 {
-    public function rules()
+    public static function getDb()
     {
-        return [
-            ['id', 'integer'],
-            ['name', 'string'],
-        ];
+        return Yii::$app->get('github');
     }
 }
 
