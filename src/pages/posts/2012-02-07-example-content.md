@@ -1,5 +1,6 @@
 ---
 title: Example content
+layout: post
 ---
 
 <div class="message">

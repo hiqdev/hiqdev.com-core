@@ -1,6 +1,7 @@
 ---
 title: Released Asset Packagist 0.1.0
 date: 2016-05-30 18:00
+layout: post
 ---
 
 ![Composer](https://raw.githubusercontent.com/hiqdev/asset-packagist/master/docs/asset-packagist.png)

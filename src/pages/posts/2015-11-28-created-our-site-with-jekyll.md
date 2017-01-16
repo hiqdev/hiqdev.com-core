@@ -2,6 +2,7 @@
 title: Created our site with Dr. Jekyll and Mr. Hyde
 date: 2015-11-28 22:07:37
 categories: jekyll update
+layout: post
 ---
 
 Strange case of Dr. [Jekyll]({% post_url 2012-02-06-whats-jekyll %}) and Mr. [Hyde]({% post_url 2013-12-28-introducing-hyde %}).

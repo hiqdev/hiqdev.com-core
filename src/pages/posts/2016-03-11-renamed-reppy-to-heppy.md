@@ -1,6 +1,7 @@
 ---
 title: rEPPy became hEPPy
 date: 2016-03-11 18:00
+layout: post
 ---
 
 I had to turn rEPPy to hEPPy to register

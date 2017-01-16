@@ -1,6 +1,7 @@
 ---
 date: 2013-12-28 00:00:00
 title: Introducing Hyde
+layout: post
 ---
 
 Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme
