@@ -12,6 +12,7 @@ return [
     'id' => 'hiqdev.com',
     'name' => 'HiQDev',
     'controllerNamespace' => 'hiqdev\\com\\controllers',
+    'defaultRoute' => 'pages/render/index',
     'container' => [
         'definitions' => [
             \hiqdev\thememanager\menus\AbstractMainMenu::class => \hiqdev\com\menus\MainMenu::class,
