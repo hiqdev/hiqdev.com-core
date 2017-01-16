@@ -1,5 +1,6 @@
 ---
 title: Projects
+layout: page
 ---
 
 {% for project in site.projects %}

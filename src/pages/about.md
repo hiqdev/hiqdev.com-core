@@ -1,5 +1,6 @@
 ---
 title: About
+layout: page
 ---
 
 <p class="message">
