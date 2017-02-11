@@ -44,7 +44,8 @@
     "require": {
         "yiisoft/yii2-debug": "~2.0.1",
         "hiqdev/hisite-core": "<2.0 || dev-master",
-        "hiqdev/yii2-hiart": "<2.0 || dev-master",
+        "hiqdev/yii2-hiart-curl": "<2.0 || dev-master",
+        "hiqdev/yii2-hiart-github": "<2.0 || dev-master",
         "hiqdev/yii2-theme-hyde": "<2.0 || dev-master",
         "hiqdev/yii2-asset-hiqdev": "<2.0 || dev-master",
         "hiqdev/yii2-module-pages": "<2.0 || dev-master",
