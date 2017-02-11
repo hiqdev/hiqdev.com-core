@@ -27,6 +27,12 @@ return [
         ]
     ],
     'components' => [
+        'urlManager' => [
+            'rules' =>
+            array (
+                '<page:.*>' => 'pages/render/index',
+            ),
+        ],
         'themeManager' => [
             'pathMap' => [
                 '$themedViewPaths' => ['@hiqdev/com/views'],
