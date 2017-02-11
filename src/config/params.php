@@ -9,5 +9,5 @@
  */
 
 return [
-    'site.description' => "We're developing <a href='/hipanel'>HiPanel</a>, <a href='/hidev'>HiDev</a> and other Yii2 projects",
+    'site.description' => "We're developing <a href='/hipanel'>HiPanel</a>, <a href='/hisite'>HiSite</a>, <a href='/hidev'>HiDev</a> and many other <a href='/projects'>projects</a>",
 ];
