@@ -37,6 +37,9 @@ return [
             'pathMap' => [
                 '$themedViewPaths' => ['@hiqdev/com/views'],
             ],
+            'assets' => [
+                \hiqdev\com\Asset::class,
+            ],
         ],
         'i18n' => [
             'translations' => [
