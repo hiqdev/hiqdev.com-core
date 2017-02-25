@@ -8,6 +8,10 @@ layout: post
 
 **Composer + Bower + NPM = friends forever!**
 
+Asset Packagist is the composer compatible repository that allows installation of Bower and NPM packages as native Composer packages.
+
+NO plugins and NO Node.js are required.
+
 [https://asset-packagist.org/](https://asset-packagist.org/)
 
 [https://github.com/hiqdev/asset-packagist](https://github.com/hiqdev/asset-packagist)
