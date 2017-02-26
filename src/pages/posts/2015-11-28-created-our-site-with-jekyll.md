@@ -11,7 +11,7 @@ Initially this site was created with Jekyll.<br>
 But then I thought it was strange :-/<br>
 And we've redone the site with Yii2.
 
-I kept it here:
+I've kept old version here:
 
 [https://github.com/hiqdev/hiqdev.github.io](https://github.com/hiqdev/hiqdev.github.io)
 
