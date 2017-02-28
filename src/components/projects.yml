@@ -1,0 +1,16 @@
+projects:
+    hidev:
+        title: HiDev
+    hisite:
+        title: HiSite
+    hipanel:
+        title: HiPanel
+    hiart:
+        title: HiArt
+    yii2-themes:
+        title: Yii2 Themes
+    yii2-assets:
+        title: Yii2 Assets
+    heppy:
+        title: hEPPy
+
