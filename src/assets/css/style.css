@@ -1,3 +1,6 @@
 a {
     display: inline-block;
 }
+img {
+    border-radius:0px;
+}

@@ -55,5 +55,8 @@ return [
                 'base_uri' => 'https://api.github.com',
             ],
         ],
+        'projects' => [
+            'class' => \hiqdev\com\components\Projects::class,
+        ],
     ],
 ];
