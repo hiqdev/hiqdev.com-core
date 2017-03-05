@@ -17,7 +17,7 @@ class SiteController extends \hisite\controllers\SiteController
 {
     public function actionTest()
     {
-        #$a = Yii::$app->github->get('orgs/hiqdev/repos');
+        //$a = Yii::$app->github->get('orgs/hiqdev/repos');
         $a = Repo::find()->where(['organization' => 'hiqdev'])->all();
         var_dump($a);
         die();

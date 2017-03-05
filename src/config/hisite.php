@@ -24,14 +24,13 @@ return [
                 'class' => \creocoder\flysystem\LocalFilesystem::class,
                 'path' => '@hiqdev/com/pages',
             ],
-        ]
+        ],
     ],
     'components' => [
         'urlManager' => [
-            'rules' =>
-            array (
+            'rules' => [
                 '<page:.*>' => 'pages/render/index',
-            ),
+            ],
         ],
         'themeManager' => [
             'pathMap' => [
