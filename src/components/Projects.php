@@ -6,6 +6,14 @@ use Symfony\Component\Yaml\Yaml;
 
 class Projects extends \yii\base\Component
 {
+    public function getPackages()
+    {
+        $projects = $this->getAll();
+        $packages = [];
+
+        return $packages;
+    }
+
     public function getAll()
     {
         return $this->raw['projects'];
