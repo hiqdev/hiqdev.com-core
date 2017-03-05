@@ -8,10 +8,34 @@
  * @copyright Copyright (c) 2016-2017, HiQDev (http://hiqdev.com/)
  */
 
+namespace hiqdev\com\console;
+
+use hiqdev\hiart\github\models\Repo;
+use Yii;
+use Symfony\Component\Yaml\Yaml;
+
 class PackagesController extends \yii\console\Controller
 {
-    public function actionTest()
+    public function actionLoad()
     {
-        echo 'Hello';
+        $packages = [];
+        $page = 1;
+        do {
+            $repos = Repo::find()->where([
+                'organization' => 'hiqdev',
+                'page' => $page,
+            ])->all();
+            var_dump($repos);
+            $page++;
+            foreach ($repos as $repo) {
+                $packages[$repo->name] = [
+                    'name' => $repo->name,
+                    'description' => $repo->description,
+                ];
+            }
+        } while ($repos && $page<10);
+
+        $path = Yii::getAlias('@hiqdev/com/components/packages.yml');
+        file_put_contents($path, Yaml::dump($packages));
     }
 }
