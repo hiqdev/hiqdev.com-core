@@ -12,7 +12,7 @@ return [
     'components' => [
         'config' => [
             'packages' => [
-                'class' => \hipanel\rbac\console\PackagesController::class,
+                'class' => \hiqdev\com\console\PackagesController::class,
             ],
         ],
     ],

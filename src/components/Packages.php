@@ -12,9 +12,8 @@ namespace hiqdev\com\components;
 
 use Symfony\Component\Yaml\Yaml;
 
-class Projects extends \yii\base\Component
+class Packages extends \yii\base\Component
 {
-
     public function getAll()
     {
         return $this->raw;
@@ -25,7 +24,7 @@ class Projects extends \yii\base\Component
     public function getRaw()
     {
         if ($this->_raw === null) {
-            $this->_raw = $this->prepare(Yaml::parse(file_get_contents(__DIR__ . '/projects.yml')));
+            $this->_raw = $this->prepare(Yaml::parse(file_get_contents(__DIR__ . '/packages.yml')));
         }
 
         return $this->_raw;
@@ -33,10 +32,10 @@ class Projects extends \yii\base\Component
 
     protected function prepare(array $data)
     {
-        foreach ($data as $name => &$project) {
-            $project['package']     = $project['package'] ?: $name;
-            $project['vendor']      = $project['vendor'] ?: 'hiqdev';
-            $project['fullName']    = $project['fullName'] ?: $project['vendor'] . '/' . $project['package'];
+        foreach ($data as $name => &$package) {
+            $package['package']     = $package['package'] ?: $name;
+            $package['vendor']      = $package['vendor'] ?: 'hiqdev';
+            $package['fullName']    = $package['fullName'] ?: $package['vendor'] . '/' . $package['package'];
         }
 
         return $data;

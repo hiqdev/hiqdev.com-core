@@ -48,14 +48,11 @@ return [
                 ],
             ],
         ],
-        'github' => [
-            'class' => \hiqdev\com\github\Api::class,
-            'config' => [
-                'base_uri' => 'https://api.github.com',
-            ],
-        ],
         'projects' => [
             'class' => \hiqdev\com\components\Projects::class,
+        ],
+        'packages' => [
+            'class' => \hiqdev\com\components\Packages::class,
         ],
     ],
 ];

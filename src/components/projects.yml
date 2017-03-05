@@ -1,61 +1,60 @@
-projects:
-    asset-packagist:
-        title:          Asset Packagist
-        lang:           php
-        package:        asset-packagist
-        description:    Composer compatible repository allowing installation of Bower and NPM packages as native Composer packages
-    composer-config-plugin:
-        title:          Config Plugin
-        lang:           php
-        package:        composer-config-plugin
-        description:    Composer plugin for config assembling
-    hipanel:
-        title:          HiPanel
-        lang:           yii2
-        package:        hipanel-core
-        description:    Next generation control panel for hosting, domains and more
-    hiart:
-        title:          HiArt
-        lang:           yii2
-        package:        yii2-hiart
-        description:    ActiveRecord for API
-    hidev:
-        title:          HiDev
-        lang:           php
-        package:        hidev
-        description:    Automation tool mixed with code generator for easier continuous development
-    hisite:
-        title:          HiSite
-        lang:           yii2
-        package:        hisite-core
-        description:    Modular Yii2 CMS. This site is built with HiSite
-    hiam:
-        title:          HIAM
-        lang:           yii2
-        package:        hiam-core
-        description:    Identity and Access Management server providing OAuth2, multi-factor authentication and more
-    yii2-themes:
-        title:          Yii2 Themes
-        lang:           yii2
-        package:        yii2-thememanager
-        description:    Theme engine and collection of themes for Yii2
-    yii2-assets:
-        title:          Yii2 Assets
-        lang:           yii2
-        package:        yii2-asset-icheck
-        description:    Assets for Yii2
-    merchant:
-        title:          Merchant
-        lang:           php/yii2
-        package:        yii2-merchant
-        description:    Payment processing library. Wrapper for Omnipay. Gateways for InterKassa, RoboKassa, ...
-    chkipper:
-        title:          chkipper
-        lang:           yii2
-        package:        chkipper
-        description:    CHANGELOG keeper
-    heppy:
-        title:          hEPPy
-        lang:           python
-        package:        heppy
-        description:    EPP client and library in Python
+asset-packagist:
+    title:          Asset Packagist
+    lang:           php
+    package:        asset-packagist
+    description:    Composer compatible repository allowing installation of Bower and NPM packages as native Composer packages
+composer-config-plugin:
+    title:          Config Plugin
+    lang:           php
+    package:        composer-config-plugin
+    description:    Composer plugin for config assembling
+hipanel:
+    title:          HiPanel
+    lang:           yii2
+    package:        hipanel-core
+    description:    Next generation control panel for hosting, domains and more
+hiart:
+    title:          HiArt
+    lang:           yii2
+    package:        yii2-hiart
+    description:    ActiveRecord for API
+hidev:
+    title:          HiDev
+    lang:           php
+    package:        hidev
+    description:    Automation tool mixed with code generator for easier continuous development
+hisite:
+    title:          HiSite
+    lang:           yii2
+    package:        hisite-core
+    description:    Modular Yii2 CMS. This site is built with HiSite
+hiam:
+    title:          HIAM
+    lang:           yii2
+    package:        hiam-core
+    description:    Identity and Access Management server providing OAuth2, multi-factor authentication and more
+yii2-themes:
+    title:          Yii2 Themes
+    lang:           yii2
+    package:        yii2-thememanager
+    description:    Theme engine and collection of themes for Yii2
+yii2-assets:
+    title:          Yii2 Assets
+    lang:           yii2
+    package:        yii2-asset-icheck
+    description:    Assets for Yii2
+merchant:
+    title:          Merchant
+    lang:           php/yii2
+    package:        yii2-merchant
+    description:    Payment processing library. Wrapper for Omnipay. Gateways for InterKassa, RoboKassa, ...
+chkipper:
+    title:          chkipper
+    lang:           yii2
+    package:        chkipper
+    description:    CHANGELOG keeper
+heppy:
+    title:          hEPPy
+    lang:           python
+    package:        heppy
+    description:    EPP client and library in Python

@@ -1,0 +1,27 @@
+{% for name,package in app.packages.all %}
+
+    <h2>
+        <a href="/packages/{{ name }}">{{ package.name }}</a>
+        &nbsp; &nbsp;
+        <span style="font-size:70%;color:gray">{{ package.lang }}</span>
+    </h2>
+
+    <a href="https://github.com/{{ package.fullName }}" style="height:20px">
+        <img src="https://img.shields.io/github/stars/{{ package.fullName }}.svg?style=social&label=Star"/>
+    </a>
+    <a href="https://github.com/{{ package.fullName }}/issues" style="height:20px">
+        <img src="https://img.shields.io/github/issues-raw/{{ package.fullName }}.svg"/>
+    </a>
+    <a href="https://github.com/{{ package.fullName }}/releases" style="height:20px">
+        <img src="https://badge.fury.io/gh/{{ package.vendor }}%2F{{ package.package }}.svg"/>
+    </a>
+    <a href="https://packagist.org/packages/{{ package.fullName }}" style="height:20px">
+        <img src="https://poser.pugx.org/{{ package.fullName }}/downloads"/>
+    </a>
+    <a href="https://travis-cs.org/{{ package.fullName }}" style="height:20px">
+        <img src="https://img.shields.io/travis/{{ package.fullName }}.svg"/>
+    </a>
+
+    <p>{{ package.description }}</p>
+
+{% endfor %}

@@ -1,0 +1,444 @@
+hipanel-core:
+    name: hipanel-core
+    description: 'HiPanel core package'
+yii2-higrid:
+    name: yii2-higrid
+    description: 'Yii 2 advanced grid'
+yii2-thememanager:
+    name: yii2-thememanager
+    description: 'Theme Manager for Yii 2'
+hipanel-module-client:
+    name: hipanel-module-client
+    description: 'Client Plugin for HiPanel'
+hipanel-module-domain:
+    name: hipanel-module-domain
+    description: 'Domain Plugin for HiPanel'
+hipanel-module-finance:
+    name: hipanel-module-finance
+    description: 'Finance Plugin for HiPanel'
+hipanel-module-ticket:
+    name: hipanel-module-ticket
+    description: 'Ticket Plugin for HiPanel'
+hipanel-module-hosting:
+    name: hipanel-module-hosting
+    description: 'Hosting Plugin for HiPanel'
+yii2-combo:
+    name: yii2-combo
+    description: 'Combo Widget for Yii 2'
+yii2-collection:
+    name: yii2-collection
+    description: 'Basic Collection for Yii 2'
+hipanel-module-server:
+    name: hipanel-module-server
+    description: 'Server Plugin for HiPanel'
+yii2-menumanager:
+    name: yii2-menumanager
+    description: 'Menu Manager for Yii 2'
+hidev:
+    name: hidev
+    description: 'Automation tool mixed with code generator for easier continuous development'
+yii2-pluginmanager:
+    name: yii2-pluginmanager
+    description: 'Abandoned in favour of hiqdev/composer-config-plugin'
+hipanel-theme-adminlte:
+    name: hipanel-theme-adminlte
+    description: 'AdminLte Theme for HiPanel'
+hipanel-module-dashboard:
+    name: hipanel-module-dashboard
+    description: 'Dashboard Plugin for HiPanel'
+yii2-app-pluggable:
+    name: yii2-app-pluggable
+    description: 'Yii 2 Pluggable Project Template'
+yii2-x-editable:
+    name: yii2-x-editable
+    description: 'X-editable extension for Yii2'
+yii2-asset-select2-bootstrap3-css:
+    name: yii2-asset-select2-bootstrap3-css
+    description: 'Select2 Bootstrap 3 CSS extension for Yii2'
+yii2-asset-datatables:
+    name: yii2-asset-datatables
+    description: 'Yii 2 asset for DataTables jQuery plugin'
+yii2-asset-autosize:
+    name: yii2-asset-autosize
+    description: 'Yii 2 asset for bower autosize'
+yii2-asset-flag-icon-css:
+    name: yii2-asset-flag-icon-css
+    description: 'Yii 2 asset for bower flag-icon-css'
+yii2-asset-icheck:
+    name: yii2-asset-icheck
+    description: 'Yii 2 asset for bower iCheck'
+yii2-asset-lightbox2:
+    name: yii2-asset-lightbox2
+    description: 'Yii 2 asset for bower lightbox2'
+yii2-hiart:
+    name: yii2-hiart
+    description: 'ActiveRecord for API'
+yii2-asset-adminlte:
+    name: yii2-asset-adminlte
+    description: 'Yii2 asset for bower adminlte'
+yii2-asset-adminlte1:
+    name: yii2-asset-adminlte1
+    description: 'Yii2 asset for old adminlte v1'
+hipanel-theme-adminlte1:
+    name: hipanel-theme-adminlte1
+    description: 'Old AdminLte v1 Theme for HiPanel'
+hipanel-module-request:
+    name: hipanel-module-request
+    description: 'Request Plugin for HiPanel'
+yii2-theme-adminlte:
+    name: yii2-theme-adminlte
+    description: 'AdminLte Theme for hiqdev/yii2-thememanager'
+hidev-vendor:
+    name: hidev-vendor
+    description: 'HiQDev vendor configuration for hidev'
+yii2-bootstrap-switch:
+    name: yii2-bootstrap-switch
+    description: 'Yii2 wrap for bootstrap switch'
+hidev-php-cs-fixer:
+    name: hidev-php-cs-fixer
+    description: 'PHP-CS-Fixer plugin for HiDev'
+yii2-asset-hipanel:
+    name: yii2-asset-hipanel
+    description: 'HiPanel assets for Yii2'
+hidev-codeception:
+    name: hidev-codeception
+    description: 'Codeception plugin for HiDev'
+yii2-asset-paulzi-form:
+    name: yii2-asset-paulzi-form
+    description: 'Yii2 asset for PaulZi Form JS library'
+hidev-travis:
+    name: hidev-travis
+    description: 'Travis CI plugin for HiDev'
+hiam-core:
+    name: hiam-core
+    description: 'Identity and Access Management server providing OAuth2, multi-factor authentication and more'
+yii2-hiam-authclient:
+    name: yii2-hiam-authclient
+    description: 'OAuth2 client for yii2 to login through HIAM server'
+hipanel:
+    name: hipanel
+    description: 'HiPanel Template'
+hipanel-module-stock:
+    name: hipanel-module-stock
+    description: 'Stock Module for Hipanel'
+yii2-asset-pnotify:
+    name: yii2-asset-pnotify
+    description: null
+yii2-pnotify:
+    name: yii2-pnotify
+    description: null
+yii2-asset-octicons:
+    name: yii2-asset-octicons
+    description: 'Yii2 asset for octicons'
+yii2-asset-pictonic:
+    name: yii2-asset-pictonic
+    description: 'Yii 2 asset for Pictonic'
+py-chkipper:
+    name: py-chkipper
+    description: 'Changelog keeper'
+heppy:
+    name: heppy
+    description: 'Python EPP client and library'
+reodb:
+    name: reodb
+    description: 'Reusable objective database'
+hidev-sql:
+    name: hidev-sql
+    description: 'HiDev config for SQL projects'
+hidev-python:
+    name: hidev-python
+    description: 'Hidev config for Python projects'
+rewatcher:
+    name: rewatcher
+    description: 'Repositories watcher'
+hibilling:
+    name: hibilling
+    description: 'HiQDev HiBilling'
+php-merchant:
+    name: php-merchant
+    description: 'PHP merchant library'
+yii2-merchant:
+    name: yii2-merchant
+    description: 'Payment merchants extension for Yii2'
+yii2-cart:
+    name: yii2-cart
+    description: 'Cart module for Yii2'
+omnipay-paypal:
+    name: omnipay-paypal
+    description: 'PayPal plugin for PHP merchant library'
+omnipay-webmoney:
+    name: omnipay-webmoney
+    description: 'WebMoney driver for the Omnipay PHP payment processing library'
+omnipay-ecoin:
+    name: omnipay-ecoin
+    description: 'eCoin driver for Omnipay PHP payment library'
+omnipay-epayments:
+    name: omnipay-epayments
+    description: 'ePayments driver for Omnipay payment processing library'
+omnipay-epayservice:
+    name: omnipay-epayservice
+    description: 'ePayService driver for the Omnipay PHP payment processing library'
+omnipay-interkassa:
+    name: omnipay-interkassa
+    description: 'InterKassa driver for the Omnipay PHP payment processing library'
+omnipay-okpay:
+    name: omnipay-okpay
+    description: 'OKPAY plugin for PHP merchant library'
+omnipay-paxum:
+    name: omnipay-paxum
+    description: 'Paxum plugin for PHP merchant library'
+omnipay-qiwi:
+    name: omnipay-qiwi
+    description: 'Qiwi driver for Omnipay PHP payment library'
+omnipay-robokassa:
+    name: omnipay-robokassa
+    description: 'RoboKassa plugin for PHP merchant library'
+omnipay-yandexmoney:
+    name: omnipay-yandexmoney
+    description: 'Yandex.Money plugin for PHP merchant library'
+hipanel-module-dns:
+    name: hipanel-module-dns
+    description: 'DNS Plugin for HiPanel'
+yii2-asset-jquery-resizable-columns:
+    name: yii2-asset-jquery-resizable-columns
+    description: 'Yii2 asset for jQuery resizable columns'
+yii2-asset-store-js:
+    name: yii2-asset-store-js
+    description: 'Yii2 asset for store.js'
+hidev-php:
+    name: hidev-php
+    description: 'Hidev config for PHP projects'
+php-collection:
+    name: php-collection
+    description: 'Collection library for PHP'
+hidev-phpunit:
+    name: hidev-phpunit
+    description: 'PHPUnit plugin for HiDev'
+hidev-license:
+    name: hidev-license
+    description: 'License plugin for HiDev'
+payment-icons:
+    name: payment-icons
+    description: 'Set of icons for payment systems and methods'
+hiqdev.github.io:
+    name: hiqdev.github.io
+    description: 'HiQDev site'
+minii-core:
+    name: minii-core
+    description: 'minii Core'
+minii-console:
+    name: minii-console
+    description: 'minii Console'
+minii-helpers:
+    name: minii-helpers
+    description: 'minii Helpers'
+minii-caching:
+    name: minii-caching
+    description: 'minii Caching'
+minii-i18n:
+    name: minii-i18n
+    description: 'minii i18n'
+minii-hidev-vendor:
+    name: minii-hidev-vendor
+    description: 'minii vendor configuration for HiDev'
+composer-asset-plugin:
+    name: composer-asset-plugin
+    description: 'Composer plugin for bower/npm assets'
+hidev-scrutinizer:
+    name: hidev-scrutinizer
+    description: 'Scrutinizer plugin for HiDev'
+hidev-readme:
+    name: hidev-readme
+    description: 'README plugin for HiDev'
+hidev-composer:
+    name: hidev-composer
+    description: 'Composer plugin for HiDev'
+minii-web:
+    name: minii-web
+    description: 'minii web'
+minii-mail:
+    name: minii-mail
+    description: 'minii mail'
+minii-widgets:
+    name: minii-widgets
+    description: 'minii widgets'
+minii-captcha:
+    name: minii-captcha
+    description: 'minii captcha'
+minii-validators:
+    name: minii-validators
+    description: 'minii validators'
+minii-db:
+    name: minii-db
+    description: 'minii DB'
+hidev-box:
+    name: hidev-box
+    description: 'Box plugin for HiDev'
+composer-extension-plugin:
+    name: composer-extension-plugin
+    description: 'Composer plugin for Yii extensions'
+hidev-hisite:
+    name: hidev-hisite
+    description: 'HiDev config for HiSite'
+yii2-bootstrap-daterangepicker:
+    name: yii2-bootstrap-daterangepicker
+    description: 'Date range picker component for Bootstrap for Yii2 framework'
+hidev-pypi:
+    name: hidev-pypi
+    description: 'PyPI plugin for HiDev'
+hipanel-domain-checker:
+    name: hipanel-domain-checker
+    description: 'Domain names checker module for HiPanel'
+asset-packagist:
+    name: asset-packagist
+    description: 'Asset Packagist'
+hipanel-rbac:
+    name: hipanel-rbac
+    description: 'RBAC implementation for HiPanel'
+hisite-module-news:
+    name: hisite-module-news
+    description: 'Hisite News Module'
+yii2-asset-visibilityjs:
+    name: yii2-asset-visibilityjs
+    description: null
+hidev-nginx:
+    name: hidev-nginx
+    description: 'HiDev Nginx plugin'
+composer-config-plugin:
+    name: composer-config-plugin
+    description: 'Composer plugin for config assembling'
+hidev-hiqdev:
+    name: hidev-hiqdev
+    description: 'HiQDev vendor configuration for HiDev'
+roundcube-hipanel-driver:
+    name: roundcube-hipanel-driver
+    description: null
+chkipper:
+    name: chkipper
+    description: 'Changelog keeper'
+asset-packagist.dev:
+    name: asset-packagist.dev
+    description: asset-packagist.dev
+hidev-chkipper:
+    name: hidev-chkipper
+    description: 'Chkipper plugin for HiDev'
+yii2-language:
+    name: yii2-language
+    description: 'Yii2 module for language switching'
+hisite-core:
+    name: hisite-core
+    description: 'Hisite core package'
+yii2-theme-flat:
+    name: yii2-theme-flat
+    description: 'Flat Theme for hiqdev/yii2-thememanager'
+yii2-theme-twentyfifteen:
+    name: yii2-theme-twentyfifteen
+    description: 'TwentyFifteen Theme for hiqdev/yii2-thememanager'
+yii2-theme-original:
+    name: yii2-theme-original
+    description: 'Original Theme for hiqdev/yii2-thememanager'
+hiqdev-site:
+    name: hiqdev-site
+    description: HiQDev.com
+yii2-theme-dataserv:
+    name: yii2-theme-dataserv
+    description: 'DataServ Theme for hiqdev/yii2-thememanager'
+hipanel-site:
+    name: hipanel-site
+    description: 'Selling site for HiPanel'
+yii2-asset-hiqdev:
+    name: yii2-asset-hiqdev
+    description: 'HiQDev asset files: images, configs and more'
+hisite-demo:
+    name: hisite-demo
+    description: 'HiSite Demo'
+yii2-theme-agency:
+    name: yii2-theme-agency
+    description: 'Agency Theme for hiqdev/yii2-thememanager'
+yii2-module-pages:
+    name: yii2-module-pages
+    description: 'Yii2 Pages Module'
+yii2-reminder:
+    name: yii2-reminder
+    description: 'Reminder module for Yii2'
+rehome:
+    name: rehome
+    description: 'Bring your home with you'
+php-confirmator:
+    name: php-confirmator
+    description: 'Library for confirmation tokens'
+hidev-pytest:
+    name: hidev-pytest
+    description: 'pytest plugin for HiDev'
+hiam-mrdp:
+    name: hiam-mrdp
+    description: 'HIAM module for MRDP database compatibility'
+yii2-mfa:
+    name: yii2-mfa
+    description: 'Yii2 module providing multi-factor authentication'
+hipanel-com:
+    name: hipanel-com
+    description: 'hipanel.com site'
+hiam:
+    name: hiam
+    description: 'Identity and Access Management server providing OAuth2, RBAC, multi-factor authentication and more'
+hipanel-module-document:
+    name: hipanel-module-document
+    description: null
+yii2-theme-hyde:
+    name: yii2-theme-hyde
+    description: 'Hyde Theme for hiqdev/yii2-thememanager'
+hiqdev.com-core:
+    name: hiqdev.com-core
+    description: 'hiqdev.com site'
+yii2-menus:
+    name: yii2-menus
+    description: 'Menus for Yii2'
+yii2-asset-less-space:
+    name: yii2-asset-less-space
+    description: 'Yii2 asset for Less Space'
+yii2-theme-obaju:
+    name: yii2-theme-obaju
+    description: 'Obaju Theme for hiqdev/yii2-thememanager'
+hipanel-mrdp:
+    name: hipanel-mrdp
+    description: 'HiPanel module for MRDP compatibility'
+yii2-error-notifier:
+    name: yii2-error-notifier
+    description: null
+hipanel-module-mailing:
+    name: hipanel-module-mailing
+    description: null
+themes-site:
+    name: themes-site
+    description: 'Themes site'
+yii2-asset-col-resizable:
+    name: yii2-asset-col-resizable
+    description: null
+jquery-resizable-columns:
+    name: jquery-resizable-columns
+    description: 'Resizable table columns for jQuery.'
+hipanel-hiart:
+    name: hipanel-hiart
+    description: 'HiPanel Hiart'
+yii2-hiart-guzzle:
+    name: yii2-hiart-guzzle
+    description: 'Guzzle transport for yii2-hiart'
+yii2-hiart-github:
+    name: yii2-hiart-github
+    description: 'GitHub API implementation for yii2-hiart'
+yii2-hiart-httpclient:
+    name: yii2-hiart-httpclient
+    description: 'yii2-httpclient transport for yii2-hiart'
+yii2-hiart-curl:
+    name: yii2-hiart-curl
+    description: 'cURL tranport for yii2-hiart'
+yii2-theme-sailor:
+    name: yii2-theme-sailor
+    description: 'Sailor theme for hiqdev/yii2-thememanager'
+yii2-asset-select2:
+    name: yii2-asset-select2
+    description: null
+hipanel-module-certificate:
+    name: hipanel-module-certificate
+    description: 'SSL certificates module for HiPanel'
