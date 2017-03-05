@@ -88,9 +88,6 @@ hipanel-module-request:
 yii2-theme-adminlte:
     name: yii2-theme-adminlte
     description: 'AdminLte Theme for hiqdev/yii2-thememanager'
-hidev-vendor:
-    name: hidev-vendor
-    description: 'HiQDev vendor configuration for hidev'
 yii2-bootstrap-switch:
     name: yii2-bootstrap-switch
     description: 'Yii2 wrap for bootstrap switch'
@@ -166,9 +163,6 @@ yii2-cart:
 omnipay-paypal:
     name: omnipay-paypal
     description: 'PayPal plugin for PHP merchant library'
-omnipay-webmoney:
-    name: omnipay-webmoney
-    description: 'WebMoney driver for the Omnipay PHP payment processing library'
 omnipay-ecoin:
     name: omnipay-ecoin
     description: 'eCoin driver for Omnipay PHP payment library'
