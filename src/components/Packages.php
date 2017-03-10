@@ -36,7 +36,12 @@ class Packages extends \yii\base\Component
             $package['package']     = $package['package'] ?: $name;
             $package['vendor']      = $package['vendor'] ?: 'hiqdev';
             $package['fullName']    = $package['fullName'] ?: $package['vendor'] . '/' . $package['package'];
+            $package['total']       = $package['stars'] + $package['watchers'] + $packages['forks'];
         }
+
+        usort($data, function ($a, $b) {
+            return $b['total'] - $a['total'];
+        });
 
         return $data;
     }

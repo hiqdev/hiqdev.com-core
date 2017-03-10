@@ -25,12 +25,15 @@ class PackagesController extends \yii\console\Controller
                 'organization' => 'hiqdev',
                 'page' => $page,
             ])->all();
-            var_dump($repos);
             $page++;
             foreach ($repos as $repo) {
                 $packages[$repo->name] = [
-                    'name' => $repo->name,
-                    'description' => $repo->description,
+                    'name'          => $repo->name,
+                    'description'   => $repo->description,
+                    'forks'         => $repo->forks_count,
+                    'stars'         => $repo->stargazers_count,
+                    'watchers'      => $repo->watchers_count,
+                    'issues'        => $repo->open_issues_count,
                 ];
             }
         } while ($repos && $page<10);
