@@ -4,7 +4,7 @@ asset-packagist:
     package:        asset-packagist
     description:    Composer compatible repository allowing installation of Bower and NPM packages as native Composer packages
 composer-config-plugin:
-    title:          Config Plugin
+    title:          Composer Config Plugin
     lang:           php
     package:        composer-config-plugin
     description:    Composer plugin for config assembling
