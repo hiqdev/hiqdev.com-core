@@ -9,5 +9,5 @@
  */
 
 return [
-    'site.description' => "We're developing <nobr><a href='/hipanel'>HiPanel</a>,</nobr> <a href='/hisite'>HiSite</a>, <a href='/hidev'>HiDev</a> and many other <a href='/projects'>projects</a>",
+    'site.description' => "We're developing <nobr><a href='/projects/hipanel'>HiPanel</a>,</nobr> <a href='/projects/hisite'>HiSite</a>, <a href='/projects/hidev'>HiDev</a> and many other <a href='/projects'>projects</a>",
 ];

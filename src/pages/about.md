@@ -19,5 +19,5 @@ We're doing [HiPanel](/hipanel), [HiDev](/hidev) and other [cool projects](/proj
  * [Tafid](https://github.com/tafid)
  * [BladeRoot](https://github.com/bladeroot)
 
-This site is made with [HiSite](/hisite) and [Hyde theme](/packages/yii2-theme-hyde).
+This site is made with [HiSite](/projects/hisite) and [Hyde theme](/packages/yii2-theme-hyde).
 The source is available on [GitHub](https://github.com/hiqdev/hiqdev.com-core).
