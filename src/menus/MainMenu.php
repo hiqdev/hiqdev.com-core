@@ -29,13 +29,13 @@ class MainMenu extends \hiqdev\yii2\menus\Menu
                 'label' => Yii::t('hiqdev:com', 'About'),
                 'url' => ['/pages/render/index', 'page' => 'about'],
             ],
-            'packages' => [
-                'label' => Yii::t('hiqdev:com', 'Packages'),
-                'url' => ['/pages/render/index', 'page' => 'packages'],
-            ],
             'projects' => [
                 'label' => Yii::t('hiqdev:com', 'Projects'),
                 'url' => ['/pages/render/index', 'page' => 'projects'],
+            ],
+            'packages' => [
+                'label' => Yii::t('hiqdev:com', 'Packages'),
+                'url' => ['/pages/render/index', 'page' => 'packages'],
             ],
         ];
     }
