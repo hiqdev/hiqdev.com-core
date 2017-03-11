@@ -10,7 +10,7 @@ All mimsy were the borogoves,<br>
 And the mome raths outgrabe.
 </p>
 
-We're doing [HiPanel](/hipanel), [HiDev](/hidev) and other [cool projects](/projects) and [packages](/packages).
+We're doing [HiPanel], [HiSite], [HiDev] and other [projects] and [packages].
 
 ## Our amazing team
 
@@ -19,5 +19,12 @@ We're doing [HiPanel](/hipanel), [HiDev](/hidev) and other [cool projects](/proj
  * [Tafid](https://github.com/tafid)
  * [BladeRoot](https://github.com/bladeroot)
 
-This site is made with [HiSite](/projects/hisite) and [Hyde theme](/packages/yii2-theme-hyde).
+This site is made with [HiSite] and [Hyde theme].
 The source is available on [GitHub](https://github.com/hiqdev/hiqdev.com-core).
+
+[projects]:     /projects
+[packages]:     /packages
+[HiPanel]:      /projects/hipanel
+[HiSite]:       /projects/hisite
+[HiDev]:        /projects/hidev
+[Hyde theme]:   /packages/yii2-theme-hyde
