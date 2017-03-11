@@ -10,4 +10,6 @@
 
 return [
     'site.description' => "We're developing <nobr><a href='/projects/hipanel'>HiPanel</a>,</nobr> <a href='/projects/hisite'>HiSite</a>, <a href='/projects/hidev'>HiDev</a> and many other <a href='/projects'>projects</a>",
+    'logoImage' => '@hiqdev/assets/hiqdev/assets/images/logo.svg',
+    'logoImageOptions' => ['class' => 'logo'],
 ];
