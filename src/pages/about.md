@@ -24,7 +24,7 @@ The source is available on [GitHub](https://github.com/hiqdev/hiqdev.com-core).
 
 [projects]:     /projects
 [packages]:     /packages
-[HiPanel]:      /projects/hipanel
-[HiSite]:       /projects/hisite
-[HiDev]:        /projects/hidev
+[HiPanel]:      /packages/hipanel
+[HiSite]:       /packages/hisite
+[HiDev]:        /packages/hidev
 [Hyde theme]:   /packages/yii2-theme-hyde
