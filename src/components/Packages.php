@@ -39,7 +39,7 @@ class Packages extends \yii\base\Component
             $package['total']       = $package['stars'] + $package['watchers'] + $packages['forks'];
         }
 
-        usort($data, function ($a, $b) {
+        uasort($data, function ($a, $b) {
             return $b['total'] - $a['total'];
         });
 
