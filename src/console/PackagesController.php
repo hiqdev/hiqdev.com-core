@@ -16,6 +16,11 @@ use Symfony\Component\Yaml\Yaml;
 
 class PackagesController extends \yii\console\Controller
 {
+    public function getPackages()
+    {
+        return Yii::$app->get('packages');
+    }
+
     public function actionLoad()
     {
         $packages = [];
@@ -38,7 +43,13 @@ class PackagesController extends \yii\console\Controller
             }
         } while ($repos && $page<10);
 
-        $path = Yii::getAlias('@hiqdev/com/components/packages.yml');
-        file_put_contents($path, Yaml::dump($packages));
+        file_put_contents($this->getPackages()->getPath(), Yaml::dump($packages));
+    }
+
+    public function actionList()
+    {
+        foreach ($this->getPackages()->getAll() as $name => $package) {
+            echo "git clone git@github.com:$package[fullName] $package[package]\n";
+        }
     }
 }

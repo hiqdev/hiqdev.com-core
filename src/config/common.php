@@ -14,6 +14,7 @@ return [
             'class' => \yii\swiftmailer\Mailer::class,
         ],
         'i18n' => [
+            'class' => \yii\i18n\I18N::class,
             'translations' => [
                 'hiqdev:com' => [
                     'class' => \yii\i18n\PhpMessageSource::class,
