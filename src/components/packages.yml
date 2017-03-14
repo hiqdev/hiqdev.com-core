@@ -169,7 +169,7 @@ yii2-asset-lightbox2:
 yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
-    forks: 7
+    forks: 6
     stars: 22
     watchers: 22
     issues: 2

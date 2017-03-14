@@ -21,10 +21,15 @@ class Packages extends \yii\base\Component
 
     protected $_raw;
 
+    public function getPath()
+    {
+        return __DIR__ . '/packages.yml';
+    }
+
     public function getRaw()
     {
         if ($this->_raw === null) {
-            $this->_raw = $this->prepare(Yaml::parse(file_get_contents(__DIR__ . '/packages.yml')));
+            $this->_raw = $this->prepare(Yaml::parse(file_get_contents($this->getPath())));
         }
 
         return $this->_raw;
