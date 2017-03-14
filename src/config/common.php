@@ -10,6 +10,9 @@
 
 return [
     'components' => [
+        'mailer' => [
+            'class' => \yii\swiftmailer\Mailer::class,
+        ],
         'i18n' => [
             'translations' => [
                 'hiqdev:com' => [
