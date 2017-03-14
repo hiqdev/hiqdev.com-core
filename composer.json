@@ -43,6 +43,7 @@
     ],
     "require": {
         "yiisoft/yii2-debug": "~2.0.1",
+        "yiisoft/yii2-swiftmailer": "~2.0.6",
         "hiqdev/hisite-core": "<2.0 || dev-master",
         "hiqdev/yii2-hiart-curl": "<2.0 || dev-master",
         "hiqdev/yii2-hiart-github": "<2.0 || dev-master",
