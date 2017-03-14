@@ -40,19 +40,5 @@ return [
                 \hiqdev\com\Asset::class,
             ],
         ],
-        'i18n' => [
-            'translations' => [
-                'hiqdev:com' => [
-                    'class' => \yii\i18n\PhpMessageSource::class,
-                    'basePath' => '@hiqdev/com/messages',
-                ],
-            ],
-        ],
-        'projects' => [
-            'class' => \hiqdev\com\components\Projects::class,
-        ],
-        'packages' => [
-            'class' => \hiqdev\com\components\Packages::class,
-        ],
     ],
 ];
