@@ -21,6 +21,11 @@ class SiteController extends \hisite\controllers\SiteController
         die('TEST');
     }
 
+    public function actionHiqdev($package, $page = null)
+    {
+        return $this->redirect("/packages/$package$page");
+    }
+
     public function actionRedirect()
     {
         return $this->redirect(Yii::$app->request->getUrl() . '/');
