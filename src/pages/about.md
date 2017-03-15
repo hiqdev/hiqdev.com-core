@@ -19,12 +19,13 @@ We're doing [HiPanel], [HiSite], [HiDev] and other [projects] and [packages].
  * [Tafid](https://github.com/tafid)
  * [BladeRoot](https://github.com/bladeroot)
 
-This site is made with [HiSite] and [Hyde theme].
+This site is made with [HiSite], [Pages module] and [Hyde theme].
 The source is available on [GitHub](https://github.com/hiqdev/hiqdev.com-core).
 
 [projects]:     /projects
 [packages]:     /packages
-[HiPanel]:      /packages/hipanel
-[HiSite]:       /packages/hisite
-[HiDev]:        /packages/hidev
-[Hyde theme]:   /packages/yii2-theme-hyde
+[HiPanel]:      /packages/hipanel/
+[HiDev]:        /packages/hidev/
+[HiSite]:       /packages/hisite/
+[Hyde theme]:   /packages/yii2-theme-hyde/
+[Pages module]: /packages/yii2-module-pages/

@@ -6,7 +6,8 @@ layout: post
 
 Completely redone our site with Yii2.
 
-It's made with [hisite] and [yii2-theme-hyde].
+It's made with [HiSite], [Pages module] and [Hyde theme].
 
-[hisite]:           /projects/hisite
-[yii2-theme-hyde]:  /packages/yii2-theme-hyde
+[HiSite]:       /packages/hisite/
+[Hyde theme]:   /packages/yii2-theme-hyde/
+[Pages module]: /packages/yii2-module-pages/
