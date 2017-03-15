@@ -4,7 +4,9 @@ title: Released HiDev 0.4.0
 date: 2016-05-21 15:00
 ---
 
-[https://github.com/hiqdev/hidev](https://github.com/hiqdev/hidev)
+[https://hiqdev.com/packages/hidev](https://hiqdev.com/packages/hidev)
+
+[CHANGELOG]:
 
 - Changed: redone to `composer-config-plugin`
 - Changed: greatly improved functional tests
@@ -28,3 +30,4 @@ date: 2016-05-21 15:00
 - Added easy creation of templated dirs and files with `DirectoryController`
 - Fixed `JsonHandler` to parse empty JSON to empty array (died before)
 
+[CHANGELOG]: https://hiqdev.com/packages/hidev/CHANGELOG.md

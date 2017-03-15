@@ -14,5 +14,4 @@ NO plugins and NO Node.js are required.
 
 [https://asset-packagist.org/](https://asset-packagist.org/)
 
-[https://github.com/hiqdev/asset-packagist](https://github.com/hiqdev/asset-packagist)
-
+[https://hiqdev.com/packages/asset-packagist](https://hiqdev.com/packages/asset-packagist)
