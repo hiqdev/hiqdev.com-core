@@ -10,6 +10,7 @@
 
 namespace hiqdev\com\controllers;
 
+use cebe\markdown\GithubMarkdown;
 use hiart\github\models\Repo;
 use Yii;
 
@@ -17,9 +18,28 @@ class SiteController extends \hisite\controllers\SiteController
 {
     public function actionTest()
     {
-        //$a = Yii::$app->github->get('orgs/hiqdev/repos');
-        $a = Repo::find()->where(['organization' => 'hiqdev'])->all();
-        var_dump($a);
-        die();
+        die('TEST');
+    }
+
+    public function actionRedirect()
+    {
+        return $this->redirect(Yii::$app->request->getUrl() . '/');
+    }
+
+    public function actionPackage($package)
+    {
+        $this->layout = 'package';
+
+        Yii::$app->view->title = $package;
+        Yii::$app->view->params += [
+            'package'   => $package,
+            'fullName'  => 'hiqdev/' . $package,
+        ];
+        $parser = new GithubMarkdown();
+        $path = Yii::getAlias("@hiqdev/com/pages/packages/$package/README.md");
+
+        return $this->render('package', [
+            'readme' => $parser->parse(file_get_contents($path)),
+        ]);
     }
 }

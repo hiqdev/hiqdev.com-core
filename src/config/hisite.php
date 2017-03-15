@@ -29,6 +29,8 @@ return [
     'components' => [
         'urlManager' => [
             'rules' => [
+                'packages/<package:[.a-z0-9-]+>' => 'site/redirect',
+                'packages/<package:[.a-z0-9-]+>/<x:X?>' => 'site/package',
                 '<page:.*>' => 'pages/render/index',
             ],
         ],
