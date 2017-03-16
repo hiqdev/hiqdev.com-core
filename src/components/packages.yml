@@ -25,7 +25,7 @@ hipanel-module-client:
     forks: 1
     stars: 2
     watchers: 2
-    issues: 1
+    issues: 2
 hipanel-module-domain:
     name: hipanel-module-domain
     description: 'Domain Plugin for HiPanel'
@@ -410,7 +410,7 @@ omnipay-interkassa:
     forks: 3
     stars: 7
     watchers: 7
-    issues: 1
+    issues: 2
 omnipay-okpay:
     name: omnipay-okpay
     description: 'OKPAY plugin for PHP merchant library'
@@ -667,8 +667,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 8
-    stars: 85
-    watchers: 85
+    stars: 86
+    watchers: 86
     issues: 8
 hipanel-rbac:
     name: hipanel-rbac
@@ -803,12 +803,12 @@ yii2-asset-hiqdev:
     stars: 2
     watchers: 2
     issues: 0
-hisite-demo:
-    name: hisite-demo
+hisite:
+    name: hisite
     description: 'HiSite Demo'
     forks: 0
-    stars: 0
-    watchers: 0
+    stars: 1
+    watchers: 1
     issues: 0
 yii2-theme-agency:
     name: yii2-theme-agency
