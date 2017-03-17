@@ -29,6 +29,7 @@ return [
     'components' => [
         'urlManager' => [
             'rules' => [
+                'site/<page:.*>' => 'site/<page>',
                 'hiqdev/<package:[.a-z0-9-]+><page:.*>' => 'site/hiqdev',
                 'packages/<package:[.a-z0-9-]+>' => 'site/redirect',
                 'packages/<package:[.a-z0-9-]+>/<x:X?>' => 'site/package',
