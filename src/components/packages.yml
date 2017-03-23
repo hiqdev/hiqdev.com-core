@@ -16,8 +16,8 @@ yii2-thememanager:
     name: yii2-thememanager
     description: 'Theme Manager for Yii 2'
     forks: 1
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 hipanel-module-client:
     name: hipanel-module-client
@@ -667,8 +667,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 8
-    stars: 86
-    watchers: 86
+    stars: 87
+    watchers: 87
     issues: 8
 hipanel-rbac:
     name: hipanel-rbac
@@ -807,8 +807,8 @@ hisite:
     name: hisite
     description: 'HiSite Demo'
     forks: 0
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 yii2-theme-agency:
     name: yii2-theme-agency
@@ -982,8 +982,8 @@ yii2-hiart-github:
     name: yii2-hiart-github
     description: 'GitHub API implementation for yii2-hiart'
     forks: 0
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 yii2-hiart-httpclient:
     name: yii2-hiart-httpclient
@@ -1019,4 +1019,11 @@ hipanel-module-certificate:
     forks: 0
     stars: 2
     watchers: 2
+    issues: 0
+php-billing:
+    name: php-billing
+    description: 'PHP Billing Library'
+    forks: 0
+    stars: 1
+    watchers: 1
     issues: 0
