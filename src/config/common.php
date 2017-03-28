@@ -31,7 +31,7 @@ return [
          'sentry' => [
             'class' => \mito\sentry\Component::class,
             'dsn' => isset($params['sentry.dsn']) ? $params['sentry.dsn'] : '',
-            'environment' => YII_ENV,
+            'environment' => defined('YII_ENV') ? YII_ENV : 'prod',
             'jsNotifier' => true,
             'jsOptions' => [
                 'whitelistUrls' => [
