@@ -28,5 +28,25 @@ return [
         'packages' => [
             'class' => \hiqdev\com\components\Packages::class,
         ],
+         'sentry' => [
+            'class' => \mito\sentry\Component::class,
+            'dsn' => isset($params['sentry.dsn']) ? $params['sentry.dsn'] : '',
+            'environment' => YII_ENV,
+            'jsNotifier' => true,
+            'jsOptions' => [
+                'whitelistUrls' => [
+                    'https://dev.hiqdev.com',
+                    'https://hiqdev.com',
+                ],
+            ],
+        ],
+        'log' => [
+            'targets' => [
+                [
+                    'class' => \mito\sentry\Target::class,
+                    'levels' => ['error'],
+                ],
+            ],
+        ],
     ],
 ];

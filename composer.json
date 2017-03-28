@@ -51,6 +51,7 @@
         "hiqdev/yii2-asset-hiqdev": "<2.0 || dev-master",
         "hiqdev/yii2-module-pages": "<2.0 || dev-master",
         "hiqdev/yii2-error-notifier": "<2.0 || dev-master",
+        "mito/yii2-sentry": "^1.0.0",
         "sadovojav/yii2-image-thumbnail": "dev-master",
         "creocoder/yii2-flysystem": "~0.8"
     },
