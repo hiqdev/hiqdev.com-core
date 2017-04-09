@@ -1,7 +1,7 @@
 hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
-    forks: 4
+    forks: 3
     stars: 14
     watchers: 14
     issues: 0
@@ -32,7 +32,7 @@ hipanel-module-domain:
     forks: 1
     stars: 1
     watchers: 1
-    issues: 0
+    issues: 1
 hipanel-module-finance:
     name: hipanel-module-finance
     description: 'Finance Plugin for HiPanel'
@@ -64,9 +64,9 @@ yii2-combo:
 yii2-collection:
     name: yii2-collection
     description: 'Basic Collection for Yii 2'
-    forks: 1
-    stars: 2
-    watchers: 2
+    forks: 2
+    stars: 3
+    watchers: 3
     issues: 0
 hipanel-module-server:
     name: hipanel-module-server
@@ -267,7 +267,7 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 0
+    forks: 1
     stars: 1
     watchers: 1
     issues: 0
@@ -366,8 +366,8 @@ yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 0
-    stars: 3
-    watchers: 3
+    stars: 5
+    watchers: 5
     issues: 0
 yii2-cart:
     name: yii2-cart
@@ -667,8 +667,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 8
-    stars: 87
-    watchers: 87
+    stars: 88
+    watchers: 88
     issues: 8
 hipanel-rbac:
     name: hipanel-rbac
@@ -785,7 +785,7 @@ hiqdev-site:
 yii2-theme-dataserv:
     name: yii2-theme-dataserv
     description: 'DataServ Theme for hiqdev/yii2-thememanager'
-    forks: 1
+    forks: 0
     stars: 3
     watchers: 3
     issues: 0
@@ -805,7 +805,7 @@ yii2-asset-hiqdev:
     issues: 0
 hisite:
     name: hisite
-    description: 'HiSite Demo'
+    description: 'HiSite Project Template'
     forks: 0
     stars: 2
     watchers: 2
@@ -1023,6 +1023,48 @@ hipanel-module-certificate:
 php-billing:
     name: php-billing
     description: 'PHP Billing Library'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+php-units:
+    name: php-units
+    description: 'PHP Units of Measure Library'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+omnipay-freekassa:
+    name: omnipay-freekassa
+    description: 'FreeKassa driver for Omnipay PHP payment library'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+hidev-webapp:
+    name: hidev-webapp
+    description: 'HiDev plugin for web applications'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+hiapi-core:
+    name: hiapi-core
+    description: 'HiAPI - template for Yii2 based API'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+billing-hiapi:
+    name: billing-hiapi
+    description: 'API for Billing'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+docker-php:
+    name: docker-php
+    description: 'Custom PHP builds'
     forks: 0
     stars: 1
     watchers: 1
