@@ -1,6 +1,8 @@
 {# ---
 title: Packages
 --- #}
+<div style="float:right">{{ app.packages.all | length }} packages</div>
+
 {% for name,package in app.packages.all %}
 
     <h2>
