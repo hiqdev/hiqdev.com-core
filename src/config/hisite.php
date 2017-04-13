@@ -28,11 +28,23 @@ return [
     ],
     'components' => [
         'urlManager' => [
+            'normalizer' => [
+                'class' => \yii\web\UrlNormalizer::class,
+            ],
             'rules' => [
-                'site/<page:.*>' => 'site/<page>',
+                /* [
+                    'class' => \hisite\components\RedirectRule::class,
+                    'pattern' => 'hiqdev/<package:[.a-z0-9-]+><page:.*>',
+                    'route' => 'packages/<package><page>',
+                ], */
                 'hiqdev/<package:[.a-z0-9-]+><page:.*>' => 'site/hiqdev',
-                'packages/<package:[.a-z0-9-]+>' => 'site/redirect',
-                'packages/<package:[.a-z0-9-]+>/<x:X?>' => 'site/package',
+                [
+                    'pattern' => 'packages/<package:[.a-z0-9-]+>',
+                    'route' => 'site/package',
+                    'suffix' => '/',
+                ],
+                //// 'packages/<package:[.a-z0-9-]+>/<x:X? >' => 'site/package',
+                'site/<page:.*>' => 'site/<page>',
                 '<page:.*>' => 'pages/render/index',
             ],
         ],
