@@ -37,15 +37,23 @@ return [
                     'pattern' => 'hiqdev/<package:[.a-z0-9-]+><page:.*>',
                     'route' => 'packages/<package><page>',
                 ], */
+                /*
+                'redirects' => [
+                    'pages/posts'   => '',
+                    'projects' => 'pages/projects',
+                    'packages' => 'pages/packages',
+                    'hiqdev/<page:.*>' => 'packages/<page>',
+                ],
+                */
                 'hiqdev/<package:[.a-z0-9-]+><page:.*>' => 'site/hiqdev',
                 [
-                    'pattern' => 'packages/<package:[.a-z0-9-]+>',
+                    'pattern' => 'packages/<package:[.a-zA-Z0-9-]+>',
                     'route' => 'site/package',
                     'suffix' => '/',
                 ],
-                //// 'packages/<package:[.a-z0-9-]+>/<x:X? >' => 'site/package',
-                'site/<page:.*>' => 'site/<page>',
-                '<page:.*>' => 'pages/render/index',
+                '' => 'pages/render/index',
+                'draft/<x:.*>' => 'pages/render/index',
+                'packages/<x:.*>' => 'pages/render/index',
             ],
         ],
         'themeManager' => [

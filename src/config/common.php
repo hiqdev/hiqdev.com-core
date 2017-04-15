@@ -28,7 +28,8 @@ return [
         'packages' => [
             'class' => \hiqdev\com\components\Packages::class,
         ],
-         'sentry' => [
+        /*
+        'sentry' => [
             'class' => \mito\sentry\Component::class,
             'dsn' => isset($params['sentry.dsn']) ? $params['sentry.dsn'] : '',
             'environment' => defined('YII_ENV') ? YII_ENV : 'prod',
@@ -48,5 +49,6 @@ return [
                 ],
             ],
         ],
+        */
     ],
 ];
