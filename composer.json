@@ -44,15 +44,15 @@
     "require": {
         "yiisoft/yii2-debug": "~2.0.1",
         "yiisoft/yii2-swiftmailer": "~2.0.6",
+        "mito/yii2-sentry": "^1.0.0",
+        "creocoder/yii2-flysystem": "~0.8",
+        "sadovojav/yii2-image-thumbnail": "dev-master",
         "hiqdev/hisite": "<2.0 || dev-master",
         "hiqdev/yii2-hiart-github": "<2.0 || dev-master",
-        "hiqdev/yii2-theme-hyde": "<2.0 || dev-master",
-        "hiqdev/yii2-asset-hiqdev": "<2.0 || dev-master",
         "hiqdev/yii2-module-pages": "<2.0 || dev-master",
         "hiqdev/yii2-monitoring": "<2.0 || dev-master",
-        "mito/yii2-sentry": "^1.0.0",
-        "sadovojav/yii2-image-thumbnail": "dev-master",
-        "creocoder/yii2-flysystem": "~0.8"
+        "hiqdev/yii2-theme-hyde": "<2.0 || dev-master",
+        "hiqdev/yii2-asset-hiqdev": "<2.0 || dev-master"
     },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0 || dev-master",
