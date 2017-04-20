@@ -2,8 +2,8 @@ hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
     forks: 3
-    stars: 14
-    watchers: 14
+    stars: 15
+    watchers: 15
     issues: 0
 yii2-higrid:
     name: yii2-higrid
@@ -16,8 +16,8 @@ yii2-thememanager:
     name: yii2-thememanager
     description: 'Theme Manager for Yii 2'
     forks: 1
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 0
 hipanel-module-client:
     name: hipanel-module-client
@@ -148,7 +148,7 @@ yii2-asset-autosize:
 yii2-asset-flag-icon-css:
     name: yii2-asset-flag-icon-css
     description: 'Yii 2 asset for bower flag-icon-css'
-    forks: 3
+    forks: 4
     stars: 2
     watchers: 2
     issues: 0
@@ -267,7 +267,7 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 1
+    forks: 2
     stars: 1
     watchers: 1
     issues: 0
@@ -666,10 +666,10 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 8
+    forks: 9
     stars: 88
     watchers: 88
-    issues: 8
+    issues: 9
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -747,8 +747,8 @@ yii2-language:
     stars: 3
     watchers: 3
     issues: 0
-hisite-core:
-    name: hisite-core
+hisite:
+    name: hisite
     description: 'Hisite core package'
     forks: 1
     stars: 2
@@ -803,8 +803,8 @@ yii2-asset-hiqdev:
     stars: 2
     watchers: 2
     issues: 0
-hisite:
-    name: hisite
+hisite-template:
+    name: hisite-template
     description: 'HiSite Project Template'
     forks: 0
     stars: 2
@@ -992,13 +992,6 @@ yii2-hiart-httpclient:
     stars: 1
     watchers: 1
     issues: 0
-yii2-hiart-curl:
-    name: yii2-hiart-curl
-    description: 'cURL tranport for yii2-hiart'
-    forks: 0
-    stars: 1
-    watchers: 1
-    issues: 0
 yii2-theme-sailor:
     name: yii2-theme-sailor
     description: 'Sailor theme for hiqdev/yii2-thememanager'
@@ -1065,6 +1058,27 @@ billing-hiapi:
 docker-php:
     name: docker-php
     description: 'Custom PHP builds'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+hipanel-faq:
+    name: hipanel-faq
+    description: 'HiPanel FAQ'
+    forks: 0
+    stars: 2
+    watchers: 2
+    issues: 0
+yii2-monitoring:
+    name: yii2-monitoring
+    description: 'Health monitoring for Yii2 applications'
+    forks: 0
+    stars: 3
+    watchers: 3
+    issues: 0
+yii2-yandex-metrika:
+    name: yii2-yandex-metrika
+    description: 'Yandex.Metrika counter for Yii2 applications'
     forks: 0
     stars: 1
     watchers: 1
