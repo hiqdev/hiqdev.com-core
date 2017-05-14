@@ -10,9 +10,6 @@
 
 return [
     'components' => [
-        'mailer' => [
-            'class' => \yii\swiftmailer\Mailer::class,
-        ],
         'i18n' => [
             'class' => \yii\i18n\I18N::class,
             'translations' => [
@@ -28,27 +25,5 @@ return [
         'packages' => [
             'class' => \hiqdev\com\components\Packages::class,
         ],
-        /*
-        'sentry' => [
-            'class' => \mito\sentry\Component::class,
-            'dsn' => isset($params['sentry.dsn']) ? $params['sentry.dsn'] : '',
-            'environment' => defined('YII_ENV') ? YII_ENV : 'prod',
-            'jsNotifier' => true,
-            'jsOptions' => [
-                'whitelistUrls' => [
-                    'https://dev.hiqdev.com',
-                    'https://hiqdev.com',
-                ],
-            ],
-        ],
-        'log' => [
-            'targets' => [
-                [
-                    'class' => \mito\sentry\Target::class,
-                    'levels' => ['error'],
-                ],
-            ],
-        ],
-        */
     ],
 ];
