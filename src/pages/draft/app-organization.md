@@ -56,8 +56,9 @@ advanced, форкаете себе, потом пишете и комитите
 - bootstrap запускается довольно рано, но всё таки объект `Application` уже создан и
   что-то уже просто не получится сконфигурировать;
 - довольно сложно правильно смержиться с конфигом уже созданного приложения,
-  придётся работать не с целым массивом конфига, а по частям: компоненты отдельно,
-  алиасы отдельно, контейнер отдельно, ... (я пробовал &mdash; так счастья не видать);
+  придётся работать не с целым массивом конфига, а по частям: компоненты отдельно
+  (и очень нетривиально), алиасы отдельно, контейнер, модули, параметры,
+  `controllerMap`, ... (я пробовал &mdash; так счастья не видать);
 - bootstrap не ленивый, он запускается на каждый запрос к приложению и если
   таких bootstrap'ов много &mdash; они просто будут бить по производительности.
 
@@ -83,13 +84,13 @@ Composer-config-plugin работает довольно просто:
 ```json
     "extra": {
         "config-plugin": {
-            "hisite": "src/config/hisite.php"
+            "web": "src/config/web.php"
         }
     }
 ```
 
-Это значит замержить в конфиг под названием `hisite` содержимое файла
-`src/config/hisite.php`. А в файле этом будет просто то, что плагин хочет добавить
+Это значит замержить в конфиг под названием `web` содержимое файла
+`src/config/web.php`. А в файле этом будет просто то, что плагин хочет добавить
 в конфиг приложения, например, конфиг интернационализации:
 
 ```php
@@ -110,13 +111,12 @@ return [
 ```
 
 Конфигов может быть сколько угодно, включая специальные: `dotenv`, `defines`
-и `params`, которые обрабатываются, в принципе, также как и другие конфиги,
-только в правильном порядке:
+и `params`. Конфиги обрабатываются в таком порядке:
 
 - переменные окружения &mdash; `dotenv`;
 - константы &mdash; `defines`;
 - параметры &mdash; `params`;
-- конфиги &mdash; `name1`, `name2`, ...
+- все остальные конфиги, например: `common`, `console`, `web`, ...
 
 Таким образом, чтобы значения полученные на предыдущих шагах могли быть использованы
 на всех ппоследующих.
@@ -134,13 +134,13 @@ return [
 после своих зависимостей и мог перезаписать значения заданные ими.
 Т.е. самый верхний пакет имеет полный контроль над конфигом и управляет всеми
 значениями, а плагины только задают дефолтные значения.
-В общем, процесс повторяет сборку конфигов в `yii2-app-advanced`, только более
+В целом, процесс повторяет сборку конфигов в `yii2-app-advanced`, только более
 масштабно.
 
 Изпользовать в приложении тривиально &mdash; добавляем в `web/index.php`:
 
 ```php
-$config = require hiqdev\composer\config\Builder::path('hisite');
+$config = require hiqdev\composer\config\Builder::path('web');
 
 (new yii\web\Application($config))->run();
 ```
@@ -274,7 +274,7 @@ return [
 их нужно создавать и назначать права "сборщиком" (build tool, task runner)
 мы велосипедим свой, но это уже совсем другая история.
 
-По сути, "корень" &mdash; это `params-local.php` на стероидах.
+По сути, *"корень"* &mdash; это `params-local.php` на стероидах.
 В нём концентрируется отличие конкретной инсталяции проекта от общего
 переиспользуемого кода. Мы создаём репозиторий под корень и храним его на нашем
 приватном git-сервере, поэтому комитим туда даже секреты (но это холиварная тема).
@@ -298,7 +298,21 @@ return [
 
 Шаблон *"корня"* для проекта на HiSite'е здесь &mdash;
 [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
-Подробнее в README.
+
+Иерархия зависимостей выглядит так:
+
+- *"корень"* &mdash; [hiqdev/hisite-template];
+    - плагин темы &mdash; [hiqdev/yii2-theme-flat];
+        - библиотека тем &mdash; [hiqdev/yii2-thememanager];
+    - базовый проект &mdash; [hiqdev/hisite];
+        - фреймворк &mdash; [yiisoft/yii2].
+
+В [README](https://github.com/hiqdev/hisite-template) корня
+описано как поднять проект у себя &mdash; `composer create-project`
+плюс настройка конфигурации.
+Благодаря реализации тем как плагинов и библиотеке тем [hiqdev/yii2-thememanager]
+в `composer.json` корня можно поменять `yii2-theme-flat` на `yii2-theme-original`
+запустить `composer update` и сайт переоденется в новую тему. Вот так просто.
 
 Ещё один реальный рабочий проект, подходящий в качестве примера,
 сделанный, используя этот подход и полностью доступный на GitHub'е &mdash;
@@ -308,23 +322,23 @@ packagist-совместимый репозиторий, который позв
 
 Иерархия зависимостей выглядит так:
 
-- *"корень"* &mdash; [hiqdev/asset-packagist.org];
+- *"корень"* &mdash; [hiqdev/asset-packagist.dev];
     - плагин темы &mdash; [hiqdev/yii2-theme-original];
     - проект &mdash; [hiqdev/asset-packagist];
         - базовый проект &mdash; [hiqdev/hisite];
             - фреймворк &mdash; [yiisoft/yii2].
 
-[hiqdev/asset-packagist.org]:   https://github.com/hiqdev/asset-packagist.org
+[hiqdev/asset-packagist.dev]:   https://github.com/hiqdev/asset-packagist.dev
+[hiqdev/yii2-theme-flat]:       https://github.com/hiqdev/yii2-theme-flat
 [hiqdev/yii2-theme-original]:   https://github.com/hiqdev/yii2-theme-original
+[hiqdev/yii2-thememanager]:     https://github.com/hiqdev/yii2-thememanager
 [hiqdev/asset-packagist]:       https://github.com/hiqdev/asset-packagist
 [hiqdev/hisite]:                https://github.com/hiqdev/hisite
+[hiqdev/hisite-template]:       https://github.com/hiqdev/hisite-template
 [yiisoft/yii2]:                 https://github.com/yiisoft/yii2
 
-В [README](https://github.com/hiqdev/asset-packagist.org) корня
-описано как поднять проект у себя &mdash; в общем-то `composer create-project` и всё.
-В `composer.json` корня можно поменять `yii2-theme-original` на `yii2-theme-flat`
-запустить `composer update` и сайт переоденется в новую тему. Вот так просто.
-Сила плагинов и правильной организации.
+Подробности как поднять проект у себя описаны в
+[README](https://github.com/hiqdev/asset-packagist.dev) корня.
 
 ## Итоги подведём
 
@@ -342,7 +356,7 @@ packagist-совместимый репозиторий, который позв
 
 [100+]: https://hiqdev.com/packages
 
-Подход, в той или иной мере применим для других фреймворков и даже языков...
+Подход, в той или иной мере, применим для других фреймворков и даже языков...
 Ой, Остапа понесло... На сегодня хватит!
 Спасибо за внимание.  Продолжение следует.
 
@@ -353,9 +367,10 @@ packagist-совместимый репозиторий, который позв
 [статей](http://fabien.potencier.org/symfony4-monolith-vs-micro.html)
 [Фабьена Потенсьера](http://fabien.potencier.org/)
 (автора Symfony) про грядущий Symfony 4.
-Стыдно сказать, не всё понял (там пока только тизеры &mdash; кода нет), но уловил,
-что система бандлов будет доработана в сторону их автоматической конфигурации,
+Стыдно сказать, не до конца понял как именно всё работает, но уловил идеи и цели,
+система бандлов будет доработана в сторону их автоматической конфигурации,
 для получения "нового способа создавать и развивать ваши приложения с лёгкостью"
 (new way to create and evolve your applications with ease).
+В общем, не один я считаю поднятые вопросы очень важными для фреймворка.
 
 Я люблю Yii. Давайте сделаем в Yii лучше!
