@@ -9,11 +9,9 @@
  */
 
 return [
-    'components' => [
-        'config' => [
-            'packages' => [
-                'class' => \hiqdev\com\console\PackagesController::class,
-            ],
+    'controllerMap' => [
+        'packages' => [
+            'class' => \hiqdev\com\console\PackagesController::class,
         ],
     ],
 ];

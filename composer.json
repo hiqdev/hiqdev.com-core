@@ -68,7 +68,7 @@
         "config-plugin": {
             "params": "src/config/params.php",
             "common": "src/config/common.php",
-            "hidev": "src/config/hidev.php",
+            "console": "src/config/console.php",
             "web": "src/config/web.php"
         }
     },
