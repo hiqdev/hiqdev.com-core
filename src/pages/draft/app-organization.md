@@ -27,9 +27,7 @@ title: Альтернативная организация проекта на Y
 Тут я должен приостановиться и объяснить что я называю плагином. В yii2 предусмотрены расширения (yii2 extension) и они дают возможность организовывать переиспользуемый код и подключать его к проекту композером. Но мало-мальски сложное расширение нуждается в конфигурации. И тут фреймворк не помогает. У создателя расширения есть два варианта:
 
 - описать желаемый конфиг в README и предложить програмеру его скопипастить;
-- сделать [bootstrap] в своём расширении, который будет закидывать желаемый конфиг в конфиг приложения.
-
-[bootstrap]: http://www.yiiframework.com/doc-2.0/guide-structure-extensions.html#bootstrapping-classes
+- сделать [bootstrap](http://www.yiiframework.com/doc-2.0/guide-structure-extensions.html#bootstrapping-classes) в своём расширении, который будет закидывать желаемый конфиг в конфиг приложения.
 
 Первый вариант я уже покритиковал в самом начале, возьмусь за второй:
 
@@ -189,18 +187,18 @@ return [
 
 Одно из *"базовых приложений"*, которые мы развиваем &mdash; **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; это основа для типичного сайта, как `yii2-app-basic,` только сделанная как плагин, что даёт все преимущества переиспользования кода над копипастингом:
 
-- Вы можете основать свой проект на HiSite и получать его обновления;
-- Вы можете со временем заменить базовый проект на другой, совместимый, но, например, с большим функционалом.
+- можно основать свой проект на HiSite и получать его обновления;
+- можно со временем заменить базовый проект на другой, совместимый, но, например, с большим функционалом.
 
 Шаблон *"корня"* для проекта на HiSite здесь &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
 
 Иерархия зависимостей выглядит так:
 
-- *"корень"* &mdash; [hiqdev/hisite-template];
-    - плагин темы &mdash; [hiqdev/yii2-theme-flat];
-        - библиотека тем &mdash; [hiqdev/yii2-thememanager];
-    - базовый проект &mdash; [hiqdev/hisite];
-        - фреймворк &mdash; [yiisoft/yii2].
+- *"корень"* &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template);
+    - плагин темы &mdash; [hiqdev/yii2-theme-flat](https://github.com/hiqdev/yii2-theme-flat);
+        - библиотека тем &mdash; [hiqdev/yii2-thememanager](https://github.com/hiqdev/yii2-thememanager);
+    - базовый проект &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
+        - фреймворк &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
 
 В [README](https://github.com/hiqdev/hisite-template) корня описано как поднять проект у себя &mdash; `composer create-project` плюс настройка конфигурации.  Благодаря реализации тем как плагинов и библиотеке тем [hiqdev/yii2-thememanager] в `composer.json` корня можно поменять `yii2-theme-flat` на `yii2-theme-original` запустить `composer update` и сайт переоденется в новую тему. Вот так просто.
 
@@ -208,20 +206,11 @@ return [
 
 Иерархия зависимостей выглядит так:
 
-- *"корень"* &mdash; [hiqdev/asset-packagist.dev];
-    - плагин темы &mdash; [hiqdev/yii2-theme-original];
-    - проект &mdash; [hiqdev/asset-packagist];
-        - базовый проект &mdash; [hiqdev/hisite];
-            - фреймворк &mdash; [yiisoft/yii2].
-
-[hiqdev/asset-packagist.dev]:   https://github.com/hiqdev/asset-packagist.dev
-[hiqdev/yii2-theme-flat]:       https://github.com/hiqdev/yii2-theme-flat
-[hiqdev/yii2-theme-original]:   https://github.com/hiqdev/yii2-theme-original
-[hiqdev/yii2-thememanager]:     https://github.com/hiqdev/yii2-thememanager
-[hiqdev/asset-packagist]:       https://github.com/hiqdev/asset-packagist
-[hiqdev/hisite]:                https://github.com/hiqdev/hisite
-[hiqdev/hisite-template]:       https://github.com/hiqdev/hisite-template
-[yiisoft/yii2]:                 https://github.com/yiisoft/yii2
+- *"корень"* &mdash; [hiqdev/asset-packagist.dev](https://github.com/hiqdev/asset-packagist.dev);
+    - плагин темы &mdash; [hiqdev/yii2-theme-original](https://github.com/hiqdev/yii2-theme-original);
+    - проект &mdash; [hiqdev/asset-packagist](https://github.com/hiqdev/asset-packagist);
+        - базовый проект &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
+            - фреймворк &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
 
 Подробности как поднять проект у себя описаны в [README](https://github.com/hiqdev/asset-packagist.dev) корня.
 
@@ -233,9 +222,7 @@ return [
 - создаём проект как иерархию плагинов;
 - отделяем переиспользуемую часть проекта от конкретной инсталяции с помощью "корня".
 
-Мы используем описанный подход около года, впечатления самые положительные &mdash; волосы стали мягкие и шелковистые: разделяем и властвуем, клепаем плагины легко и непринуждённо, [100+] и останавливаться не собираемся, нужен новый функционал &mdash; делаем новый плагин.
-
-[100+]: https://hiqdev.com/packages
+Мы используем описанный подход около года, впечатления самые положительные &mdash; волосы стали мягкие и шелковистые: разделяем и властвуем, клепаем плагины легко и непринуждённо, [100+](https://hiqdev.com/packages) и останавливаться не собираемся, нужен новый функционал &mdash; делаем новый плагин.
 
 Подход, в той или иной мере, применим для других фреймворков и даже языков...  Ой, Остапа понесло... На сегодня хватит!  Спасибо за внимание.  Продолжение следует.
 
