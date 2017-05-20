@@ -4,7 +4,7 @@ title: Альтернативная организация проекта на Y
 
 # Альтернативная организация проекта на Yii2
 
-<img style="float:right" src="http://cdn.hiqdev.com/hiqdev/3dpuzzle.jpg"/>
+<img src="http://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
 
 Как предлагается создавать проект на Yii2 сейчас? Выбираете шаблон проекта: basic или advanced, форкаете себе, потом пишете и комитите туда. Бам! Случилась копипаста, ваш проект и шаблон теперь развиваются отдельно. Вам не получить исправлений, внесенных, в шаблон, а в `yii2-app-basic`, естественно, не возьмут доработок специфических для вашей задачи. Это проблема номер один.
 
@@ -99,7 +99,7 @@ $config = require hiqdev\composer\config\Builder::path('web');
 
 Очень простой пример плагина [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin).  Но он наглядно демонстрирует возможности этого подхода. Чтобы получить счётчик Яндекс.Метрики достаточно зареквайрить плагин и задать параметр `yandexMetrika.id`.  Всё! Не надо ничего копипастить в свой конфиг, не надо добавлять виджет в layout &mdash; не надо касаться рабочего кода.  Плагин &mdash; это цельный кусок функционала, который позволяет расширять систему не внося изменений в существующий код.
 
-<img style="float:right" src="http://cdn.hiqdev.com/hiqdev/shtrih.jpg"/>
+<img src="http://cdn.hiqdev.com/hiqdev/shtrih.png" align="right"/>
 
 &mdash; Что? Можно написать новую фичу, не поломав старые?!<br>
 &mdash; Да.<br>
@@ -228,7 +228,14 @@ return [
 
 ## P.S.
 
-На написание таких объёмов текста сподвигла [серия](http://fabien.potencier.org/symfony4-compose-applications.html) [статей](http://fabien.potencier.org/symfony4-monolith-vs-micro.html) [Фабьена Потенсьера](http://fabien.potencier.org/) (автора Symfony) про грядущий Symfony 4.  Стыдно сказать, не до конца понял как именно всё работает, но уловил идеи и цели, система бандлов будет доработана в сторону их автоматической конфигурации, для получения "нового способа создавать и развивать ваши приложения с лёгкостью" (new way to create and evolve your applications with ease).  В общем, не один я считаю поднятые вопросы очень важными для фреймворка.
+На написание таких объёмов текста сподвигла [серия](http://fabien.potencier.org/symfony4-compose-applications.html) [статей](http://fabien.potencier.org/symfony4-monolith-vs-micro.html) [Фабьена Потенсьера](http://fabien.potencier.org/) (автора Symfony) про грядущий Symfony 4.  Стыдно сказать, не до конца понял как именно всё работает, но уловил идеи и цели: система бандлов будет доработана в сторону их автоматической конфигурации, что в итоге даёт:
+
+> new way to create and evolve your applications with ease<br>
+> новый способ создавать и развивать ваши приложения с лёгкостью
+
+(c) Fabien Potencier
+
+В общем, не один я считаю поднятые вопросы очень важными для фреймворка.
 
 Я люблю Yii. Давайте сделаем в Yii лучше!
 
