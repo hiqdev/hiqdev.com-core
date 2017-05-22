@@ -408,8 +408,8 @@ omnipay-interkassa:
     name: omnipay-interkassa
     description: 'InterKassa driver for the Omnipay PHP payment processing library'
     forks: 3
-    stars: 7
-    watchers: 7
+    stars: 8
+    watchers: 8
     issues: 2
 omnipay-okpay:
     name: omnipay-okpay
@@ -436,8 +436,8 @@ omnipay-robokassa:
     name: omnipay-robokassa
     description: 'RoboKassa plugin for PHP merchant library'
     forks: 2
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 1
 omnipay-yandexmoney:
     name: omnipay-yandexmoney
