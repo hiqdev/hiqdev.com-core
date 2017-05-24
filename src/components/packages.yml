@@ -2,8 +2,8 @@ hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
     forks: 3
-    stars: 16
-    watchers: 16
+    stars: 17
+    watchers: 17
     issues: 0
 yii2-higrid:
     name: yii2-higrid
@@ -170,8 +170,8 @@ yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
     forks: 6
-    stars: 23
-    watchers: 23
+    stars: 24
+    watchers: 24
     issues: 0
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -366,8 +366,8 @@ yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 0
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 yii2-cart:
     name: yii2-cart
@@ -413,10 +413,10 @@ omnipay-interkassa:
     issues: 2
 omnipay-okpay:
     name: omnipay-okpay
-    description: 'OKPAY plugin for PHP merchant library'
+    description: 'OKPAY driver for Omnipay PHP payment library'
     forks: 1
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 omnipay-paxum:
     name: omnipay-paxum
@@ -443,8 +443,8 @@ omnipay-yandexmoney:
     name: omnipay-yandexmoney
     description: 'Yandex.Money plugin for PHP merchant library'
     forks: 1
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 hipanel-module-dns:
     name: hipanel-module-dns
@@ -477,9 +477,9 @@ hidev-php:
 php-collection:
     name: php-collection
     description: 'Collection library for PHP'
-    forks: 1
-    stars: 2
-    watchers: 2
+    forks: 2
+    stars: 3
+    watchers: 3
     issues: 0
 hidev-phpunit:
     name: hidev-phpunit
@@ -499,8 +499,8 @@ payment-icons:
     name: payment-icons
     description: 'Set of icons for payment systems and methods'
     forks: 4
-    stars: 9
-    watchers: 9
+    stars: 10
+    watchers: 10
     issues: 0
 hiqdev.github.io:
     name: hiqdev.github.io
@@ -513,8 +513,8 @@ minii-core:
     name: minii-core
     description: 'minii Core'
     forks: 0
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 minii-console:
     name: minii-console
@@ -669,7 +669,7 @@ asset-packagist:
     forks: 9
     stars: 96
     watchers: 96
-    issues: 5
+    issues: 6
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -701,9 +701,9 @@ hidev-nginx:
 composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
-    forks: 2
-    stars: 5
-    watchers: 5
+    forks: 3
+    stars: 10
+    watchers: 10
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -1073,8 +1073,8 @@ yii2-yandex-metrika:
     name: yii2-yandex-metrika
     description: 'Yandex.Metrika counter for Yii2 applications'
     forks: 0
-    stars: 3
-    watchers: 3
+    stars: 5
+    watchers: 5
     issues: 0
 docker-letsencrypt-nginx-proxy-companion:
     name: docker-letsencrypt-nginx-proxy-companion
