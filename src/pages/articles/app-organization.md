@@ -39,10 +39,11 @@ After several iterations and tried different variants I've come to a radical sol
 
 Composer-config-plugin works rather simply:
 
-- обходит все зависимости проекта, находит в них описание конфигов плагинов в `extra` секции их `composer.json`;
-- мержит конфиги в соответствии с описанием и иерархией пакетов и записывает результирующие конфиг файлы.
+- it scans all the project's dependecies for `config-plugin` extra option in their `composer.json`;
+- it merges all the configs according to the description and packages' hierarchy;
+- it writes resulting config as PHP files.
 
-В `composer.json` расширения (которое превращается в плагин) добавляются такие строчки:
+To convert an extension to plugin list desired config files in `composer.json` like this:
 
 ```json
     "extra": {
@@ -52,7 +53,7 @@ Composer-config-plugin works rather simply:
     }
 ```
 
-Это значит замержить в конфиг под названием `web` содержимое файла `src/config/web.php`. А в файле этом будет просто то, что плагин хочет добавить в конфиг приложения, например, конфиг интернационализации:
+It tells composer-config-plugin to merge `src/config/web.php` contents into `web` config. And this file should contain just what plugin needs to be added into application config, e.g. internationalization config:
 
 ```php
 <?php
@@ -71,20 +72,19 @@ return [
 ];
 ```
 
-Конфигов может быть сколько угодно, включая специальные: `dotenv`, `defines` и `params`. Конфиги обрабатываются в таком порядке:
+There can be any number of configs including special ones: `dotenv`, `defines` и `params`. Configs are processed in the following order:
 
-- переменные окружения &mdash; `dotenv`;
-- константы &mdash; `defines`;
-- параметры &mdash; `params`;
-- все остальные конфиги, например: `common`, `console`, `web`, ...
+- environment variables &mdash; `dotenv`;
+- constants &mdash; `defines`;
+- parameters &mdash; `params`;
+- all other configs, e.g.: `common`, `console`, `web`, ...
 
-Таким образом, чтобы значения полученные на предыдущих шагах могли быть использованы на всех ппоследующих.
+In the way that values obtained in the former steps could be used for all the latter ones.
+I.e. environment variables can be used to set constants. Constants and environment variables can be used to set parameters. And the whole set of parameters, constants and environment variables can be used in configs.
 
-То есть:  переменные окружения могут использоваться для назначения констант.  Константы и переменные окружения могут использоваться для назначения параметров.  И весь набор: параметры, константы и переменные окружения могут использоваться в конфигах.
+And generally we're done! Composer-config-plugin just merges all the config arrays with function analogous to `yii\helpers\ArrayHelper::merge`. Configs are merged in the right order of course &mdash; considering requirements hierarchy &mdash; in the way that every package to be merged after all of its dependencies and could override its values. I.e. upmost package has full control over the config and controls all the values and plugins only provide default values. On the whole the process repeats config assembling process in `yii2-app-advanced` just on the larger scale.
 
-В общем-то всё! `composer-config-plugin` просто мержит все массивы конфигов аналогом функции `yii\base\helpers\ArrayHelper::merge`.  Естественно, конфиги мержатся в правильном порядке &mdash; с учётом кто кого реквайрит &mdash; таким образом, чтобы конфиг каждого пакета мержился после своих зависимостей и мог перезаписать значения заданные ими.  Т.е. самый верхний пакет имеет полный контроль над конфигом и управляет всеми значениями, а плагины только задают дефолтные значения.  В целом, процесс повторяет сборку конфигов в `yii2-app-advanced`, только более масштабно.
-
-Изпользовать в приложении тривиально &mdash; добавляем в `web/index.php`:
+To use assembled configs in application simply add these lines to `web/index.php`:
 
 ```php
 $config = require hiqdev\composer\config\Builder::path('web');
@@ -92,9 +92,9 @@ $config = require hiqdev\composer\config\Builder::path('web');
 (new yii\web\Application($config))->run();
 ```
 
-Найти больше информации и примеров, а также задать вопросы можно на гитхабе: [hiqdev/composer-config-plugin](https://github.com/hiqdev/composer-config-plugin).
+You can find more information and examples as well as ask your questions at GitHub: [hiqdev/composer-config-plugin](https://github.com/hiqdev/composer-config-plugin).
 
-Очень простой пример плагина [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin).  Но он наглядно демонстрирует возможности этого подхода. Чтобы получить счётчик Яндекс.Метрики достаточно зареквайрить плагин и задать параметр `yandexMetrika.id`.  Всё! Не надо ничего копипастить в свой конфиг, не надо добавлять виджет в layout &mdash; не надо касаться рабочего кода.  Плагин &mdash; это цельный кусок функционала, который позволяет расширять систему не внося изменений в существующий код.
+Here is an example of a simple plugin [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin). It shows advantages of this approach. To get Yandex.Metrika counter on your site it is only necessary to require the plugin and provide `yandexMetrika.id` parameter. And that's it! No need to copy-paste anything to your config, no need to add widget into layout &mdash; no need to touch your working code. Plugin is an entire piece of functionality which allows to extend system without making chages to existing code.
 
 <img src="http://cdn.hiqdev.com/hiqdev/shtrih.png" align="right"/>
 
@@ -103,6 +103,6 @@ $config = require hiqdev\composer\config\Builder::path('web');
 &mdash; Awesome! No need to write tests anymore?<br>
 &mdash; No... That will not pass...<br>
 
-Итого, `composer-config-plugin` даёт систему плагинов и решает вопрос повторного использования так сказать "малых архитектурных форм". Пора вернуться к главному &mdash; организации больших переиспользуемых проектов. Повторю и уточню предлагаемое решение: создавать проект как систему плагинов, организованную в правильную иерархию.
+In total, `composer-config-plugin` provides plugin system and enables reuse of smaller pieces of software. It's time to return to the main question &mdash; how to organize big reusable projects. Once again proposed solution: create project as a system of plugins organized in the proper hierarchy.
 
 ## Packages hiararchy
