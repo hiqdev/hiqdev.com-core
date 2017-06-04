@@ -16,8 +16,8 @@ yii2-thememanager:
     name: yii2-thememanager
     description: 'Theme Manager for Yii 2'
     forks: 1
-    stars: 7
-    watchers: 7
+    stars: 8
+    watchers: 8
     issues: 2
 hipanel-module-client:
     name: hipanel-module-client
@@ -169,10 +169,10 @@ yii2-asset-lightbox2:
 yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
-    forks: 6
+    forks: 7
     stars: 24
     watchers: 24
-    issues: 0
+    issues: 3
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
     description: 'Yii2 asset for bower adminlte'
@@ -667,9 +667,9 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 9
-    stars: 96
-    watchers: 96
-    issues: 6
+    stars: 99
+    watchers: 99
+    issues: 7
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -702,8 +702,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 10
-    watchers: 10
+    stars: 15
+    watchers: 15
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -744,8 +744,8 @@ hisite:
     name: hisite
     description: 'Hisite Yii2 base project'
     forks: 1
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 0
 yii2-theme-flat:
     name: yii2-theme-flat
@@ -800,8 +800,8 @@ hisite-template:
     name: hisite-template
     description: 'HiSite Project Template'
     forks: 0
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 yii2-theme-agency:
     name: yii2-theme-agency
@@ -813,9 +813,9 @@ yii2-theme-agency:
 yii2-module-pages:
     name: yii2-module-pages
     description: 'Yii2 Pages Module'
-    forks: 0
-    stars: 2
-    watchers: 2
+    forks: 1
+    stars: 3
+    watchers: 3
     issues: 0
 yii2-reminder:
     name: yii2-reminder
@@ -1073,8 +1073,8 @@ yii2-yandex-metrika:
     name: yii2-yandex-metrika
     description: 'Yandex.Metrika counter for Yii2 applications'
     forks: 0
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 docker-letsencrypt-nginx-proxy-companion:
     name: docker-letsencrypt-nginx-proxy-companion
@@ -1097,3 +1097,10 @@ asset-packagist.dev:
     stars: 2
     watchers: 2
     issues: 0
+yii2-hiart-librariesio:
+    name: yii2-hiart-librariesio
+    description: 'Libraries.io API implementation for yii2-hiart'
+    forks: 1
+    stars: 2
+    watchers: 2
+    issues: 1
