@@ -107,7 +107,7 @@ In total, `composer-config-plugin` provides plugin system and enables reuse of s
 
 ## Packages hiararchy
 
-Самый простой вариант организации проекта такой &mdash; наш проект реквайрит композером фреймворк и *сторонние* расширения (*"сторонними"* я называю не являющиеся частью нашего проекта), т.е. получается такая простая иерархия пакетов (репозиториев):
+Самый простой вариант организации проекта такой &mdash; наш проект реквайрит композером framework и *сторонние* расширения (*"сторонними"* я называю не являющиеся частью нашего проекта), т.е. получается такая простая иерархия пакетов (репозиториев):
 
 - project that has grown up from application template;
     - extensions;
@@ -116,7 +116,7 @@ In total, `composer-config-plugin` provides plugin system and enables reuse of s
 Пропускаю все промежуточные варианты организации, проверенные и отброшенные по итогам практической эксплуатации, и перехожу сразу к оптимальной иерархии, которой мы придерживаемся сейчас:
 
 - *"root"*
-    - plugins specific for these variant of project;
+    - plugins that are specific for this variant of project;
     - main project;
         - plugins of project;
         - *third-party* plugins;
@@ -124,7 +124,7 @@ In total, `composer-config-plugin` provides plugin system and enables reuse of s
             - plugins needed for basic project;
             - framework.
 
-Иерархия отображает кто кого реквайрит, т.е. корень реквайрит основной проект, тот в свою очередь &mdash; базовый проект, а базовый проект &mdash; фреймворк.
+Иерархия отображает кто кого реквайрит, т.е. корень реквайрит основной проект, тот в свою очередь &mdash; базовый проект, а базовый проект &mdash; framework.
 
 &mdash; Воу-воу! Полегче! Что за "корень" и "базовый проект"?
 
@@ -134,7 +134,7 @@ In total, `composer-config-plugin` provides plugin system and enables reuse of s
 
 *"Базовый проект"* это то, во что превращается `yii2-app-basic` в этой схеме.  Т.е. переиспользуемая основа приложения реализующая некоторый базовый функционал и оформленная в виде плагина.  Эта запчасть не обязательна, но очень полезна. Вам не надо её делать самому, она может разрабатываться сообществом как сейчас разрабатывается `yii2-app-basic`.  Мы разрабатываем HiSite, об этом ниже.
 
-Таким образом пакеты образуют иерархию композиции &mdash; более внешний пакет использует внутренний, в основном переиспользуя его поведение, но переопределяя свою специфику: *"корень"* использует и уточняет основной проект, основной проект &mdash; базовый, базовый проект &mdash; фреймворк.
+Таким образом пакеты образуют иерархию композиции &mdash; более внешний пакет использует внутренний, в основном переиспользуя его поведение, но переопределяя свою специфику: *"корень"* использует и уточняет основной проект, основной проект &mdash; базовый, базовый проект &mdash; framework.
 
 Необходимо уточнить, что речь идёт только об организации кода, т.е. про разделение кода по пакетам/плагинам.  Архитектурное деление проекта на слои, естественно, независимо от деления на пакеты, но они могут дополнять друг друга. Например, доменная логика может быть вынесена в отдельный пакет для переиспользования между разными проектами.
 
@@ -142,17 +142,17 @@ In total, `composer-config-plugin` provides plugin system and enables reuse of s
 
 Например, Вы делаете на потоке сайты визитки. Базовый функционал везде одинаковый, но есть фичи за дополнительну плату, например каталог и, естественно, сайты отличаются внешним видом (темой) и кучей параметров.  Это можно организовать в такую иерархию пакетов:
 
-- `business-card-no42.com` &mdash; *"корень"*;
-    - `myvendor/yii2-theme-cool` &mdash; плагин, специфичный для данного сайта;
-    - `myvendor/business-card-catalog` &mdash; плагин проекта, подключенный на данном сайте;
-    - `myvendor/business-card` &mdash; основной проект;
-        - `myvendor/business-card-contacts` &mdash; плагин проекта, используемый на всех сайтах;
-        - `othervendor/yii2-cool-stuff` &mdash; *сторонний* плагин;
-        - `hiqdev/hisite` &mdash; базовый проект;
-            - `yiisoft/yii2-swiftmail` &mdash; плагин, необходимый для работы базового проекта;
-            - `yiisoft/yii2` &mdash; фреймворк.
+- `business-card-no42.com` &mdash; *"root"*;
+    - `myvendor/yii2-theme-cool` &mdash; this site specific plugin;
+    - `myvendor/business-card-catalog` &mdash; project plugin, that is enabled on this site;
+    - `myvendor/business-card` &mdash; main project;
+        - `myvendor/business-card-contacts` &mdash; project plugin used for on all sites;;
+        - `othervendor/yii2-cool-stuff` &mdash; *third party* plugin;
+        - `hiqdev/hisite` &mdash; basic project;
+            - `yiisoft/yii2-swiftmail` &mdash; plugin, необходимый для работы базового проекта;
+            - `yiisoft/yii2` &mdash; framework.
 
-Надеюсь, не открыл Америки, и все более менее так и делят свои проекты на части.  Только, наверно, без *"корня"*. Попытаюсь донести его полезность.
+Hope not said anything very new for you and everybody split their projects more or less in similar way. But without a *"root"*. I'll try to explain its usefullness.
 
 ## *"Root"*
 
@@ -172,17 +172,17 @@ return [
 
 Учитывая "легкоусвояемость" `.env` лучшими претендентами на вынос в `.env` являются параметры используемые другими (не PHP) технологиями.
 
-Конечно, можно и нужно класть в *"корень"* некоторый конфиг и даже код, специфичный сугубо для данной инсталяции, не подлежащий копипастингу.  Как только вижу копипасту, страшно её не люблю &mdash; уношу в какой-нибудь плагин.
+Конечно, можно и нужно класть в *"корень"* некоторый конфиг и даже код, специфичный сугубо для данной инсталяции, не подлежащий копипастингу.  Как только вижу копипасту, страшно её не люблю &mdash; уношу в какой-нибудь plugin.
 
 Остальные файлы и каталоги необходимые для функционирования приложения (`web/assets/`, `web/index.php`) стандартны, их нужно создавать и назначать права "сборщиком" (build tool, task runner) мы велосипедим свой, но это уже совсем другая история.
 
 По сути, *"корень"* &mdash; это `params-local.php` на стероидах.  В нём концентрируется отличие конкретной инсталяции проекта от общего переиспользуемого кода. Мы создаём репозиторий под корень и храним его на нашем приватном git-сервере, поэтому комитим туда даже секреты (но это холиварная тема).  Все остальные пакеты &mdash; в публичном доступе на GitHub.  Мы комитим `composer.lock` в корне, поэтому перенос проекта на другой сервер делается просто `composer create-project` (я знаю &mdash; Docker получше будет, но об этом в следующий раз).
 
-&mdash; А можно ещё конкретнее? Покажите мне код наконец!
+&mdash; Can you be more specific? Show me the code finally!
 
 ## HiSite and Asset Packagist
 
-Одно из *"базовых приложений"*, которые мы развиваем &mdash; **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; это основа для типичного сайта, как `yii2-app-basic,` только сделанная как плагин, что даёт все преимущества переиспользования кода над копипастингом:
+Одно из *"базовых приложений"*, которые мы развиваем &mdash; **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; это основа для типичного сайта, как `yii2-app-basic,` только сделанная как plugin, что даёт все преимущества переиспользования кода над копипастингом:
 
 - можно основать свой проект на HiSite и получать его обновления;
 - можно со временем заменить базовый проект на другой, совместимый, но, например, с большим функционалом.
@@ -191,11 +191,11 @@ return [
 
 Иерархия зависимостей выглядит так:
 
-- *"корень"* &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template);
-    - плагин темы &mdash; [hiqdev/yii2-theme-flat](https://github.com/hiqdev/yii2-theme-flat);
-        - библиотека тем &mdash; [hiqdev/yii2-thememanager](https://github.com/hiqdev/yii2-thememanager);
-    - базовый проект &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
-        - фреймворк &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
+- *"root"* &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template);
+    - theme plugin &mdash; [hiqdev/yii2-theme-flat](https://github.com/hiqdev/yii2-theme-flat);
+        - theming library &mdash; [hiqdev/yii2-thememanager](https://github.com/hiqdev/yii2-thememanager);
+    - basic project &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
+        - framework &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
 
 В [README](https://github.com/hiqdev/hisite-template) корня описано как поднять проект у себя &mdash; `composer create-project` плюс настройка конфигурации.  Благодаря реализации тем как плагинов и библиотеке тем [hiqdev/yii2-thememanager] в `composer.json` корня можно поменять `yii2-theme-flat` на `yii2-theme-original` запустить `composer update` и сайт переоденется в новую тему. Вот так просто.
 
@@ -219,7 +219,7 @@ You can find more information on how to deploy the project on your site in the [
 - создаём проект как иерархию плагинов;
 - отделяем переиспользуемую часть проекта от конкретной инсталяции с помощью "корня".
 
-Мы используем описанный подход около года, впечатления самые положительные &mdash; волосы стали мягкие и шелковистые: разделяем и властвуем, клепаем плагины легко и непринуждённо, [100+](https://hiqdev.com/packages) и останавливаться не собираемся, нужен новый функционал &mdash; делаем новый плагин.
+Мы используем описанный подход около года, впечатления самые положительные &mdash; волосы стали мягкие и шелковистые: разделяем и властвуем, клепаем плагины легко и непринуждённо, [100+](https://hiqdev.com/packages) и останавливаться не собираемся, нужен новый функционал &mdash; делаем новый plugin.
 
 Подход, в той или иной мере, применим для других фреймворков и даже языков...  Ой, Остапа понесло... На сегодня хватит!  Спасибо за внимание.  Продолжение следует.
 
