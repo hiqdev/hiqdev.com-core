@@ -53,7 +53,7 @@ hipanel-module-hosting:
     forks: 2
     stars: 2
     watchers: 2
-    issues: 0
+    issues: 1
 yii2-combo:
     name: yii2-combo
     description: 'Combo Widget for Yii 2'
@@ -211,7 +211,7 @@ yii2-theme-adminlte:
 yii2-bootstrap-switch:
     name: yii2-bootstrap-switch
     description: 'Yii2 wrap for bootstrap switch'
-    forks: 1
+    forks: 2
     stars: 1
     watchers: 1
     issues: 0
@@ -667,8 +667,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 9
-    stars: 99
-    watchers: 99
+    stars: 101
+    watchers: 101
     issues: 7
 hipanel-rbac:
     name: hipanel-rbac
@@ -975,8 +975,8 @@ yii2-hiart-github:
     name: yii2-hiart-github
     description: 'GitHub API implementation for yii2-hiart'
     forks: 0
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 0
 yii2-hiart-httpclient:
     name: yii2-hiart-httpclient
@@ -1023,9 +1023,9 @@ php-units:
 omnipay-freekassa:
     name: omnipay-freekassa
     description: 'FreeKassa driver for Omnipay PHP payment library'
-    forks: 0
-    stars: 2
-    watchers: 2
+    forks: 1
+    stars: 3
+    watchers: 3
     issues: 0
 hidev-webapp:
     name: hidev-webapp
