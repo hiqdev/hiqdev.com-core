@@ -107,13 +107,13 @@ In total, `composer-config-plugin` provides plugin system and enables reuse of s
 
 ## Packages hiararchy
 
-Самый простой вариант организации проекта такой &mdash; наш проект реквайрит композером framework и *сторонние* расширения (*"сторонними"* я называю не являющиеся частью нашего проекта), т.е. получается такая простая иерархия пакетов (репозиториев):
+Simpliest project structure is the following &mdash; our project requires framework and third party extensions with composer (I call *third party* those extensions that are not part of our project). So we have this simple packages (repositories) hierarchy:
 
-- project that has grown up from application template;
+- project that has grown up from an application template;
     - extensions;
     - framework.
 
-Пропускаю все промежуточные варианты организации, проверенные и отброшенные по итогам практической эксплуатации, и перехожу сразу к оптимальной иерархии, которой мы придерживаемся сейчас:
+I will not burden you with all the different variants of hierarchy that we've tried and rejected after practical operations. And here is the optimal hierarchy we've finally stick to:
 
 - *"root"*
     - plugins that are specific for this variant of project;
@@ -124,11 +124,11 @@ In total, `composer-config-plugin` provides plugin system and enables reuse of s
             - plugins needed for basic project;
             - framework.
 
-Иерархия отображает кто кого реквайрит, т.е. корень реквайрит основной проект, тот в свою очередь &mdash; базовый проект, а базовый проект &mdash; framework.
+Hierarchy displays who requires whom, i.e. *"root"* requires main project, which in turn requires basic project, and basic project requires framework.
 
-&mdash; Воу-воу! Полегче! Что за "корень" и "базовый проект"?
+&mdash; Wow-wow! Easy! What's a "root" and "basic project"?
 
-Извиняюсь, всё придумал сам, терминологии подходящей не нашёл, пришлось велосипедить, буду признателен за лучшие варианты.
+Sorry, I've come up to all this myself and didn't find suitable terminology had to invent. I'll be grateful for better variants.
 
 *"Корнем"* я называю самый внешний пакет, содержащий код, конфиг и другие файлы специфические для данного конкретного варианта реализации вашего проекта &mdash; то, чем этот вариант отличается от основного проекта.  В идеале содержит буквально несколько файлов, об этом ниже.
 
@@ -221,7 +221,7 @@ You can find more information on how to deploy the project on your site in the [
 
 Мы используем описанный подход около года, впечатления самые положительные &mdash; волосы стали мягкие и шелковистые: разделяем и властвуем, клепаем плагины легко и непринуждённо, [100+](https://hiqdev.com/packages) и останавливаться не собираемся, нужен новый функционал &mdash; делаем новый plugin.
 
-Подход, в той или иной мере, применим для других фреймворков и даже языков...  Ой, Остапа понесло... На сегодня хватит!  Спасибо за внимание.  Продолжение следует.
+This approach is more or less suitable for other frameworks and even languages... Oops, I'm going too fast... It's enough for today. Thank you for your attention. To be continued.
 
 ## P.S.
 
@@ -231,7 +231,7 @@ You can find more information on how to deploy the project on your site in the [
 
 (c) Fabien Potencier
 
-So, I'm not alone to evaluate mentioned questions very important for a framework.
+So, I'm not alone to consider mentioned questions very important for a framework.
 
 Я люблю Yii. Давайте сделаем в Yii лучше!
 
