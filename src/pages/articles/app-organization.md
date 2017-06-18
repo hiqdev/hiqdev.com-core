@@ -128,11 +128,11 @@ Hierarchy displays who requires whom, i.e. *"root"* requires main project, which
 
 &mdash; Wow-wow! Easy! What's a "root" and "basic project"?
 
-Sorry, I've come up to all this myself and didn't find suitable terminology had to invent. I'll be grateful for better variants.
+Sorry, I've come up to all this myself and didn't find suitable terminology so I had to invent. I'll be grateful for better variants.
 
-*"Корнем"* я называю самый внешний пакет, содержащий код, конфиг и другие файлы специфические для данного конкретного варианта реализации вашего проекта &mdash; то, чем этот вариант отличается от основного проекта.  В идеале содержит буквально несколько файлов, об этом ниже.
+I call *"root"* the most external package that containts code, config and other files specifical for this particular installation of your project &mdash; things this installation is different from main project. Ideally it contains just a few files, more about it below.
 
-*"Базовый проект"* это то, во что превращается `yii2-app-basic` в этой схеме.  Т.е. переиспользуемая основа приложения реализующая некоторый базовый функционал и оформленная в виде плагина.  Эта запчасть не обязательна, но очень полезна. Вам не надо её делать самому, она может разрабатываться сообществом как сейчас разрабатывается `yii2-app-basic`.  Мы разрабатываем HiSite, об этом ниже.
+*"Basic project"* is what `yii2-app-basic` becomes to when using this approach. I.e. it is reusable application basis implementing some basic functions and arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developped by a community like `yii2-app-basic`. We are developing HiSite, more about it below.
 
 Таким образом пакеты образуют иерархию композиции &mdash; более внешний пакет использует внутренний, в основном переиспользуя его поведение, но переопределяя свою специфику: *"корень"* использует и уточняет основной проект, основной проект &mdash; базовый, базовый проект &mdash; framework.
 
