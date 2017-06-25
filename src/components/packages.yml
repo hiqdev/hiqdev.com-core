@@ -18,7 +18,7 @@ yii2-thememanager:
     forks: 1
     stars: 8
     watchers: 8
-    issues: 2
+    issues: 1
 hipanel-module-client:
     name: hipanel-module-client
     description: 'Client Plugin for HiPanel'
@@ -373,8 +373,8 @@ yii2-cart:
     name: yii2-cart
     description: 'Cart module for Yii2'
     forks: 2
-    stars: 5
-    watchers: 5
+    stars: 4
+    watchers: 4
     issues: 0
 omnipay-paypal:
     name: omnipay-paypal
@@ -666,9 +666,9 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 9
-    stars: 101
-    watchers: 101
+    forks: 10
+    stars: 105
+    watchers: 105
     issues: 7
 hipanel-rbac:
     name: hipanel-rbac
@@ -1093,7 +1093,7 @@ nginx-proxy:
 asset-packagist.dev:
     name: asset-packagist.dev
     description: 'Root project for Asset Packagist'
-    forks: 1
+    forks: 2
     stars: 2
     watchers: 2
     issues: 0
