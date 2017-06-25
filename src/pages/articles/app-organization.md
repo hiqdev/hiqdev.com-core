@@ -14,6 +14,10 @@ How are these probles related? You solve first with separating reusable code and
 
 These problems become most acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing copypasta and code reuse never hurt anyone.
 
+
+
+
+
 I want to share my solution for outlined problems.
 
 <habracut/>
@@ -138,9 +142,9 @@ I call *"root"* the most external package that containts code, config and other 
 
 Необходимо уточнить, что речь идёт только об организации кода, т.е. про разделение кода по пакетам/плагинам.  Архитектурное деление проекта на слои, естественно, независимо от деления на пакеты, но они могут дополнять друг друга. Например, доменная логика может быть вынесена в отдельный пакет для переиспользования между разными проектами.
 
-&mdash; Аааа! Нужен пример!
+&mdauh; Аааа! Example needed!
 
-Например, Вы делаете на потоке сайты визитки. Базовый функционал везде одинаковый, но есть фичи за дополнительну плату, например каталог и, естественно, сайты отличаются внешним видом (темой) и кучей параметров.  Это можно организовать в такую иерархию пакетов:
+E.g. you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. catalog. And sites differ in design and parameters. You could organize your code in packages forming hierarchy like the following:
 
 - `business-card-no42.com` &mdash; *"root"*;
     - `myvendor/yii2-theme-cool` &mdash; this site specific plugin;
@@ -152,7 +156,9 @@ I call *"root"* the most external package that containts code, config and other 
             - `yiisoft/yii2-swiftmail` &mdash; plugin, необходимый для работы базового проекта;
             - `yiisoft/yii2` &mdash; framework.
 
-Hope not said anything very new for you and everybody split their projects more or less in similar way. But without a *"root"*. I'll try to explain its usefullness.
+Hope I didn't said anything very new for you and everybody split their projects more or less in similar way.
+Or at least everybody understand that it is the way the code should be split into hierarchy of reusable packages. If not you should consider it definetely. Don't put all your code in a single package copied over and over again. DRY!
+But without a *"root"*. I'll try to explain why it is useful.
 
 ## *"Root"*
 
