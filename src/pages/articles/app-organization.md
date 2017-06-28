@@ -156,9 +156,11 @@ E.g. you create a lot of simple business card websites. Basic functions are the 
             - `yiisoft/yii2-swiftmail` &mdash; plugin, необходимый для работы базового проекта;
             - `yiisoft/yii2` &mdash; framework.
 
-Hope I didn't said anything very new for you and everybody split their projects more or less in similar way.
-Or at least everybody understand that it is the way the code should be split into hierarchy of reusable packages. If not you should consider it definetely. Don't put all your code in a single package copied over and over again. DRY!
-But without a *"root"*. I'll try to explain why it is useful.
+Hope I didn't said anything new for you and everybody split their projects more or less in similar way.
+Or at least everybody understand that it is the way the code should be split into hierarchy of reusable packages.
+If not then you should consider it definetely. Don't put all your code in a single package copied over and over again. DRY!
+But I doubt you use "root". Now I'll try to argue its benefits to keep you code DRY.
+It splits reusable code from installation specific code.
 
 ## *"Root"*
 
@@ -168,7 +170,7 @@ But without a *"root"*. I'll try to explain why it is useful.
 - `composer.json` &mdash; тут подключается основной проект и специфичные для него плагины;
 - `src/config/params.php` &mdash; явки, пароли, параметры проекта и используемых плагинов.
 
-Пароли можно положить в `.env` и потом использовать их в `params.php` так:
+You can put passwords in `.env` and then use it in `params.php` like this:
 
 ```php
 return [
@@ -182,7 +184,7 @@ return [
 
 Остальные файлы и каталоги необходимые для функционирования приложения (`web/assets/`, `web/index.php`) стандартны, их нужно создавать и назначать права "сборщиком" (build tool, task runner) мы велосипедим свой, но это уже совсем другая история.
 
-По сути, *"корень"* &mdash; это `params-local.php` на стероидах.  В нём концентрируется отличие конкретной инсталяции проекта от общего переиспользуемого кода. Мы создаём репозиторий под корень и храним его на нашем приватном git-сервере, поэтому комитим туда даже секреты (но это холиварная тема).  Все остальные пакеты &mdash; в публичном доступе на GitHub.  Мы комитим `composer.lock` в корне, поэтому перенос проекта на другой сервер делается просто `composer create-project` (я знаю &mdash; Docker получше будет, но об этом в следующий раз).
+In fact *"root"* is `params-local.php` on steroids. It concentrates difference between certain project installation and generally used code. We create separate repository for "root" and save it to our private git-server, so we can commit there even secrets (but this is holy war topic). All the other packages are publicly available at GitHub. We commit `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
 
 &mdash; Can you be more specific? Show me the code finally!
 
