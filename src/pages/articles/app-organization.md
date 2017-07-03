@@ -164,11 +164,12 @@ It splits reusable code from installation specific code.
 
 ## *"Root"*
 
-В *"корне"* достаточно всего пару файлов, которые подлежат копированию из шаблона и настройке под данную инсталяцию проекта. Можно и желательно обойтись всего тремя файлами:
+It's enough to put in the "root" just a couple of files tuned for this specific installation of project.
+It is possible and preferable to succeed with just three files:
 
-- `.env` &mdash; переменные окружения, например,`ENV=prod`;
-- `composer.json` &mdash; тут подключается основной проект и специфичные для него плагины;
-- `src/config/params.php` &mdash; явки, пароли, параметры проекта и используемых плагинов.
+- `.env` &mdash; environment variables, e.g.`ENV=prod`;
+- `composer.json` &mdash; require main project and it's specific prlugins;
+- `src/config/params.php` &mdash; password and options for project and plugins.
 
 You can put passwords in `.env` and then use it in `params.php` like this:
 
@@ -178,7 +179,7 @@ return [
 ];
 ```
 
-Учитывая "легкоусвояемость" `.env` лучшими претендентами на вынос в `.env` являются параметры используемые другими (не PHP) технологиями.
+Considering `.env` portability parameters used by other (non PHP) technologies are best candidates to be put to `.env`.
 
 Конечно, можно и нужно класть в *"корень"* некоторый конфиг и даже код, специфичный сугубо для данной инсталяции, не подлежащий копипастингу.  Как только вижу копипасту, страшно её не люблю &mdash; уношу в какой-нибудь plugin.
 
@@ -193,6 +194,7 @@ In fact *"root"* is `params-local.php` on steroids. It concentrates difference b
 Одно из *"базовых приложений"*, которые мы развиваем &mdash; **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; это основа для типичного сайта, как `yii2-app-basic,` только сделанная как plugin, что даёт все преимущества переиспользования кода над копипастингом:
 
 - можно основать свой проект на HiSite и получать его обновления;
+- you can
 - можно со временем заменить базовый проект на другой, совместимый, но, например, с большим функционалом.
 
 Шаблон *"корня"* для проекта на HiSite здесь &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
