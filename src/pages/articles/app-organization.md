@@ -136,15 +136,17 @@ Sorry, I've come up to all this myself and didn't find suitable terminology so I
 
 I call *"root"* the most external package that containts code, config and other files specifical for this particular installation of your project &mdash; things this installation is different from main project. Ideally it contains just a few files, more about it below.
 
-*"Basic project"* is what `yii2-app-basic` becomes to when using this approach. I.e. it is reusable application basis implementing some basic functions and arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developped by a community like `yii2-app-basic`. We are developing HiSite, more about it below.
+*"Basic project"* (or basic application) is what `yii2-app-basic` turns into using this approach. I.e. it is reusable application basis implementing some basic functions and arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developped by a community like `yii2-app-basic`. We are developing HiSite, more about it below.
 
-Таким образом пакеты образуют иерархию композиции &mdash; более внешний пакет использует внутренний, в основном переиспользуя его поведение, но переопределяя свою специфику: *"корень"* использует и уточняет основной проект, основной проект &mdash; базовый, базовый проект &mdash; framework.
+Thus packages form hierarchy of composition. An outer package uses inner one mostly reusing its behavior but redifining own specifics; *"root"* uses and specifies main project and so on: main project uses basic project; basic project &mdash; framework.
 
-Необходимо уточнить, что речь идёт только об организации кода, т.е. про разделение кода по пакетам/плагинам.  Архитектурное деление проекта на слои, естественно, независимо от деления на пакеты, но они могут дополнять друг друга. Например, доменная логика может быть вынесена в отдельный пакет для переиспользования между разными проектами.
+It's necessary to clarify that we are talking of code organization only, i.e. how to split code into packages/plugins.
+Architectural division of code into layers is independent of division info packages of course. But the can complement each outher.
+E.g. domain logic can be taken away into separate package to be reused between different projects.
 
-&mdauh; Аааа! Example needed!
+&mdauh; Uh-oh! Example needed!
 
-E.g. you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. catalog. And sites differ in design and parameters. You could organize your code in packages forming hierarchy like the following:
+For example you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. catalog. And sites differ in design and parameters. You could organize your code in packages forming hierarchy this way:
 
 - `business-card-no42.com` &mdash; *"root"*;
     - `myvendor/yii2-theme-cool` &mdash; this site specific plugin;
@@ -185,21 +187,20 @@ Considering `.env` portability parameters used by other (non PHP) technologies a
 
 Остальные файлы и каталоги необходимые для функционирования приложения (`web/assets/`, `web/index.php`) стандартны, их нужно создавать и назначать права "сборщиком" (build tool, task runner) мы велосипедим свой, но это уже совсем другая история.
 
-In fact *"root"* is `params-local.php` on steroids. It concentrates difference between certain project installation and generally used code. We create separate repository for "root" and save it to our private git-server, so we can commit there even secrets (but this is holy war topic). All the other packages are publicly available at GitHub. We commit `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
+In fact *"root"* is `params-local.php` on steroids. It concentrates difference between specific project installation and generally used code. We create separate repository for "root" and save it to our private git-server, so we can commit there even secrets (but this is holy war topic). All the other packages are publicly available at GitHub. We commit `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
 
 &mdash; Can you be more specific? Show me the code finally!
 
 ## HiSite and Asset Packagist
 
-Одно из *"базовых приложений"*, которые мы развиваем &mdash; **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; это основа для типичного сайта, как `yii2-app-basic,` только сделанная как plugin, что даёт все преимущества переиспользования кода над копипастингом:
+One of *"basic application"* we develop is **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; that's a base for a typical website like `yii2-app-basic` but implemented as plugin that gives all advantages of code reused over copy-pasting.
 
-- можно основать свой проект на HiSite и получать его обновления;
-- you can
-- можно со временем заменить базовый проект на другой, совместимый, но, например, с большим функционалом.
+- you can base your project upon HiSite and get it's updates as it evolves;
+- you can change basic project for other one that is compatible but with more functions.
 
-Шаблон *"корня"* для проекта на HiSite здесь &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
+*"Root"* template (or skeleton) is here &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
 
-Иерархия зависимостей выглядит так:
+Hierarchy of dependencies looks like this:
 
 - *"root"* &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template);
     - theme plugin &mdash; [hiqdev/yii2-theme-flat](https://github.com/hiqdev/yii2-theme-flat);
@@ -207,11 +208,12 @@ In fact *"root"* is `params-local.php` on steroids. It concentrates difference b
     - basic project &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
         - framework &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
 
-В [README](https://github.com/hiqdev/hisite-template) корня описано как поднять проект у себя &mdash; `composer create-project` плюс настройка конфигурации.  Благодаря реализации тем как плагинов и библиотеке тем [hiqdev/yii2-thememanager] в `composer.json` корня можно поменять `yii2-theme-flat` на `yii2-theme-original` запустить `composer update` и сайт переоденется в новую тему. Вот так просто.
+In the [README](https://github.com/hiqdev/hisite-template) you can find how to setup the project at your side&mdash; `composer create-project` plus configuration settings. Thanks to themes implemented as plugins and use of the theming library [hiqdev/yii2-thememanager]  you can change `yii2-theme-flat` to `yii2-theme-original` then run `composer update` and the site will change it's clothes to other theme. As simple as change single line in `composer.json`.
 
-Ещё один реальный рабочий проект, подходящий в качестве примера, сделанный, используя этот подход и полностью доступный на GitHub &mdash; [Asset Packagist](https://asset-packagist.org) &mdash; packagist-совместимый репозиторий, который позволяет устанавливать Bower и NPM пакеты как нативные composer пакеты.
+There is another real working project that can be used as example of this approach and it is completely available at GitHub.
+[Asset Packagist](https://asset-packagist.org/) is packagist-compatible repository that enables installation of Bower and NPM packages as native Composer packages.
 
-Hierarchy of ependencies looks like this:
+Hierarchy of dependencies looks like this:
 
 - *"root"* &mdash; [hiqdev/asset-packagist.dev](https://github.com/hiqdev/asset-packagist.dev);
     - theme plugin &mdash; [hiqdev/yii2-theme-original](https://github.com/hiqdev/yii2-theme-original);
@@ -223,11 +225,11 @@ You can find more information on how to deploy the project on your site in the [
 
 ## Let's sum it up
 
-Тема обширная, множество подробностей пришлось опустить.  Надеюсь получилось донести общую идею. Ещё раз, используя введенную терминологию:
+The topic is huge. I had to skip many details. Hope I've managed to bring the general idea. Once again using defined terminology:
 
-- переиспользуем код в виде плагинов, т.е. код вместе с конфигурацией;
-- создаём проект как иерархию плагинов;
-- отделяем переиспользуемую часть проекта от конкретной инсталяции с помощью "корня".
+- reuse code as plugins, i.e. code combined with configuration;
+- create project as hierarchy of plugins;
+- separate reusable part of project from specific installation with use of "root".
 
 Мы используем описанный подход около года, впечатления самые положительные &mdash; волосы стали мягкие и шелковистые: разделяем и властвуем, клепаем плагины легко и непринуждённо, [100+](https://hiqdev.com/packages) и останавливаться не собираемся, нужен новый функционал &mdash; делаем новый plugin.
 
