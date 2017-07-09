@@ -12,11 +12,7 @@ How is it supposed to evolve Yii2 project? Choose suitable extensions and plug t
 
 How are these probles related? You solve first with separating reusable code and turning it into an extension. And you've got second problem &mdash; extension needs config.
 
-These problems become most acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing copypasta and code reuse never hurt anyone.
-
-
-
-
+These problems are most acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing copypasta and code reuse never hurt anyone.
 
 I want to share my solution for outlined problems.
 
@@ -155,7 +151,7 @@ For example you create a lot of simple business card websites. Basic functions a
         - `myvendor/business-card-contacts` &mdash; project plugin used for on all sites;;
         - `othervendor/yii2-cool-stuff` &mdash; *third party* plugin;
         - `hiqdev/hisite` &mdash; basic project;
-            - `yiisoft/yii2-swiftmail` &mdash; plugin, необходимый для работы базового проекта;
+            - `yiisoft/yii2-swiftmail` &mdash; plugin required for basic project to work;
             - `yiisoft/yii2` &mdash; framework.
 
 Hope I didn't said anything new for you and everybody split their projects more or less in similar way.
@@ -183,9 +179,10 @@ return [
 
 Considering `.env` portability parameters used by other (non PHP) technologies are best candidates to be put to `.env`.
 
-Конечно, можно и нужно класть в *"корень"* некоторый конфиг и даже код, специфичный сугубо для данной инсталяции, не подлежащий копипастингу.  Как только вижу копипасту, страшно её не люблю &mdash; уношу в какой-нибудь plugin.
+Of course one may and should put some configuration and even code into the *"root"*. But it has to be very specific for this particular installation and should not be copy pasted between installation.
+As soon as I see a copy-pasted code I catch it and move into some plugin.
 
-Остальные файлы и каталоги необходимые для функционирования приложения (`web/assets/`, `web/index.php`) стандартны, их нужно создавать и назначать права "сборщиком" (build tool, task runner) мы велосипедим свой, но это уже совсем другая история.
+All the other files and directories needed for application to work, like `web/assets/`, `web/index.php` are standard and they should be created and chmoded with build too or task runner. We are reinventing [our own](https://hiqdev.com/packages/hidev) but this is quite another story.
 
 In fact *"root"* is `params-local.php` on steroids. It concentrates difference between specific project installation and generally used code. We create separate repository for "root" and save it to our private git-server, so we can commit there even secrets (but this is holy war topic). All the other packages are publicly available at GitHub. We commit `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
 
@@ -231,7 +228,9 @@ The topic is huge. I had to skip many details. Hope I've managed to bring the ge
 - create project as hierarchy of plugins;
 - separate reusable part of project from specific installation with use of "root".
 
-Мы используем описанный подход около года, впечатления самые положительные &mdash; волосы стали мягкие и шелковистые: разделяем и властвуем, клепаем плагины легко и непринуждённо, [100+](https://hiqdev.com/packages) и останавливаться не собираемся, нужен новый функционал &mdash; делаем новый plugin.
+We've been using described approach about a year already. We've got best impressions &mdash; our hairs became smooth and silky, we divide and conquer, we create plugins simply and easily -
+[100+ already](https://hiqdev.com/packages)
+and we are not going to stop. When we need a new functionality &mdash; we create a new plugin.
 
 This approach is more or less suitable for other frameworks and even languages... Oops, I'm going too fast... It's enough for today. Thank you for your attention. To be continued.
 
