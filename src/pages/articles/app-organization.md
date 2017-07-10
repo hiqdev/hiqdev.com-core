@@ -236,13 +236,14 @@ This approach is more or less suitable for other frameworks and even languages..
 
 ## P.S.
 
-На написание таких объёмов текста сподвигла [серия](http://fabien.potencier.org/symfony4-compose-applications.html) [статей](http://fabien.potencier.org/symfony4-monolith-vs-micro.html) [Фабьена Потенсьера](http://fabien.potencier.org/) (автора Symfony) про грядущий Symfony 4.  Стыдно сказать, не до конца понял как именно всё работает, но уловил идеи и цели: система бандлов будет доработана в сторону их автоматической конфигурации, что в итоге даёт:
+I was inspired to write such a volume of text by a [series](http://fabien.potencier.org/symfony4-compose-applications.html) of [articles](http://fabien.potencier.org/symfony4-monolith-vs-micro.html) of [Fabien Potencier](http://fabien.potencier.org/) (Symfony's creator) about upcoming Symfony Flex.
+This new Symfony component will improve bundles system in the direction of automatic configuration which gives:
 
 > new way to create and evolve your applications with ease
 
 (c) Fabien Potencier
 
-So, I'm not alone to consider mentioned questions very important for a framework.
+So I'm not alone to consider mentioned questions very important for a framework.
 
-Я люблю Yii. Давайте сделаем в Yii лучше!
+I love Yii. Let's make Yii better!
 
