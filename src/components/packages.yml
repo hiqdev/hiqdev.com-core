@@ -44,8 +44,8 @@ hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
     forks: 1
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 hipanel-module-hosting:
     name: hipanel-module-hosting
@@ -58,13 +58,13 @@ yii2-combo:
     name: yii2-combo
     description: 'Combo Widget for Yii 2'
     forks: 0
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 yii2-collection:
     name: yii2-collection
     description: 'Basic Collection for Yii 2'
-    forks: 2
+    forks: 3
     stars: 3
     watchers: 3
     issues: 0
@@ -170,8 +170,8 @@ yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
     forks: 7
-    stars: 24
-    watchers: 24
+    stars: 25
+    watchers: 25
     issues: 3
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -268,8 +268,8 @@ hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
     forks: 2
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
@@ -366,8 +366,8 @@ yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 0
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 0
 yii2-cart:
     name: yii2-cart
@@ -408,8 +408,8 @@ omnipay-interkassa:
     name: omnipay-interkassa
     description: 'InterKassa driver for the Omnipay PHP payment processing library'
     forks: 3
-    stars: 8
-    watchers: 8
+    stars: 9
+    watchers: 9
     issues: 2
 omnipay-okpay:
     name: omnipay-okpay
@@ -499,8 +499,8 @@ payment-icons:
     name: payment-icons
     description: 'Set of icons for payment systems and methods'
     forks: 4
-    stars: 10
-    watchers: 10
+    stars: 12
+    watchers: 12
     issues: 0
 hiqdev.github.io:
     name: hiqdev.github.io
@@ -667,8 +667,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 10
-    stars: 105
-    watchers: 105
+    stars: 107
+    watchers: 107
     issues: 7
 hipanel-rbac:
     name: hipanel-rbac
@@ -702,8 +702,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 15
-    watchers: 15
+    stars: 16
+    watchers: 16
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -799,9 +799,9 @@ yii2-asset-hiqdev:
 hisite-template:
     name: hisite-template
     description: 'HiSite Project Template'
-    forks: 0
-    stars: 6
-    watchers: 6
+    forks: 1
+    stars: 7
+    watchers: 7
     issues: 0
 yii2-theme-agency:
     name: yii2-theme-agency
@@ -814,8 +814,8 @@ yii2-module-pages:
     name: yii2-module-pages
     description: 'Yii2 Pages Module'
     forks: 1
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 yii2-reminder:
     name: yii2-reminder
@@ -855,7 +855,7 @@ hiam-mrdp:
 yii2-mfa:
     name: yii2-mfa
     description: 'Yii2 module providing multi-factor authentication'
-    forks: 2
+    forks: 3
     stars: 1
     watchers: 1
     issues: 0
@@ -1073,8 +1073,8 @@ yii2-yandex-metrika:
     name: yii2-yandex-metrika
     description: 'Yandex.Metrika counter for Yii2 applications'
     forks: 0
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 0
 docker-letsencrypt-nginx-proxy-companion:
     name: docker-letsencrypt-nginx-proxy-companion
