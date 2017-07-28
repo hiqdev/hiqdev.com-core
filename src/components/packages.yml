@@ -1,7 +1,7 @@
 hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
-    forks: 3
+    forks: 4
     stars: 17
     watchers: 17
     issues: 0
@@ -267,9 +267,9 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 2
-    stars: 2
-    watchers: 2
+    forks: 3
+    stars: 3
+    watchers: 3
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
@@ -365,10 +365,10 @@ php-merchant:
 yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
-    forks: 0
-    stars: 7
-    watchers: 7
-    issues: 0
+    forks: 1
+    stars: 8
+    watchers: 8
+    issues: 1
 yii2-cart:
     name: yii2-cart
     description: 'Cart module for Yii2'
@@ -501,7 +501,7 @@ payment-icons:
     forks: 4
     stars: 12
     watchers: 12
-    issues: 0
+    issues: 1
 hiqdev.github.io:
     name: hiqdev.github.io
     description: 'HiQDev site'
@@ -666,10 +666,10 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 10
-    stars: 107
-    watchers: 107
-    issues: 7
+    forks: 11
+    stars: 108
+    watchers: 108
+    issues: 6
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -702,8 +702,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 16
-    watchers: 16
+    stars: 17
+    watchers: 17
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
