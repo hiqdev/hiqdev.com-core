@@ -88,6 +88,7 @@ And generally we're done! Composer-config-plugin just merges all the config arra
 To use assembled configs in application simply add these lines to `web/index.php`:
 
 ```php
+<?php
 $config = require hiqdev\composer\config\Builder::path('web');
 
 (new yii\web\Application($config))->run();
@@ -180,10 +181,12 @@ return [
 
 Considering `.env` portability parameters used by other (non PHP) technologies are best candidates to be put to `.env`.
 
-Of course one may and should put some configuration and even code into the *"root"*. But it has to be very specific for this particular installation and should not be copy pasted between installation.
+Of course one may and should put some configuration and even code into the *"root"*.
+But it has to be very specific for this particular installation and should not be copy pasted between installation.
 As soon as I see a copy-pasted code I catch it and move into some plugin.
 
-All the other files and directories needed for application to work, like `web/assets/`, `web/index.php` are standard and they should be created and chmoded with build too or task runner. We are reinventing [our own](https://hiqdev.com/packages/hidev) but this is quite another story.
+All the other files and directories needed for application to work, like `web/assets/`, `web/index.php` are standard and they should be created and chmoded with build tool or task runner.
+We are reinventing [our own](https://hiqdev.com/packages/hidev) but this is quite another story.
 
 In fact *"root"* is `params-local.php` on steroids. It concentrates difference between specific project installation and generally used code. We create separate repository for "root" and save it to our private git-server, so we can commit there even secrets (but this is holy war topic). All the other packages are publicly available at GitHub. We commit `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
 
@@ -191,10 +194,10 @@ In fact *"root"* is `params-local.php` on steroids. It concentrates difference b
 
 ## HiSite and Asset Packagist
 
-One of *"basic application"* we develop is **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; that's a base for a typical website like `yii2-app-basic` but implemented as plugin that gives all advantages of code reused over copy-pasting.
+One of *"basic application"* we develop is **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; that's a base for a typical website like `yii2-app-basic` but implemented as plugin that gives all advantages of code reuse over copy-pasting:
 
 - you can base your project upon HiSite and get it's updates as it evolves;
-- you can change basic project for other one that is compatible but with more functions.
+- you can change basic project for another basic project that is compatible but has more features.
 
 *"Root"* template (or skeleton) is here &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
 
@@ -206,7 +209,7 @@ Hierarchy of dependencies looks like this:
     - basic project &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
         - framework &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
 
-In the [README](https://github.com/hiqdev/hisite-template) you can find how to setup the project at your side&mdash; `composer create-project` plus configuration settings. Thanks to themes implemented as plugins and use of the theming library [hiqdev/yii2-thememanager]  you can change `yii2-theme-flat` to `yii2-theme-original` then run `composer update` and the site will change it's clothes to other theme. As simple as change single line in `composer.json`.
+In the [README](https://github.com/hiqdev/hisite-template) you can find how to setup the project on your side &mdash; easy enough: `composer create-project` plus configuration settings. Thanks to themes implemented as plugins and use of the theming library [hiqdev/yii2-thememanager]  you can change `yii2-theme-flat` to `yii2-theme-original` then run `composer update` and the site will change it's clothes to other theme. As simple as change single line in `composer.json`.
 
 There is another real working project that can be used as example of this approach and it is completely available at GitHub.
 [Asset Packagist](https://asset-packagist.org/) is packagist-compatible repository that enables installation of Bower and NPM packages as native Composer packages.
@@ -233,7 +236,8 @@ We've been using described approach about a year already. We've got best impress
 [100+ already](https://hiqdev.com/packages)
 and we are not going to stop. When we need a new functionality &mdash; we create a new plugin.
 
-This approach is more or less suitable for other frameworks and even languages... Oops, I'm going too fast... It's enough for today. Thank you for your attention. To be continued.
+This approach is more or less suitable for other frameworks and even languages... Oops, I'm going too fast...
+That's enough for today. Thank you for your attention. To be continued.
 
 ## P.S.
 
