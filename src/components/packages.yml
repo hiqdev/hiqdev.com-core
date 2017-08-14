@@ -32,7 +32,7 @@ hipanel-module-domain:
     forks: 1
     stars: 1
     watchers: 1
-    issues: 1
+    issues: 2
 hipanel-module-finance:
     name: hipanel-module-finance
     description: 'Finance Plugin for HiPanel'
@@ -170,8 +170,8 @@ yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
     forks: 7
-    stars: 25
-    watchers: 25
+    stars: 27
+    watchers: 27
     issues: 3
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -254,8 +254,8 @@ hiam:
     name: hiam
     description: 'Identity and Access Management server providing OAuth2, multi-factor authentication and more'
     forks: 1
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 yii2-hiam-authclient:
     name: yii2-hiam-authclient
@@ -366,8 +366,8 @@ yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 1
-    stars: 8
-    watchers: 8
+    stars: 9
+    watchers: 9
     issues: 1
 yii2-cart:
     name: yii2-cart
@@ -501,7 +501,7 @@ payment-icons:
     forks: 4
     stars: 12
     watchers: 12
-    issues: 1
+    issues: 0
 hiqdev.github.io:
     name: hiqdev.github.io
     description: 'HiQDev site'
@@ -667,9 +667,9 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 11
-    stars: 108
-    watchers: 108
-    issues: 6
+    stars: 110
+    watchers: 110
+    issues: 9
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -702,8 +702,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 17
-    watchers: 17
+    stars: 18
+    watchers: 18
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -800,8 +800,8 @@ hisite-template:
     name: hisite-template
     description: 'HiSite Project Template'
     forks: 1
-    stars: 7
-    watchers: 7
+    stars: 8
+    watchers: 8
     issues: 0
 yii2-theme-agency:
     name: yii2-theme-agency
@@ -1017,8 +1017,8 @@ php-units:
     name: php-units
     description: 'PHP Units of Measure Library'
     forks: 0
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 omnipay-freekassa:
     name: omnipay-freekassa
@@ -1104,3 +1104,10 @@ yii2-hiart-librariesio:
     stars: 2
     watchers: 2
     issues: 1
+yii2-google-analytics:
+    name: yii2-google-analytics
+    description: 'Google Analytics tracking widget for Yii2 applications'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
