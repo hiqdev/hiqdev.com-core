@@ -75,13 +75,6 @@ hipanel-module-server:
     stars: 3
     watchers: 3
     issues: 0
-yii2-menumanager:
-    name: yii2-menumanager
-    description: 'Menu Manager for Yii 2'
-    forks: 1
-    stars: 3
-    watchers: 3
-    issues: 0
 hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
@@ -89,13 +82,6 @@ hidev:
     stars: 10
     watchers: 10
     issues: 1
-yii2-pluginmanager:
-    name: yii2-pluginmanager
-    description: 'Abandoned in favour of hiqdev/composer-config-plugin'
-    forks: 1
-    stars: 4
-    watchers: 4
-    issues: 0
 hipanel-theme-adminlte:
     name: hipanel-theme-adminlte
     description: 'AdminLte Theme for HiPanel'
@@ -193,13 +179,6 @@ hipanel-theme-adminlte1:
     forks: 0
     stars: 1
     watchers: 1
-    issues: 0
-hipanel-module-request:
-    name: hipanel-module-request
-    description: 'Request Plugin for HiPanel'
-    forks: 0
-    stars: 0
-    watchers: 0
     issues: 0
 yii2-theme-adminlte:
     name: yii2-theme-adminlte
@@ -628,13 +607,6 @@ hidev-box:
     stars: 1
     watchers: 1
     issues: 0
-composer-extension-plugin:
-    name: composer-extension-plugin
-    description: 'Composer plugin for Yii extensions'
-    forks: 0
-    stars: 1
-    watchers: 1
-    issues: 0
 hidev-hisite:
     name: hidev-hisite
     description: 'HiDev config for HiSite'
@@ -660,15 +632,15 @@ hipanel-domain-checker:
     name: hipanel-domain-checker
     description: 'Domain names checker module for HiPanel'
     forks: 1
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 11
-    stars: 110
-    watchers: 110
+    forks: 12
+    stars: 112
+    watchers: 112
     issues: 9
 hipanel-rbac:
     name: hipanel-rbac
@@ -751,8 +723,8 @@ yii2-theme-flat:
     name: yii2-theme-flat
     description: 'Flat Theme for Yii2 projects'
     forks: 1
-    stars: 2
-    watchers: 2
+    stars: 4
+    watchers: 4
     issues: 0
 yii2-theme-twentyfifteen:
     name: yii2-theme-twentyfifteen
@@ -785,7 +757,7 @@ yii2-theme-dataserv:
 hipanel-site:
     name: hipanel-site
     description: 'Selling site for HiPanel'
-    forks: 0
+    forks: 1
     stars: 3
     watchers: 3
     issues: 0
@@ -858,7 +830,7 @@ yii2-mfa:
     forks: 3
     stars: 1
     watchers: 1
-    issues: 0
+    issues: 1
 hipanel-com:
     name: hipanel-com
     description: 'hipanel.com site'
@@ -877,8 +849,8 @@ hipanel-module-document:
     name: hipanel-module-document
     description: null
     forks: 1
-    stars: 0
-    watchers: 0
+    stars: 1
+    watchers: 1
     issues: 0
 yii2-theme-hyde:
     name: yii2-theme-hyde
@@ -1107,6 +1079,13 @@ yii2-hiart-librariesio:
 yii2-google-analytics:
     name: yii2-google-analytics
     description: 'Google Analytics tracking widget for Yii2 applications'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+yii2-maintenance:
+    name: yii2-maintenance
+    description: 'Module for switching Yii2 project into maintenance mode'
     forks: 0
     stars: 1
     watchers: 1
