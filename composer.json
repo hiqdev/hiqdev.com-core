@@ -49,6 +49,7 @@
         "sadovojav/yii2-image-thumbnail": "dev-master",
         "hiqdev/hisite": "<2.0 || dev-master",
         "hiqdev/yii2-yandex-metrika": "<2.0 || dev-master",
+        "hiqdev/yii2-google-analytics": "<2.0 || dev-master",
         "hiqdev/yii2-hiart-github": "<2.0 || dev-master",
         "hiqdev/yii2-module-pages": "<2.0 || dev-master",
         "hiqdev/yii2-monitoring": "<2.0 || dev-master",
