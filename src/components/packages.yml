@@ -394,8 +394,8 @@ omnipay-okpay:
     name: omnipay-okpay
     description: 'OKPAY driver for Omnipay PHP payment library'
     forks: 1
-    stars: 2
-    watchers: 2
+    stars: 4
+    watchers: 4
     issues: 0
 omnipay-paxum:
     name: omnipay-paxum
@@ -480,7 +480,7 @@ payment-icons:
     forks: 4
     stars: 12
     watchers: 12
-    issues: 0
+    issues: 1
 hiqdev.github.io:
     name: hiqdev.github.io
     description: 'HiQDev site'
@@ -1045,8 +1045,8 @@ yii2-yandex-metrika:
     name: yii2-yandex-metrika
     description: 'Yandex.Metrika counter for Yii2 applications'
     forks: 0
-    stars: 7
-    watchers: 7
+    stars: 8
+    watchers: 8
     issues: 0
 docker-letsencrypt-nginx-proxy-companion:
     name: docker-letsencrypt-nginx-proxy-companion
@@ -1066,8 +1066,8 @@ asset-packagist.dev:
     name: asset-packagist.dev
     description: 'Root project for Asset Packagist'
     forks: 2
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 yii2-hiart-librariesio:
     name: yii2-hiart-librariesio
