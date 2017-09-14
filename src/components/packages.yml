@@ -82,13 +82,6 @@ hidev:
     stars: 10
     watchers: 10
     issues: 1
-hipanel-theme-adminlte:
-    name: hipanel-theme-adminlte
-    description: 'AdminLte Theme for HiPanel'
-    forks: 0
-    stars: 1
-    watchers: 1
-    issues: 0
 hipanel-module-dashboard:
     name: hipanel-module-dashboard
     description: 'Dashboard Plugin for HiPanel'
@@ -303,8 +296,8 @@ reodb:
     name: reodb
     description: 'Reusable objective database'
     forks: 0
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 hidev-sql:
     name: hidev-sql
@@ -638,9 +631,9 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 12
-    stars: 112
-    watchers: 112
+    forks: 13
+    stars: 113
+    watchers: 113
     issues: 9
 hipanel-rbac:
     name: hipanel-rbac
@@ -739,13 +732,6 @@ yii2-theme-original:
     forks: 0
     stars: 2
     watchers: 2
-    issues: 0
-hiqdev-site:
-    name: hiqdev-site
-    description: HiQDev.com
-    forks: 0
-    stars: 1
-    watchers: 1
     issues: 0
 yii2-theme-dataserv:
     name: yii2-theme-dataserv
