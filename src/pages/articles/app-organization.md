@@ -4,6 +4,8 @@ title: Yii2 projects allternative organization
 
 # Yii2 projects allternative organization
 
+<div align="right"><a href="https://habrahabr.ru/post/329286/">Russian version</a></div>
+
 <img src="http://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
 
 How is it supposed to create Yii2 project now? Choose template project: basic or advanced, fork it then edit and commit right there. Wham! You've made copy-pasting! Your project and the template develop separately since now. You will not get fixes to the template. And your improvements that are specific for your tasks will not be accepted into `yii2-app-basic`. This the problem number one.
@@ -250,5 +252,6 @@ This new Symfony component will improve bundles system in the direction of autom
 
 So I'm not alone to consider mentioned questions very important for a framework.
 
-I love Yii. Let's make Yii better!
+## P.P.S
 
+If you want to discuss please open issue in any of the mentioned GitHub repos.
