@@ -1,8 +1,8 @@
 ---
-title: Yii2 projects allternative organization
+title: Yii2 projects alternative organization
 ---
 
-# Yii2 projects allternative organization
+# Yii2 projects alternative organization
 
 <div align="right"><a href="https://habrahabr.ru/post/329286/">Russian version</a></div>
 

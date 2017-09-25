@@ -1,5 +1,5 @@
 ---
-title: Yii2 projects allternative organization
+title: Yii2 projects alternative organization
 date: 2017-09-25 11:40
 layout: post
 ---
