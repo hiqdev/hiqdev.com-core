@@ -235,7 +235,7 @@ The topic is huge. I had to skip many details. Hope I've managed to bring the ge
 - separate reusable part of project from specific installation with use of "root".
 
 We've been using described approach about a year already. We've got best impressions &mdash; our hairs became smooth and silky, we divide and conquer, we create plugins simply and easily -
-[100+ already](https://hiqdev.com/packages)
+[100+ already](https://hiqdev.com/pages/packages)
 and we are not going to stop. When we need a new functionality &mdash; we create a new plugin.
 
 This approach is more or less suitable for other frameworks and even languages... Oops, I'm going too fast...
