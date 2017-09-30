@@ -289,15 +289,15 @@ heppy:
     name: heppy
     description: 'Python EPP client and library'
     forks: 1
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 0
 reodb:
     name: reodb
     description: 'Reusable objective database'
     forks: 0
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 hidev-sql:
     name: hidev-sql
@@ -408,8 +408,8 @@ omnipay-robokassa:
     name: omnipay-robokassa
     description: 'RoboKassa plugin for PHP merchant library'
     forks: 2
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 1
 omnipay-yandexmoney:
     name: omnipay-yandexmoney
@@ -632,9 +632,9 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 13
-    stars: 113
-    watchers: 113
-    issues: 9
+    stars: 116
+    watchers: 116
+    issues: 12
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -667,8 +667,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 18
-    watchers: 18
+    stars: 19
+    watchers: 19
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -701,10 +701,10 @@ hidev-chkipper:
 yii2-language:
     name: yii2-language
     description: 'Yii2 module for language switching'
-    forks: 0
-    stars: 4
-    watchers: 4
-    issues: 0
+    forks: 1
+    stars: 5
+    watchers: 5
+    issues: 1
 hisite:
     name: hisite
     description: 'Hisite Yii2 base project'
@@ -1075,4 +1075,32 @@ yii2-maintenance:
     forks: 0
     stars: 1
     watchers: 1
+    issues: 0
+hiapi-rcp-traf:
+    name: hiapi-rcp-traf
+    description: 'hiAPI RCP Traf Collector'
+    forks: 1
+    stars: 2
+    watchers: 2
+    issues: 0
+hiapi-gogetssl:
+    name: hiapi-gogetssl
+    description: 'hiAPI GoGetSSL plugin'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+hiapi-directi:
+    name: hiapi-directi
+    description: 'hiAPI Directi'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+hipanel-module-integrations:
+    name: hipanel-module-integrations
+    description: 'Integrations management plugin for HiPanel'
+    forks: 0
+    stars: 2
+    watchers: 2
     issues: 0
