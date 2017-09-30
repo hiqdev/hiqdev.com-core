@@ -10,7 +10,7 @@ telling a songwriter there's already a song about love.<br>
 </p>
 
 We're developing [HiPanel], [HiSite], [HiDev] and other [projects] and [packages].<br>
-Also we do consulting.
+Also we do web development and consulting.
 
 ## Our amazing team
 
