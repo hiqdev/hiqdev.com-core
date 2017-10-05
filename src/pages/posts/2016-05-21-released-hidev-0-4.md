@@ -2,9 +2,8 @@
 layout: post
 title: Released HiDev 0.4.0
 date: 2016-05-21 15:00
+url: /packages/hidev
 ---
-
-[https://hiqdev.com/packages/hidev](https://hiqdev.com/packages/hidev)
 
 [CHANGELOG]:
 

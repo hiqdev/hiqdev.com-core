@@ -2,9 +2,8 @@
 title: Released Composer Config Plugin 0.2.2
 date: 2017-04-12 16:52
 layout: post
+url: /packages/composer-config-plugin
 ---
-
-[https://hiqdev.com/packages/composer-config-plugin](https://hiqdev.com/packages/composer-config-plugin)
 
 [CHANGELOG]:
 

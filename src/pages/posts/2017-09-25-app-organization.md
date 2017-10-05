@@ -2,9 +2,8 @@
 title: Yii2 projects alternative organization
 date: 2017-09-25 11:40
 layout: post
+url: /pages/articles/app-organization
 ---
-
-[Full article] | [Russian version]
 
 <img src="http://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
 
@@ -18,6 +17,8 @@ First one can be solved by separating reusable code and turning it into an exten
 These problems are most acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing copypasta and code reuse never hurt anyone.
 
 I want to share my solution for outlined problems.
+
+[Full article] | [Russian version]
 
 [Full article]: /pages/articles/app-organization
 [Russian version]: https://habrahabr.ru/post/329286/
