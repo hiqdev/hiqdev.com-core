@@ -473,7 +473,7 @@ payment-icons:
     forks: 4
     stars: 12
     watchers: 12
-    issues: 1
+    issues: 2
 hiqdev.github.io:
     name: hiqdev.github.io
     description: 'HiQDev site'
@@ -634,7 +634,7 @@ asset-packagist:
     forks: 13
     stars: 116
     watchers: 116
-    issues: 12
+    issues: 11
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -667,8 +667,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 19
-    watchers: 19
+    stars: 20
+    watchers: 20
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -1100,6 +1100,20 @@ hiapi-directi:
 hipanel-module-integrations:
     name: hipanel-module-integrations
     description: 'Integrations management plugin for HiPanel'
+    forks: 0
+    stars: 2
+    watchers: 2
+    issues: 0
+omnipay-bitpay:
+    name: omnipay-bitpay
+    description: null
+    forks: 0
+    stars: 0
+    watchers: 0
+    issues: 0
+yii2-cookie-consent:
+    name: yii2-cookie-consent
+    description: 'Yii2 Cookie Consent'
     forks: 0
     stars: 2
     watchers: 2
