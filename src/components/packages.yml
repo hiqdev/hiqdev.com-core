@@ -4,7 +4,7 @@ hipanel-core:
     forks: 4
     stars: 17
     watchers: 17
-    issues: 0
+    issues: 1
 yii2-higrid:
     name: yii2-higrid
     description: 'Yii 2 advanced grid'
@@ -22,10 +22,10 @@ yii2-thememanager:
 hipanel-module-client:
     name: hipanel-module-client
     description: 'Client Plugin for HiPanel'
-    forks: 1
+    forks: 2
     stars: 3
     watchers: 3
-    issues: 1
+    issues: 0
 hipanel-module-domain:
     name: hipanel-module-domain
     description: 'Domain Plugin for HiPanel'
@@ -43,7 +43,7 @@ hipanel-module-finance:
 hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
-    forks: 1
+    forks: 2
     stars: 2
     watchers: 2
     issues: 0
@@ -71,7 +71,7 @@ yii2-collection:
 hipanel-module-server:
     name: hipanel-module-server
     description: 'Server Plugin for HiPanel'
-    forks: 1
+    forks: 2
     stars: 3
     watchers: 3
     issues: 0
@@ -400,7 +400,7 @@ omnipay-paxum:
 omnipay-qiwi:
     name: omnipay-qiwi
     description: 'Qiwi driver for Omnipay PHP payment library'
-    forks: 2
+    forks: 3
     stars: 1
     watchers: 1
     issues: 0
@@ -456,7 +456,7 @@ php-collection:
 hidev-phpunit:
     name: hidev-phpunit
     description: 'PHPUnit plugin for HiDev'
-    forks: 1
+    forks: 2
     stars: 2
     watchers: 2
     issues: 0
@@ -631,10 +631,10 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 13
-    stars: 116
-    watchers: 116
-    issues: 11
+    forks: 14
+    stars: 120
+    watchers: 120
+    issues: 12
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -688,8 +688,8 @@ chkipper:
     name: chkipper
     description: 'Changelog keeper'
     forks: 0
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 hidev-chkipper:
     name: hidev-chkipper
@@ -968,8 +968,8 @@ php-billing:
     name: php-billing
     description: 'PHP Billing Library'
     forks: 0
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 php-units:
     name: php-units
@@ -1117,4 +1117,18 @@ yii2-cookie-consent:
     forks: 0
     stars: 2
     watchers: 2
+    issues: 0
+yii2-autobus:
+    name: yii2-autobus
+    description: 'Simple automated command bus'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+hiapi-module-logs:
+    name: hiapi-module-logs
+    description: 'User activity logs module for hiAPI'
+    forks: 0
+    stars: 1
+    watchers: 1
     issues: 0
