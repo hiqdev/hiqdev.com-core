@@ -50,7 +50,7 @@ hipanel-module-ticket:
 hipanel-module-hosting:
     name: hipanel-module-hosting
     description: 'Hosting Plugin for HiPanel'
-    forks: 2
+    forks: 3
     stars: 2
     watchers: 2
     issues: 1
@@ -149,8 +149,8 @@ yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
     forks: 7
-    stars: 27
-    watchers: 27
+    stars: 28
+    watchers: 28
     issues: 3
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -226,8 +226,8 @@ hiam:
     name: hiam
     description: 'Identity and Access Management server providing OAuth2, multi-factor authentication and more'
     forks: 1
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 0
 yii2-hiam-authclient:
     name: yii2-hiam-authclient
@@ -239,7 +239,7 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 3
+    forks: 4
     stars: 3
     watchers: 3
     issues: 0
@@ -331,16 +331,16 @@ php-merchant:
     name: php-merchant
     description: 'PHP merchant library'
     forks: 1
-    stars: 1
-    watchers: 1
-    issues: 0
+    stars: 2
+    watchers: 2
+    issues: 1
 yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 1
     stars: 9
     watchers: 9
-    issues: 1
+    issues: 2
 yii2-cart:
     name: yii2-cart
     description: 'Cart module for Yii2'
@@ -415,8 +415,8 @@ omnipay-yandexmoney:
     name: omnipay-yandexmoney
     description: 'Yandex.Money plugin for PHP merchant library'
     forks: 1
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 hipanel-module-dns:
     name: hipanel-module-dns
@@ -632,8 +632,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 14
-    stars: 120
-    watchers: 120
+    stars: 124
+    watchers: 124
     issues: 12
 hipanel-rbac:
     name: hipanel-rbac
@@ -667,8 +667,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 20
-    watchers: 20
+    stars: 21
+    watchers: 21
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -960,7 +960,7 @@ yii2-asset-select2:
 hipanel-module-certificate:
     name: hipanel-module-certificate
     description: 'SSL certificates module for HiPanel'
-    forks: 0
+    forks: 1
     stars: 2
     watchers: 2
     issues: 0
