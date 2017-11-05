@@ -333,7 +333,7 @@ php-merchant:
     forks: 1
     stars: 2
     watchers: 2
-    issues: 1
+    issues: 2
 yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
@@ -401,8 +401,8 @@ omnipay-qiwi:
     name: omnipay-qiwi
     description: 'Qiwi driver for Omnipay PHP payment library'
     forks: 3
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 omnipay-robokassa:
     name: omnipay-robokassa
@@ -473,7 +473,7 @@ payment-icons:
     forks: 4
     stars: 12
     watchers: 12
-    issues: 2
+    issues: 0
 hiqdev.github.io:
     name: hiqdev.github.io
     description: 'HiQDev site'
@@ -632,8 +632,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 14
-    stars: 124
-    watchers: 124
+    stars: 128
+    watchers: 128
     issues: 12
 hipanel-rbac:
     name: hipanel-rbac
@@ -667,8 +667,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 21
-    watchers: 21
+    stars: 22
+    watchers: 22
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -709,8 +709,8 @@ hisite:
     name: hisite
     description: 'Hisite Yii2 base project'
     forks: 1
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 yii2-theme-flat:
     name: yii2-theme-flat
@@ -1031,8 +1031,8 @@ yii2-yandex-metrika:
     name: yii2-yandex-metrika
     description: 'Yandex.Metrika counter for Yii2 applications'
     forks: 0
-    stars: 8
-    watchers: 8
+    stars: 9
+    watchers: 9
     issues: 0
 docker-letsencrypt-nginx-proxy-companion:
     name: docker-letsencrypt-nginx-proxy-companion
@@ -1128,6 +1128,13 @@ yii2-autobus:
 hiapi-module-logs:
     name: hiapi-module-logs
     description: 'User activity logs module for hiAPI'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+yii2-export:
+    name: yii2-export
+    description: 'Data exporting to different formats for Yii2'
     forks: 0
     stars: 1
     watchers: 1
