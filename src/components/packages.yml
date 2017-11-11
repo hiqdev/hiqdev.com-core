@@ -2,8 +2,8 @@ hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
     forks: 4
-    stars: 17
-    watchers: 17
+    stars: 18
+    watchers: 18
     issues: 1
 yii2-higrid:
     name: yii2-higrid
@@ -148,7 +148,7 @@ yii2-asset-lightbox2:
 yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
-    forks: 7
+    forks: 8
     stars: 28
     watchers: 28
     issues: 3
@@ -632,8 +632,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 14
-    stars: 128
-    watchers: 128
+    stars: 130
+    watchers: 130
     issues: 12
 hipanel-rbac:
     name: hipanel-rbac
@@ -667,9 +667,9 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 22
-    watchers: 22
-    issues: 0
+    stars: 23
+    watchers: 23
+    issues: 1
 hidev-hiqdev:
     name: hidev-hiqdev
     description: 'HiQDev vendor configuration for HiDev'
@@ -743,9 +743,9 @@ yii2-theme-dataserv:
 hipanel-site:
     name: hipanel-site
     description: 'Selling site for HiPanel'
-    forks: 1
-    stars: 3
-    watchers: 3
+    forks: 2
+    stars: 4
+    watchers: 4
     issues: 0
 yii2-asset-hiqdev:
     name: yii2-asset-hiqdev
