@@ -6,7 +6,7 @@ title: Yii2 projects alternative organization
 
 <div align="right"><a href="https://habrahabr.ru/post/329286/">Russian version</a></div>
 
-<img src="http://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
+<img src="https://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
 
 How is it supposed to create Yii2 project now? Choose template project: basic or advanced, fork it then edit and commit right there. Wham! You've made copy-pasting! Your project and the template develop separately since now. You will not get fixes to the template. And your improvements that are specific for your tasks will not be accepted into `yii2-app-basic`. This is the problem number one.
 
@@ -100,7 +100,7 @@ You can find more information and examples as well as ask your questions at GitH
 
 Here is an example of a simple plugin [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin). It shows advantages of this approach. To get Yandex.Metrika counter on your site it is only necessary to require the plugin and provide `yandexMetrika.id` parameter. And that's it! No need to copy-paste anything to your config, no need to add widget into layout &mdash; no need to touch your working code. Plugin is an entire piece of functionality which allows to extend system without making chages to existing code.
 
-<img src="http://cdn.hiqdev.com/hiqdev/shtrih.png" align="right"/>
+<img src="https://cdn.hiqdev.com/hiqdev/shtrih.png" align="right"/>
 
 &mdash; What? One can create a new feature and don't break old ones?!<br>
 &mdash; Yes.<br>

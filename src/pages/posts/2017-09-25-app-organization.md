@@ -5,7 +5,7 @@ layout: post
 url: /pages/articles/app-organization
 ---
 
-<img src="http://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
+<img src="https://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
 
 How is it supposed to create Yii2 project now? Choose template project: basic or advanced, fork it then edit and commit right there. Wham! You've made copy-pasting! Your project and the template develop separately since now. You will not get fixes to the template. And your improvements that are specific for your tasks will not be accepted into `yii2-app-basic`. This is the problem number one.
 
