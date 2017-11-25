@@ -43,7 +43,7 @@ hipanel-module-finance:
 hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
-    forks: 2
+    forks: 3
     stars: 2
     watchers: 2
     issues: 0
@@ -65,8 +65,8 @@ yii2-collection:
     name: yii2-collection
     description: 'Basic Collection for Yii 2'
     forks: 3
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 hipanel-module-server:
     name: hipanel-module-server
@@ -183,7 +183,7 @@ yii2-theme-adminlte:
 yii2-bootstrap-switch:
     name: yii2-bootstrap-switch
     description: 'Yii2 wrap for bootstrap switch'
-    forks: 2
+    forks: 3
     stars: 1
     watchers: 1
     issues: 0
@@ -333,20 +333,20 @@ php-merchant:
     forks: 1
     stars: 2
     watchers: 2
-    issues: 2
+    issues: 1
 yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 1
     stars: 9
     watchers: 9
-    issues: 2
+    issues: 1
 yii2-cart:
     name: yii2-cart
     description: 'Cart module for Yii2'
     forks: 2
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 0
 omnipay-paypal:
     name: omnipay-paypal
@@ -632,9 +632,9 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 14
-    stars: 130
-    watchers: 130
-    issues: 12
+    stars: 135
+    watchers: 135
+    issues: 13
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -667,8 +667,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 3
-    stars: 23
-    watchers: 23
+    stars: 24
+    watchers: 24
     issues: 1
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -1138,4 +1138,11 @@ yii2-export:
     forks: 0
     stars: 1
     watchers: 1
+    issues: 0
+hiapi-namesuggestion:
+    name: hiapi-namesuggestion
+    description: 'hiAPI NameSuggestion.com plugin'
+    forks: 1
+    stars: 2
+    watchers: 2
     issues: 0
