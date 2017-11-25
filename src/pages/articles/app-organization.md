@@ -144,7 +144,7 @@ It's necessary to clarify that we are talking of code organization only, i.e. ho
 Architectural division of code into layers is independent of division info packages of course. But the can complement each outher.
 E.g. domain logic can be taken away into separate package to be reused between different projects.
 
-&mdauh; Uh-oh! Example needed!
+&mdash; Uh-oh! Example needed!
 
 For example you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. catalog. And sites differ in design and parameters. You could organize your code in packages forming hierarchy this way:
 
