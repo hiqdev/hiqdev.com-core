@@ -149,8 +149,8 @@ yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
     forks: 8
-    stars: 28
-    watchers: 28
+    stars: 29
+    watchers: 29
     issues: 3
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -239,7 +239,7 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 4
+    forks: 5
     stars: 3
     watchers: 3
     issues: 0
@@ -260,7 +260,7 @@ yii2-asset-pnotify:
 yii2-pnotify:
     name: yii2-pnotify
     description: null
-    forks: 0
+    forks: 1
     stars: 2
     watchers: 2
     issues: 0
@@ -338,8 +338,8 @@ yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 2
-    stars: 9
-    watchers: 9
+    stars: 10
+    watchers: 10
     issues: 1
 yii2-cart:
     name: yii2-cart
@@ -352,8 +352,8 @@ omnipay-paypal:
     name: omnipay-paypal
     description: 'PayPal plugin for PHP merchant library'
     forks: 1
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 omnipay-ecoin:
     name: omnipay-ecoin
@@ -631,9 +631,9 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 15
-    stars: 138
-    watchers: 138
+    forks: 14
+    stars: 143
+    watchers: 143
     issues: 12
 hipanel-rbac:
     name: hipanel-rbac
@@ -667,8 +667,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 5
-    stars: 24
-    watchers: 24
+    stars: 25
+    watchers: 25
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -814,8 +814,8 @@ yii2-mfa:
     name: yii2-mfa
     description: 'Yii2 module providing multi-factor authentication'
     forks: 3
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 1
 hipanel-com:
     name: hipanel-com
@@ -968,8 +968,8 @@ php-billing:
     name: php-billing
     description: 'PHP Billing Library'
     forks: 0
-    stars: 7
-    watchers: 7
+    stars: 8
+    watchers: 8
     issues: 0
 php-units:
     name: php-units
