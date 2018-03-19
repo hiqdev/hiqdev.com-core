@@ -4,7 +4,7 @@ hipanel-core:
     forks: 5
     stars: 18
     watchers: 18
-    issues: 1
+    issues: 2
 yii2-higrid:
     name: yii2-higrid
     description: 'Yii 2 advanced grid'
@@ -36,7 +36,7 @@ hipanel-module-domain:
 hipanel-module-finance:
     name: hipanel-module-finance
     description: 'Finance Plugin for HiPanel'
-    forks: 1
+    forks: 2
     stars: 4
     watchers: 4
     issues: 0
@@ -44,9 +44,9 @@ hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
     forks: 3
-    stars: 2
-    watchers: 2
-    issues: 0
+    stars: 3
+    watchers: 3
+    issues: 1
 hipanel-module-hosting:
     name: hipanel-module-hosting
     description: 'Hosting Plugin for HiPanel'
@@ -74,7 +74,7 @@ hipanel-module-server:
     forks: 2
     stars: 3
     watchers: 3
-    issues: 0
+    issues: 1
 hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
@@ -99,7 +99,7 @@ yii2-app-pluggable:
 yii2-x-editable:
     name: yii2-x-editable
     description: 'X-editable extension for Yii2'
-    forks: 0
+    forks: 1
     stars: 1
     watchers: 1
     issues: 0
@@ -148,7 +148,7 @@ yii2-asset-lightbox2:
 yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
-    forks: 8
+    forks: 9
     stars: 29
     watchers: 29
     issues: 3
@@ -183,7 +183,7 @@ yii2-theme-adminlte:
 yii2-bootstrap-switch:
     name: yii2-bootstrap-switch
     description: 'Yii2 wrap for bootstrap switch'
-    forks: 3
+    forks: 4
     stars: 1
     watchers: 1
     issues: 0
@@ -225,7 +225,7 @@ hidev-travis:
 hiam:
     name: hiam
     description: 'Identity and Access Management server providing OAuth2, multi-factor authentication and more'
-    forks: 1
+    forks: 2
     stars: 8
     watchers: 8
     issues: 0
@@ -240,8 +240,8 @@ hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
     forks: 5
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
@@ -338,13 +338,13 @@ yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 2
-    stars: 10
-    watchers: 10
+    stars: 11
+    watchers: 11
     issues: 1
 yii2-cart:
     name: yii2-cart
     description: 'Cart module for Yii2'
-    forks: 2
+    forks: 3
     stars: 5
     watchers: 5
     issues: 0
@@ -424,7 +424,7 @@ hipanel-module-dns:
     forks: 1
     stars: 2
     watchers: 2
-    issues: 0
+    issues: 1
 yii2-asset-jquery-resizable-columns:
     name: yii2-asset-jquery-resizable-columns
     description: 'Yii2 asset for jQuery resizable columns'
@@ -632,9 +632,9 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 14
-    stars: 143
-    watchers: 143
-    issues: 12
+    stars: 148
+    watchers: 148
+    issues: 13
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -666,7 +666,7 @@ hidev-nginx:
 composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
-    forks: 5
+    forks: 6
     stars: 25
     watchers: 25
     issues: 0
@@ -743,7 +743,7 @@ yii2-theme-dataserv:
 hipanel-site:
     name: hipanel-site
     description: 'Selling site for HiPanel'
-    forks: 2
+    forks: 3
     stars: 4
     watchers: 4
     issues: 0
@@ -806,14 +806,14 @@ hidev-pytest:
 hiam-mrdp:
     name: hiam-mrdp
     description: 'HIAM module for MRDP database compatibility'
-    forks: 0
+    forks: 1
     stars: 1
     watchers: 1
     issues: 0
 yii2-mfa:
     name: yii2-mfa
     description: 'Yii2 module providing multi-factor authentication'
-    forks: 3
+    forks: 4
     stars: 2
     watchers: 2
     issues: 1
@@ -912,8 +912,8 @@ jquery-resizable-columns:
     name: jquery-resizable-columns
     description: 'Resizable table columns for jQuery.'
     forks: 0
-    stars: 0
-    watchers: 0
+    stars: 1
+    watchers: 1
     issues: 0
 hipanel-hiart:
     name: hipanel-hiart
@@ -933,8 +933,8 @@ yii2-hiart-github:
     name: yii2-hiart-github
     description: 'GitHub API implementation for yii2-hiart'
     forks: 0
-    stars: 5
-    watchers: 5
+    stars: 3
+    watchers: 3
     issues: 0
 yii2-hiart-httpclient:
     name: yii2-hiart-httpclient
@@ -953,7 +953,7 @@ yii2-theme-sailor:
 yii2-asset-select2:
     name: yii2-asset-select2
     description: null
-    forks: 0
+    forks: 1
     stars: 1
     watchers: 1
     issues: 0
@@ -1052,8 +1052,8 @@ asset-packagist.dev:
     name: asset-packagist.dev
     description: 'Root project for Asset Packagist'
     forks: 2
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 1
 yii2-hiart-librariesio:
     name: yii2-hiart-librariesio
@@ -1150,8 +1150,8 @@ yii2-data-mapper:
     name: yii2-data-mapper
     description: 'Data Mapper for Yii2'
     forks: 0
-    stars: 1
-    watchers: 1
+    stars: 4
+    watchers: 4
     issues: 0
 hiapi-legacy:
     name: hiapi-legacy
@@ -1163,6 +1163,20 @@ hiapi-legacy:
 hiapi-fetchmail:
     name: hiapi-fetchmail
     description: 'hiAPI Fetchmail plugin'
+    forks: 1
+    stars: 2
+    watchers: 2
+    issues: 0
+docker-satis-gitlab:
+    name: docker-satis-gitlab
+    description: 'Docker Satis Gitlab'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+hiapi-certum:
+    name: hiapi-certum
+    description: 'hiAPI Certum.pl plugin'
     forks: 1
     stars: 2
     watchers: 2
