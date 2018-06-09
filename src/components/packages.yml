@@ -4,7 +4,7 @@ hipanel-core:
     forks: 7
     stars: 19
     watchers: 19
-    issues: 2
+    issues: 1
 yii2-higrid:
     name: yii2-higrid
     description: 'Yii 2 advanced grid'
@@ -18,7 +18,7 @@ yii2-thememanager:
     forks: 1
     stars: 10
     watchers: 10
-    issues: 1
+    issues: 0
 hipanel-module-client:
     name: hipanel-module-client
     description: 'Client Plugin for HiPanel'
@@ -32,7 +32,7 @@ hipanel-module-domain:
     forks: 2
     stars: 2
     watchers: 2
-    issues: 0
+    issues: 1
 hipanel-module-finance:
     name: hipanel-module-finance
     description: 'Finance Plugin for HiPanel'
@@ -43,7 +43,7 @@ hipanel-module-finance:
 hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
-    forks: 4
+    forks: 5
     stars: 4
     watchers: 4
     issues: 0
@@ -53,7 +53,7 @@ hipanel-module-hosting:
     forks: 4
     stars: 3
     watchers: 3
-    issues: 2
+    issues: 0
 yii2-combo:
     name: yii2-combo
     description: 'Combo Widget for Yii 2'
@@ -74,18 +74,18 @@ hipanel-module-server:
     forks: 3
     stars: 4
     watchers: 4
-    issues: 1
+    issues: 0
 hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
-    forks: 3
-    stars: 11
-    watchers: 11
+    forks: 4
+    stars: 12
+    watchers: 12
     issues: 1
 hipanel-module-dashboard:
     name: hipanel-module-dashboard
     description: 'Dashboard Plugin for HiPanel'
-    forks: 1
+    forks: 2
     stars: 3
     watchers: 3
     issues: 0
@@ -149,8 +149,8 @@ yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
     forks: 9
-    stars: 32
-    watchers: 32
+    stars: 34
+    watchers: 34
     issues: 4
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -225,7 +225,7 @@ hidev-travis:
 hiam:
     name: hiam
     description: 'Identity and Access Management server providing OAuth2, multi-factor authentication and more'
-    forks: 2
+    forks: 3
     stars: 9
     watchers: 9
     issues: 0
@@ -239,17 +239,17 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 6
-    stars: 5
-    watchers: 5
-    issues: 1
+    forks: 8
+    stars: 6
+    watchers: 6
+    issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
     description: 'Stock Module for Hipanel'
-    forks: 2
+    forks: 3
     stars: 2
     watchers: 2
-    issues: 1
+    issues: 0
 yii2-asset-pnotify:
     name: yii2-asset-pnotify
     description: null
@@ -288,7 +288,7 @@ py-chkipper:
 heppy:
     name: heppy
     description: 'Python EPP client and library'
-    forks: 2
+    forks: 1
     stars: 6
     watchers: 6
     issues: 0
@@ -379,7 +379,7 @@ omnipay-epayservice:
 omnipay-interkassa:
     name: omnipay-interkassa
     description: 'InterKassa driver for the Omnipay PHP payment processing library'
-    forks: 3
+    forks: 4
     stars: 10
     watchers: 10
     issues: 2
@@ -424,7 +424,7 @@ hipanel-module-dns:
     forks: 2
     stars: 3
     watchers: 3
-    issues: 1
+    issues: 0
 yii2-asset-jquery-resizable-columns:
     name: yii2-asset-jquery-resizable-columns
     description: 'Yii2 asset for jQuery resizable columns'
@@ -471,8 +471,8 @@ payment-icons:
     name: payment-icons
     description: 'Set of icons for payment systems and methods'
     forks: 4
-    stars: 14
-    watchers: 14
+    stars: 15
+    watchers: 15
     issues: 0
 hiqdev.github.io:
     name: hiqdev.github.io
@@ -607,13 +607,6 @@ hidev-hisite:
     stars: 2
     watchers: 2
     issues: 0
-yii2-bootstrap-daterangepicker:
-    name: yii2-bootstrap-daterangepicker
-    description: 'Date range picker component for Bootstrap for Yii2 framework'
-    forks: 0
-    stars: 1
-    watchers: 1
-    issues: 0
 hidev-pypi:
     name: hidev-pypi
     description: 'PyPI plugin for HiDev'
@@ -632,13 +625,13 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 14
-    stars: 155
-    watchers: 155
-    issues: 15
+    stars: 159
+    watchers: 159
+    issues: 17
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
-    forks: 2
+    forks: 3
     stars: 2
     watchers: 2
     issues: 0
@@ -667,8 +660,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 7
-    stars: 30
-    watchers: 30
+    stars: 31
+    watchers: 31
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -702,8 +695,8 @@ yii2-language:
     name: yii2-language
     description: 'Yii2 module for language switching'
     forks: 1
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 1
 hisite:
     name: hisite
@@ -834,7 +827,7 @@ hiam-template:
 hipanel-module-document:
     name: hipanel-module-document
     description: null
-    forks: 1
+    forks: 2
     stars: 2
     watchers: 2
     issues: 0
@@ -968,8 +961,8 @@ php-billing:
     name: php-billing
     description: 'PHP Billing Library'
     forks: 0
-    stars: 9
-    watchers: 9
+    stars: 10
+    watchers: 10
     issues: 0
 php-units:
     name: php-units
@@ -1086,7 +1079,7 @@ hiapi-rcp-traf:
 hiapi-gogetssl:
     name: hiapi-gogetssl
     description: 'hiAPI GoGetSSL plugin'
-    forks: 0
+    forks: 1
     stars: 2
     watchers: 2
     issues: 0
@@ -1100,7 +1093,7 @@ hiapi-directi:
 hipanel-module-integrations:
     name: hipanel-module-integrations
     description: 'Integrations management plugin for HiPanel'
-    forks: 0
+    forks: 1
     stars: 3
     watchers: 3
     issues: 0
@@ -1153,13 +1146,6 @@ yii2-data-mapper:
     stars: 5
     watchers: 5
     issues: 0
-hiapi-legacy:
-    name: hiapi-legacy
-    description: null
-    forks: 0
-    stars: 0
-    watchers: 0
-    issues: 0
 hiapi-fetchmail:
     name: hiapi-fetchmail
     description: 'hiAPI Fetchmail plugin'
@@ -1201,4 +1187,11 @@ hifile-api:
     forks: 0
     stars: 2
     watchers: 2
+    issues: 0
+yii2-daterangepicker:
+    name: yii2-daterangepicker
+    description: 'Date Range Picker widget for Yii2'
+    forks: 1
+    stars: 6
+    watchers: 6
     issues: 0
