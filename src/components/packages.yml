@@ -1,10 +1,10 @@
 hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
-    forks: 7
+    forks: 8
     stars: 19
     watchers: 19
-    issues: 1
+    issues: 2
 yii2-higrid:
     name: yii2-higrid
     description: 'Yii 2 advanced grid'
@@ -39,7 +39,7 @@ hipanel-module-finance:
     forks: 3
     stars: 5
     watchers: 5
-    issues: 0
+    issues: 2
 hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
@@ -148,10 +148,10 @@ yii2-asset-lightbox2:
 yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
-    forks: 9
-    stars: 34
-    watchers: 34
-    issues: 4
+    forks: 10
+    stars: 35
+    watchers: 35
+    issues: 3
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
     description: 'Yii2 asset for bower adminlte'
@@ -289,8 +289,8 @@ heppy:
     name: heppy
     description: 'Python EPP client and library'
     forks: 1
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 0
 reodb:
     name: reodb
@@ -345,8 +345,8 @@ yii2-cart:
     name: yii2-cart
     description: 'Cart module for Yii2'
     forks: 3
-    stars: 10
-    watchers: 10
+    stars: 11
+    watchers: 11
     issues: 0
 omnipay-paypal:
     name: omnipay-paypal
@@ -624,10 +624,10 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 14
-    stars: 159
-    watchers: 159
-    issues: 17
+    forks: 15
+    stars: 164
+    watchers: 164
+    issues: 19
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -960,7 +960,7 @@ hipanel-module-certificate:
 php-billing:
     name: php-billing
     description: 'PHP Billing Library'
-    forks: 0
+    forks: 1
     stars: 10
     watchers: 10
     issues: 0
@@ -995,9 +995,9 @@ hiapi:
 billing-hiapi:
     name: billing-hiapi
     description: 'API for Billing'
-    forks: 0
-    stars: 3
-    watchers: 3
+    forks: 1
+    stars: 4
+    watchers: 4
     issues: 0
 docker-php:
     name: docker-php
@@ -1152,7 +1152,7 @@ hiapi-fetchmail:
     forks: 1
     stars: 3
     watchers: 3
-    issues: 0
+    issues: 1
 docker-satis-gitlab:
     name: docker-satis-gitlab
     description: 'Docker Satis Gitlab'
@@ -1171,8 +1171,8 @@ hipanel-client-debt:
     name: hipanel-client-debt
     description: 'Client Debt plugin for HiPanel'
     forks: 1
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 hifile-sql:
     name: hifile-sql
@@ -1194,4 +1194,11 @@ yii2-daterangepicker:
     forks: 1
     stars: 6
     watchers: 6
+    issues: 0
+hidev-phpstan:
+    name: hidev-phpstan
+    description: 'HiDev plugin for PHPStan'
+    forks: 0
+    stars: 1
+    watchers: 1
     issues: 0
