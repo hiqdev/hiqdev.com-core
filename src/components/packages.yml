@@ -4,7 +4,7 @@ hipanel-core:
     forks: 8
     stars: 19
     watchers: 19
-    issues: 2
+    issues: 1
 yii2-higrid:
     name: yii2-higrid
     description: 'Yii 2 advanced grid'
@@ -25,7 +25,7 @@ hipanel-module-client:
     forks: 3
     stars: 4
     watchers: 4
-    issues: 0
+    issues: 1
 hipanel-module-domain:
     name: hipanel-module-domain
     description: 'Domain Plugin for HiPanel'
@@ -39,7 +39,7 @@ hipanel-module-finance:
     forks: 3
     stars: 5
     watchers: 5
-    issues: 2
+    issues: 1
 hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
@@ -71,7 +71,7 @@ yii2-collection:
 hipanel-module-server:
     name: hipanel-module-server
     description: 'Server Plugin for HiPanel'
-    forks: 3
+    forks: 4
     stars: 4
     watchers: 4
     issues: 0
@@ -79,9 +79,9 @@ hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
     forks: 4
-    stars: 12
-    watchers: 12
-    issues: 1
+    stars: 14
+    watchers: 14
+    issues: 2
 hipanel-module-dashboard:
     name: hipanel-module-dashboard
     description: 'Dashboard Plugin for HiPanel'
@@ -148,9 +148,9 @@ yii2-asset-lightbox2:
 yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
-    forks: 10
-    stars: 35
-    watchers: 35
+    forks: 11
+    stars: 38
+    watchers: 38
     issues: 3
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -176,7 +176,7 @@ hipanel-theme-adminlte1:
 yii2-theme-adminlte:
     name: yii2-theme-adminlte
     description: 'AdminLte Theme for hiqdev/yii2-thememanager'
-    forks: 2
+    forks: 3
     stars: 5
     watchers: 5
     issues: 0
@@ -191,8 +191,8 @@ hidev-php-cs-fixer:
     name: hidev-php-cs-fixer
     description: 'PHP-CS-Fixer plugin for HiDev'
     forks: 1
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 yii2-asset-hipanel:
     name: yii2-asset-hipanel
@@ -225,16 +225,16 @@ hidev-travis:
 hiam:
     name: hiam
     description: 'Identity and Access Management server providing OAuth2, multi-factor authentication and more'
-    forks: 3
+    forks: 4
     stars: 9
     watchers: 9
-    issues: 0
+    issues: 1
 yii2-hiam-authclient:
     name: yii2-hiam-authclient
     description: 'OAuth2 client for yii2 to login through HIAM server'
-    forks: 1
-    stars: 2
-    watchers: 2
+    forks: 2
+    stars: 4
+    watchers: 4
     issues: 0
 hipanel:
     name: hipanel
@@ -338,9 +338,9 @@ yii2-merchant:
     name: yii2-merchant
     description: 'Payment merchants extension for Yii2'
     forks: 3
-    stars: 13
-    watchers: 13
-    issues: 1
+    stars: 14
+    watchers: 14
+    issues: 2
 yii2-cart:
     name: yii2-cart
     description: 'Cart module for Yii2'
@@ -407,7 +407,7 @@ omnipay-qiwi:
 omnipay-robokassa:
     name: omnipay-robokassa
     description: 'RoboKassa plugin for PHP merchant library'
-    forks: 3
+    forks: 4
     stars: 5
     watchers: 5
     issues: 1
@@ -464,8 +464,8 @@ hidev-license:
     name: hidev-license
     description: 'License plugin for HiDev'
     forks: 1
-    stars: 2
-    watchers: 2
+    stars: 3
+    watchers: 3
     issues: 0
 payment-icons:
     name: payment-icons
@@ -625,9 +625,9 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 15
-    stars: 164
-    watchers: 164
-    issues: 19
+    stars: 168
+    watchers: 168
+    issues: 17
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -660,8 +660,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 7
-    stars: 31
-    watchers: 31
+    stars: 33
+    watchers: 33
     issues: 0
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -694,7 +694,7 @@ hidev-chkipper:
 yii2-language:
     name: yii2-language
     description: 'Yii2 module for language switching'
-    forks: 1
+    forks: 2
     stars: 7
     watchers: 7
     issues: 1
@@ -736,9 +736,9 @@ yii2-theme-dataserv:
 hipanel-site:
     name: hipanel-site
     description: 'Selling site for HiPanel'
-    forks: 3
-    stars: 4
-    watchers: 4
+    forks: 4
+    stars: 5
+    watchers: 5
     issues: 0
 yii2-asset-hiqdev:
     name: yii2-asset-hiqdev
@@ -799,9 +799,9 @@ hidev-pytest:
 hiam-mrdp:
     name: hiam-mrdp
     description: 'HIAM module for MRDP database compatibility'
-    forks: 1
-    stars: 3
-    watchers: 3
+    forks: 2
+    stars: 4
+    watchers: 4
     issues: 0
 yii2-mfa:
     name: yii2-mfa
@@ -848,9 +848,9 @@ hiqdev.com-core:
 yii2-menus:
     name: yii2-menus
     description: 'Menus for Yii2'
-    forks: 0
-    stars: 2
-    watchers: 2
+    forks: 1
+    stars: 3
+    watchers: 3
     issues: 0
 yii2-asset-less-space:
     name: yii2-asset-less-space
@@ -912,8 +912,8 @@ hipanel-hiart:
     name: hipanel-hiart
     description: 'HiPanel Hiart'
     forks: 0
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 yii2-hiart-guzzle:
     name: yii2-hiart-guzzle
@@ -1009,7 +1009,7 @@ docker-php:
 hipanel-faq:
     name: hipanel-faq
     description: 'HiPanel FAQ'
-    forks: 0
+    forks: 1
     stars: 3
     watchers: 3
     issues: 0
@@ -1145,7 +1145,7 @@ yii2-data-mapper:
     forks: 0
     stars: 5
     watchers: 5
-    issues: 0
+    issues: 1
 hiapi-fetchmail:
     name: hiapi-fetchmail
     description: 'hiAPI Fetchmail plugin'
@@ -1198,6 +1198,27 @@ yii2-daterangepicker:
 hidev-phpstan:
     name: hidev-phpstan
     description: 'HiDev plugin for PHPStan'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+docker-ci-images:
+    name: docker-ci-images
+    description: null
+    forks: 0
+    stars: 0
+    watchers: 0
+    issues: 0
+easygo-hipanel:
+    name: easygo-hipanel
+    description: 'EasyGo implementation of HiPanel'
+    forks: 0
+    stars: 1
+    watchers: 1
+    issues: 0
+catcher:
+    name: catcher
+    description: Catcher
     forks: 0
     stars: 1
     watchers: 1
