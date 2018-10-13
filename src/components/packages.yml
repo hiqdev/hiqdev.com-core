@@ -2,8 +2,8 @@ hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
     forks: 8
-    stars: 21
-    watchers: 21
+    stars: 22
+    watchers: 22
     issues: 1
 yii2-higrid:
     name: yii2-higrid
@@ -289,8 +289,8 @@ heppy:
     name: heppy
     description: 'Python EPP client and library'
     forks: 2
-    stars: 8
-    watchers: 8
+    stars: 9
+    watchers: 9
     issues: 0
 reodb:
     name: reodb
@@ -660,9 +660,9 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 9
-    stars: 44
-    watchers: 44
-    issues: 7
+    stars: 48
+    watchers: 48
+    issues: 3
 hidev-hiqdev:
     name: hidev-hiqdev
     description: 'HiQDev vendor configuration for HiDev'
@@ -961,8 +961,8 @@ php-billing:
     name: php-billing
     description: 'PHP Billing Library'
     forks: 2
-    stars: 12
-    watchers: 12
+    stars: 13
+    watchers: 13
     issues: 0
 php-units:
     name: php-units
@@ -988,9 +988,9 @@ hidev-webapp:
 hiapi:
     name: hiapi
     description: 'HiAPI Yii2 base project for building API'
-    forks: 0
-    stars: 3
-    watchers: 3
+    forks: 1
+    stars: 5
+    watchers: 5
     issues: 0
 billing-hiapi:
     name: billing-hiapi
@@ -1142,10 +1142,10 @@ hiapi-namesuggestion:
 yii2-data-mapper:
     name: yii2-data-mapper
     description: 'Data Mapper for Yii2'
-    forks: 0
-    stars: 6
-    watchers: 6
-    issues: 1
+    forks: 2
+    stars: 10
+    watchers: 10
+    issues: 2
 hiapi-fetchmail:
     name: hiapi-fetchmail
     description: 'hiAPI Fetchmail plugin'
