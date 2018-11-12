@@ -4,7 +4,7 @@ hipanel-core:
     forks: 10
     stars: 25
     watchers: 25
-    issues: 1
+    issues: 2
 yii2-higrid:
     name: yii2-higrid
     description: 'Yii 2 advanced grid'
@@ -36,10 +36,10 @@ hipanel-module-domain:
 hipanel-module-finance:
     name: hipanel-module-finance
     description: 'Finance Plugin for HiPanel'
-    forks: 3
+    forks: 4
     stars: 7
     watchers: 7
-    issues: 1
+    issues: 2
 hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
@@ -72,8 +72,8 @@ hipanel-module-server:
     name: hipanel-module-server
     description: 'Server Plugin for HiPanel'
     forks: 4
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 hidev:
     name: hidev
@@ -81,14 +81,14 @@ hidev:
     forks: 4
     stars: 19
     watchers: 19
-    issues: 2
+    issues: 3
 hipanel-module-dashboard:
     name: hipanel-module-dashboard
     description: 'Dashboard Plugin for HiPanel'
-    forks: 1
+    forks: 2
     stars: 4
     watchers: 4
-    issues: 0
+    issues: 1
 yii2-app-pluggable:
     name: yii2-app-pluggable
     description: 'Yii 2 Pluggable Project Template'
@@ -176,7 +176,7 @@ hipanel-theme-adminlte1:
 yii2-theme-adminlte:
     name: yii2-theme-adminlte
     description: 'AdminLte Theme for hiqdev/yii2-thememanager'
-    forks: 2
+    forks: 3
     stars: 9
     watchers: 9
     issues: 0
@@ -296,8 +296,8 @@ reodb:
     name: reodb
     description: 'Reusable objective database'
     forks: 0
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 hidev-sql:
     name: hidev-sql
@@ -660,8 +660,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 9
-    stars: 52
-    watchers: 52
+    stars: 54
+    watchers: 54
     issues: 3
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -1233,9 +1233,9 @@ hiapi-nicru:
 hiapi-heppy:
     name: hiapi-heppy
     description: 'hiAPI plugin for hEPPy'
-    forks: 0
-    stars: 2
-    watchers: 2
+    forks: 1
+    stars: 3
+    watchers: 3
     issues: 0
 docker-logstash:
     name: docker-logstash
