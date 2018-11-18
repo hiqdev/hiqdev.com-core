@@ -16,8 +16,8 @@ yii2-thememanager:
     name: yii2-thememanager
     description: 'Theme Manager for Yii 2'
     forks: 1
-    stars: 13
-    watchers: 13
+    stars: 14
+    watchers: 14
     issues: 0
 hipanel-module-client:
     name: hipanel-module-client
@@ -32,7 +32,7 @@ hipanel-module-domain:
     forks: 2
     stars: 4
     watchers: 4
-    issues: 0
+    issues: 1
 hipanel-module-finance:
     name: hipanel-module-finance
     description: 'Finance Plugin for HiPanel'
@@ -78,17 +78,17 @@ hipanel-module-server:
 hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
-    forks: 4
+    forks: 6
     stars: 19
     watchers: 19
-    issues: 3
+    issues: 4
 hipanel-module-dashboard:
     name: hipanel-module-dashboard
     description: 'Dashboard Plugin for HiPanel'
     forks: 2
     stars: 4
     watchers: 4
-    issues: 1
+    issues: 0
 yii2-app-pluggable:
     name: yii2-app-pluggable
     description: 'Yii 2 Pluggable Project Template'
@@ -240,8 +240,8 @@ hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
     forks: 9
-    stars: 7
-    watchers: 7
+    stars: 8
+    watchers: 8
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
@@ -627,7 +627,7 @@ asset-packagist:
     forks: 15
     stars: 174
     watchers: 174
-    issues: 19
+    issues: 21
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -659,7 +659,7 @@ hidev-nginx:
 composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
-    forks: 9
+    forks: 10
     stars: 54
     watchers: 54
     issues: 3
@@ -729,7 +729,7 @@ yii2-theme-original:
 yii2-theme-dataserv:
     name: yii2-theme-dataserv
     description: 'DataServ Theme for hiqdev/yii2-thememanager'
-    forks: 1
+    forks: 2
     stars: 4
     watchers: 4
     issues: 0
@@ -939,7 +939,7 @@ yii2-hiart-httpclient:
 yii2-theme-sailor:
     name: yii2-theme-sailor
     description: 'Sailor theme for hiqdev/yii2-thememanager'
-    forks: 1
+    forks: 2
     stars: 4
     watchers: 4
     issues: 0
@@ -1087,8 +1087,8 @@ hiapi-directi:
     name: hiapi-directi
     description: 'hiAPI Directi'
     forks: 2
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 0
 hipanel-module-integrations:
     name: hipanel-module-integrations
@@ -1229,7 +1229,7 @@ hiapi-nicru:
     forks: 1
     stars: 3
     watchers: 3
-    issues: 0
+    issues: 1
 hiapi-heppy:
     name: hiapi-heppy
     description: 'hiAPI plugin for hEPPy'
