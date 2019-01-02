@@ -25,7 +25,7 @@ hipanel-module-client:
     forks: 3
     stars: 5
     watchers: 5
-    issues: 0
+    issues: 1
 hipanel-module-domain:
     name: hipanel-module-domain
     description: 'Domain Plugin for HiPanel'
@@ -60,7 +60,7 @@ yii2-combo:
     forks: 1
     stars: 6
     watchers: 6
-    issues: 1
+    issues: 0
 yii2-collection:
     name: yii2-collection
     description: 'Basic Collection for Yii 2'
@@ -148,10 +148,10 @@ yii2-asset-lightbox2:
 yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
-    forks: 11
-    stars: 43
-    watchers: 43
-    issues: 3
+    forks: 12
+    stars: 45
+    watchers: 45
+    issues: 2
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
     description: 'Yii2 asset for bower adminlte'
@@ -317,8 +317,8 @@ rewatcher:
     name: rewatcher
     description: 'Repositories watcher'
     forks: 0
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 hibilling:
     name: hibilling
@@ -393,7 +393,7 @@ omnipay-okpay:
 omnipay-paxum:
     name: omnipay-paxum
     description: 'Paxum plugin for PHP merchant library'
-    forks: 1
+    forks: 2
     stars: 3
     watchers: 3
     issues: 0
@@ -473,7 +473,7 @@ payment-icons:
     forks: 4
     stars: 16
     watchers: 16
-    issues: 1
+    issues: 0
 hiqdev.github.io:
     name: hiqdev.github.io
     description: 'HiQDev site'
@@ -625,8 +625,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 15
-    stars: 177
-    watchers: 177
+    stars: 179
+    watchers: 179
     issues: 21
 hipanel-rbac:
     name: hipanel-rbac
@@ -660,8 +660,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 10
-    stars: 56
-    watchers: 56
+    stars: 62
+    watchers: 62
     issues: 3
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -704,7 +704,7 @@ hisite:
     forks: 1
     stars: 9
     watchers: 9
-    issues: 0
+    issues: 1
 yii2-theme-flat:
     name: yii2-theme-flat
     description: 'Flat Theme for Yii2 projects'
@@ -849,8 +849,8 @@ yii2-menus:
     name: yii2-menus
     description: 'Menus for Yii2'
     forks: 1
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 0
 yii2-asset-less-space:
     name: yii2-asset-less-space
@@ -949,7 +949,7 @@ yii2-asset-select2:
     forks: 2
     stars: 3
     watchers: 3
-    issues: 1
+    issues: 0
 hipanel-module-certificate:
     name: hipanel-module-certificate
     description: 'SSL certificates module for HiPanel'
@@ -961,8 +961,8 @@ php-billing:
     name: php-billing
     description: 'PHP Billing Library'
     forks: 3
-    stars: 18
-    watchers: 18
+    stars: 20
+    watchers: 20
     issues: 0
 php-units:
     name: php-units
@@ -1128,7 +1128,7 @@ hiapi-module-logs:
 yii2-export:
     name: yii2-export
     description: 'Data exporting to different formats for Yii2'
-    forks: 0
+    forks: 1
     stars: 3
     watchers: 3
     issues: 0
