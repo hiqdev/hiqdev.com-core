@@ -84,7 +84,7 @@ There can be any number of configs including special ones: `dotenv`, `defines` Ð
 Then the values obtained in the former steps can be used for all the later ones.
 i.e. environment variables can be used to set constants. Constants and environment variables can be used to set parameters. And the whole set of parameters, constants and environment variables can be used in the configs.
 
-And generally we're done! The Composer-config-plugin just merges all the config arrays like 'yii\helpers\ArrayHelper::merge`. Configs are merged in the right order of course &mdash; considering the  requirements hierarchy &mdash; in the way that every package is merged according to its dependencies with the ability to override its values. i.e. the top most package has full control over the config. It controls all the values. The plugins only provide default values. On the whole, the process repeats the config assembling process in `yii2-app-advanced` just on the larger scale.
+And generally we're done! The Composer-config-plugin just merges all the config arrays like `yii\helpers\ArrayHelper::merge`. Configs are merged in the right order of course &mdash; considering the  requirements hierarchy &mdash; in the way that every package is merged according to its dependencies with the ability to override its values. i.e. the top most package has full control over the config. It controls all the values. The plugins only provide default values. On the whole, the process repeats the config assembling process in `yii2-app-advanced` just on the larger scale.
 
 To use the assembled configs in an application simply add these lines to `web/index.php`:
 
