@@ -1,8 +1,8 @@
 ---
-title: Yii2 projects - An  alternative organization regime
+title: Yii2 projects - An  alternative way to organise them
 ---
 
-# Yii2 projects - An alternative organization regime
+# Yii2 projects - An alternative way to organise them
 
 <div align="right"><a href="https://habrahabr.ru/post/329286/">Russian version</a></div>
 
