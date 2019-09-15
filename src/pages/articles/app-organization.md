@@ -18,7 +18,7 @@ Both these problems are covererd together here because they are closely related.
 
 These problems become more acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing the copying and pasting of code will not hurt anyone.
 
-I want to share my solution for the outlined problems.
+I want to share my solution to these outlined problems.
 
 <habracut/>
 
