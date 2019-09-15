@@ -120,10 +120,10 @@ It's time to return to the main question &mdash; how to organize big reusable pr
 
 ## Packages hiararchy
 
-The simplist project structure is the following &mdash; our project requires a framework and third party extensions with composer (I call *third party* those extensions that are not part of our project). So we have this simple package (repositories) hierarchy:
+The simplest project structure is the following &mdash; our project requires a framework and third party extensions with composer (I call *third party* those extensions that are not part of our project). So we have this simple package (repositories) hierarchy:
 
 - A project that has grown up from an application template including;
-    - extensions;
+    - extensions, and a,
     - framework.
 
 I will not burden you with all the different variants of this hierarchy that we've tried and rejected after practical operations. So  here is the optimal hierarchy we've finally decided to stick to:
