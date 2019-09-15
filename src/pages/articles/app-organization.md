@@ -74,7 +74,7 @@ return [
 ];
 ```
 
-There can be any number of configs including special ones: `dotenv`, `defines` и `params`. Configs are processed in the following order:
+There can be any number of configs including special ones: `dotenv`, `defines` . `params`. Configs are processed in the following order:
 
 - environment variables &mdash; `dotenv`;
 - constants &mdash; `defines`;
@@ -128,31 +128,31 @@ I will not burden you with all the different variants of this hierarchy that we'
 - *"root"*
     - plugins that are specific for this variant of project;
     - main project;
-        - plugins of project;
+        - plugins of the project;
         - *third-party* plugins;
         - basic project;
-            - plugins needed for basic project;
+            - plugins needed for the basic project;
             - framework.
 
-Hierarchy displays who requires whom, i.e. *"root"* requires main project, which in turn requires basic project, and basic project requires framework.
+This Hierarchy displays who, in a coding sense, `requires` whom, i.e. *"root"* `requires` the  main project, which in turn  `requires` the basic project, and the basic project then requires the framework.
 
 &mdash; Wow-wow! Easy! What's a "root" and "basic project"?
 
-Sorry, I've come up to all this myself and didn't find suitable terminology so I had to invent. I'll be grateful for better variants.
+Sorry, I've come up with all of this myself and perhaps didn't use suitable terms so I have had to improvise or invent a few terms. I'll be grateful for your suggestion of better variants.
 
-I call *"root"* the most external package that containts code, config and other files specifical for this particular installation of your project &mdash; things this installation is different from main project. Ideally it contains just a few files, more about it below.
+I call *"root"* the most external package that containts code, config and other files specifically for this particular installation and that are unique to your project &mdash; things this installation distinguishes it from the main project. Ideally it contains just a few files. More about it below.
 
-*"Basic project"* (or basic application) is what `yii2-app-basic` turns into using this approach. I.e. it is reusable application basis implementing some basic functions and arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developped by a community like `yii2-app-basic`. We are developing HiSite, more about it below.
+*"Basic project"* (or basic application) is what `yii2-app-basic` turns into or develops into using this approach. i.e. it is a reusable base application that implements some basic functions arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developed by a community like `yii2-app-basic`. We are developing HiSite according to this method. More about it below.
 
-Thus packages form hierarchy of composition. An outer package uses inner one mostly reusing its behavior but redifining own specifics; *"root"* uses and specifies main project and so on: main project uses basic project; basic project &mdash; framework.
+Thus packages form the hierarchy of the composition. An outer package uses the inner one mostly by reusing its behavior but redefining its own specifics; *"root"* uses and specifies the  main project and so on: main project uses the basic project; basic project &mdash; framework.
 
 It's necessary to clarify that we are talking of code organization only, i.e. how to split code into packages/plugins.
-Architectural division of code into layers is independent of division info packages of course. But the can complement each outher.
-E.g. domain logic can be taken away into separate package to be reused between different projects.
+Architectural division of code into layers is independent of division info packages of course. But they can complement each other.
+e.g. domain logic can be separated into separate packages to be reused between different projects.
 
-&mdash; Uh-oh! Example needed!
+&mdash; Uh-oh! An Example is needed!
 
-For example you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. catalog. And sites differ in design and parameters. You could organize your code in packages forming hierarchy this way:
+For example, you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. a catalog. And sites differ in design and parameters. You could organize your code in packages forming a hierarchy this way:
 
 - `business-card-no42.com` &mdash; *"root"*;
     - `myvendor/yii2-theme-cool` &mdash; this site specific plugin;
@@ -164,15 +164,15 @@ For example you create a lot of simple business card websites. Basic functions a
             - `yiisoft/yii2-swiftmail` &mdash; plugin required for basic project to work;
             - `yiisoft/yii2` &mdash; framework.
 
-Hope I didn't said anything new for you and everybody split their projects more or less in similar way.
-Or at least everybody understand that it is the way the code should be split into hierarchy of reusable packages.
-If not then you should consider it definetely. Don't put all your code in a single package copied over and over again. DRY!
-But I doubt you use "root". Now I'll try to argue its benefits to keep you code DRY.
-It splits reusable code from installation specific code.
+I hope I have not covered or said anything new to you and that everybody can split their projects more or less in a similar way.
+Or at least everybody understands the way the code is split into a hierarchy of reusable packages.
+If not then you should consider this carefully. Don't put all your code into a single package copied over and over again. DRY!
+But I doubt you will use "root". Now I'll try to argue its benefits to keep your code DRY.
+It separates reusable code from installation specific code.
 
 ## *"Root"*
 
-It's enough to put in the "root" just a couple of files tuned for this specific installation of project.
+It's adequate to put in the "root" just a couple of files fine tuned for the specific installation of this project.
 It is possible and preferable to succeed with just three files:
 
 - `.env` &mdash; environment variables, e.g.`ENV=prod`;
@@ -187,25 +187,25 @@ return [
 ];
 ```
 
-Considering `.env` portability parameters used by other (non PHP) technologies are best candidates to be put to `.env`.
+Considering `.env` portability parameters used by other (non PHP) technologies are the best candidates to be converted to `.env`.
 
 Of course one may and should put some configuration and even code into the *"root"*.
-But it has to be very specific for this particular installation and should not be copy pasted between installation.
-As soon as I see a copy-pasted code I catch it and move into some plugin.
+But it has to be very specific for this particular installation and should not need to be copied or pasted between installations.
+As soon as I see reusable copy-pasted code, I catch it and move it into some plugin.
 
-All the other files and directories needed for application to work, like `web/assets/`, `web/index.php` are standard and they should be created and chmoded with build tool or task runner.
+All the other files and directories needed for an application to work, like `web/assets/`, `web/index.php` are standard and they should be created and chmoded with a  build tool or task runner.
 We are reinventing [our own](https://hiqdev.com/packages/hidev) but this is quite another story.
 
-In fact *"root"* is `params-local.php` on steroids. It concentrates difference between specific project installation and generally used code. We create separate repository for "root" and save it to our private git-server, so we can commit there even secrets (but this is holy war topic). All the other packages are publicly available at GitHub. We commit `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
+In fact *"root"* is a `params-local.php` on steroids. It emphasizes the difference between a specific project installation and generally used code. We create a separate repository for the "root" and save it to our private git-server, so we can commit there even secrets (but this is a contentious topic). All the other packages are publicly available at GitHub. We commit the `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
 
-&mdash; Can you be more specific? Show me the code finally!
+&mdash; Can you be more specific? Please show me the final code!
 
 ## HiSite and Asset Packagist
 
-One of *"basic application"* we develop is **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; that's a base for a typical website like `yii2-app-basic` but implemented as plugin that gives all advantages of code reuse over copy-pasting:
+One  *"basic application"* we developed is **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; that's a base for a typical website like `yii2-app-basic` but implemented as a plugin it gives all the advantages of code reuse over copy-pasting:
 
 - you can base your project upon HiSite and get it's updates as it evolves;
-- you can change basic project for another basic project that is compatible but has more features.
+- you can change or adapt a basic project from another basic project that is compatible but has more features.
 
 *"Root"* template (or skeleton) is here &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
 
@@ -217,12 +217,12 @@ Hierarchy of dependencies looks like this:
     - basic project &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
         - framework &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
 
-In the [README](https://github.com/hiqdev/hisite-template) you can find how to setup the project on your side &mdash; easy enough: `composer create-project` plus configuration settings. Thanks to themes implemented as plugins and use of the theming library [hiqdev/yii2-thememanager]  you can change `yii2-theme-flat` to `yii2-theme-original` then run `composer update` and the site will change it's clothes to other theme. As simple as change single line in `composer.json`.
+In the [README](https://github.com/hiqdev/hisite-template) you can find out how to setup the project on your side &mdash; Simply: `composer create-project` plus configuration settings. Thanks to themes implemented as plugins and the use of the theming library [hiqdev/yii2-thememanager]  you can change `yii2-theme-flat` to `yii2-theme-original` then run `composer update` and the site will change it's clothes to the other theme. Similarily as simple as changing a  single line in `composer.json`.
 
-There is another real working project that can be used as example of this approach and it is completely available at GitHub.
-[Asset Packagist](https://asset-packagist.org/) is packagist-compatible repository that enables installation of Bower and NPM packages as native Composer packages.
+There is another real working project that can be used as an example of this approach and it is completely available at GitHub.
+[Asset Packagist](https://asset-packagist.org/) is a packagist-compatible repository that enables the installation of Bower and NPM packages as native Composer packages.
 
-Hierarchy of dependencies looks like this:
+The Hierarchy of dependencies looks like this:
 
 - *"root"* &mdash; [hiqdev/asset-packagist.dev](https://github.com/hiqdev/asset-packagist.dev);
     - theme plugin &mdash; [hiqdev/yii2-theme-original](https://github.com/hiqdev/yii2-theme-original);
@@ -234,13 +234,13 @@ You can find more information on how to deploy the project on your site in the [
 
 ## Let's sum it up
 
-The topic is huge. I had to skip many details. Hope I've managed to bring the general idea. Once again using defined terminology:
+This topic is huge. I had to skip many details. I hope I've managed to give you the general idea. Once again using defined terminology:
 
-- reuse code as plugins, i.e. code combined with configuration;
-- create project as hierarchy of plugins;
-- separate reusable part of project from specific installation with use of "root".
+- reuse code as plugins, i.e. code combined with the configuration;
+- create a project as a hierarchy of plugins;
+- separate the reusable part of the project from the specific installation with the use of "root".
 
-We've been using described approach about a year already. We've got best impressions &mdash; our hairs became smooth and silky, we divide and conquer, we create plugins simply and easily -
+We've been using this described approach for about a year already. We've created our best impression &mdash; our hairs became smooth and silky, we divided and conquered, we now create plugins simply and easily -
 [100+ already](https://hiqdev.com/pages/packages)
 and we are not going to stop. When we need a new functionality &mdash; we create a new plugin.
 
@@ -252,12 +252,12 @@ That's enough for today. Thank you for your attention. To be continued.
 I was inspired to write such a volume of text by a [series](http://fabien.potencier.org/symfony4-compose-applications.html) of [articles](http://fabien.potencier.org/symfony4-monolith-vs-micro.html) of [Fabien Potencier](http://fabien.potencier.org/) (Symfony's creator) about upcoming Symfony Flex.
 This new Symfony component will improve bundles system in the direction of automatic configuration which gives:
 
-> new way to create and evolve your applications with ease
+> a new way to create and evolve your applications with ease
 
 (c) Fabien Potencier
 
-So I'm not alone to consider mentioned questions very important for a framework.
+So I'm not alone in promoting the mentioned questions as being very important for a framework.
 
 ## P.P.S
 
-If you want to discuss please open issue in any of the mentioned GitHub repos.
+If you want to discuss please open an issue in any of the mentioned GitHub repos.
