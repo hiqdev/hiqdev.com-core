@@ -1,52 +1,53 @@
 ---
-title: Yii2 projects alternative organization
+title: Yii2 projects - An  alternative way to organise them
 ---
 
-# Yii2 projects alternative organization
+# Yii2 projects - An alternative way to organise them
 
 <div align="right"><a href="https://habrahabr.ru/post/329286/">Russian version</a></div>
 
 <img src="https://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
 
-How is it supposed to create Yii2 project now? Choose template project: basic or advanced, fork it then edit and commit right there. Wham! You've made copy-pasting! Your project and the template develop separately since now. You will not get fixes to the template. And your improvements that are specific for your tasks will not be accepted into `yii2-app-basic`. This is the problem number one.
+How does one create a Yii2 project currently? I choose a template project: either basic or advanced, fork it, then edit and commit it, right there. Wham! I've copied and pasted it into my fork. 
 
-How is it supposed to evolve Yii2 project? Choose suitable extensions and plug them in with composer. Then you find example config for the extension in it's README and copy this example into your application config. Oops... You cook copypasta again! It can make troubles in many ways, e.g. in a big project many extensions can be used &mdash; application config becomes just huge and unreadable. This is the problem number two.
+My project and the template I notice develop separately now. I do not get fixes to the template automatically into my project. And conversely or similarly my improvements that are specifically generated from my tasks will not be accepted into the `yii2-app-basic` template. This certainly poses the first problem with the current situation.
 
-I cover these problems together because they are closely related.
-First one can be solved by separating reusable code and turning it into an extension. But then you've got second problem &mdash; extension needs config.
+Currently how does a  Yii2 project evolve? Choose suitable extensions and plug them in with composer. Then I find the example config for the extension in it's README and copy this example into my application config. Oops... I notice I am copying and pasting again! This method causes problems, e.g. in a big project many extensions can be used &mdash; the application config becomes huge and unreadable. This is the second problem.
 
-These problems are most acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing copypasta and code reuse never hurt anyone.
+Both these problems are covererd together here because they are closely related. The first one can be solved by separating reusable code and turning it into an extension. But then you've got a second problem &mdash; this extension needs configuring.
 
-I want to share my solution for outlined problems.
+These problems become more acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing the copying and pasting of code will not hurt anyone.
+
+I want to share my solution to these outlined problems.
 
 <habracut/>
 
 ## Plugins system
 
-So here is the solution: use plugins system &mdash; from the very beginning create a project as a plugin, split project into plugins and assemble application config automatically from configs of plugins.
+So here is the solution: Use a plugins based system &mdash; from the very beginning or outset. So yes, create a project as a plugin, split the project into plugins and assemble the application's  config automatically from these configs or plugins.
 
-I have to slow down here and explain what do I call plugin. Yii2 supports extensions and they enable organization of reusable code and plug it in to a project with composer. But any simplest extension needs a config. And the framework doesn't help here much. Author of an extension has two options:
+I have to slow down here and define a plugin. Yii2 supports extensions and they enable the organization of reusable code and you can plug them into a project with composer. But even the simplest extension needs a config. And the framework doesn't help here much. The author of an extension has two options:
 
-- describe desired config in the README file and propose programmer to copy-paste it;
-- use [bootstrap](http://www.yiiframework.com/doc-2.0/guide-structure-extensions.html#bootstrapping-classes) in your extension that will put desired config into application config.
+- describe the desired config in the README file and invite programmers to copy and paste it;
+- use [bootstrap](http://www.yiiframework.com/doc-2.0/guide-structure-extensions.html#bootstrapping-classes) in your extension that will put the desired config into the application config.
 
-I've criticized first option above. Now I'll take second:
+I've criticized the first option above. Now I'll analyse the second:
 
-- bootstrap is run quite early, but `Application` object is already created and it's just too late to configure certain things;
-- it is rather difficult to merge with config of already created application, you'll have to work not with a whole config bit in parts: components separately (and very non trivial), aliases separately, DI container, modules, params, `controllerMap`, ... (I tried &mdash; that's not going to work);
+- bootstrap is run near the start, but the `Application` object by that time has already been created and it's just too late to configure certain things;
+- it is particularly difficult to merge with the configuration file of the already created application since it is one progressively large file representing a progressively larger array of key-value pairs. You'll have to work not with a whole config file but with its constituent parts: components separately (and sometimes very non trivial), aliases separately, DI container, modules, params, `controllerMap`, ... (I tried &mdash; that's not going to work);
 - bootstrap is not lazy, it is run on every application request and if you have many such bootstraps they will hurt performance.
 
-After several iterations and tried different variants I've come to a radical solution &mdash; assemble config outside of application before it starts. Hmm, sounds easy and obvious, but best idea just doesn't come first. It turned out that it is most suitable to assemble config with a composer plugin it has convenient access to all information about project dependencies. This is how [composer-config-plugin](https://github.com/hiqdev/composer-config-plugin) was created.
+After several iterations and trying several different variants I've come to a radical solution &mdash; assemble the config outside of the application before it starts. Hmm, sounds easy and obvious, but actually this concept is not new. It turns out that this concept is especially suited to assembling configs with a composer plugin. It will have convenient access to all information about project dependencies. This is how [composer-config-plugin](https://github.com/hiqdev/composer-config-plugin) was created.
 
-## Composer Config Plugin
+## The New Composer Config Plugin
 
-Composer-config-plugin works rather simply:
+The new Composer-config-plugins work quite simply by:
 
-- it scans all the project's dependecies for `config-plugin` extra option in their `composer.json`;
-- it merges all the configs according to the description and packages' hierarchy;
-- it writes resulting config as PHP files.
+- scanning all the project's dependencies for the `config-plugin` extra option in their `composer.json`;
+- merging all the configs according to the description and packages' hierarchy;
+- writing the resulting config as PHP files.
 
-To convert an extension to plugin list desired config files in `composer.json` like this:
+To convert an extension to a plugin, list the desired config files in `composer.json` as follows:
 
 ```json
     "extra": {
@@ -56,7 +57,7 @@ To convert an extension to plugin list desired config files in `composer.json` l
     }
 ```
 
-It tells composer-config-plugin to merge `src/config/web.php` contents into `web` config. And this file should contain just what plugin needs to be added into application config, e.g. internationalization config:
+This tells the composer-config-plugin to merge the contents of the `src/config/web.php` into the `web` config. And this file should contain just what the plugin needs to be added into the application config, e.g. internationalization config:
 
 ```php
 <?php
@@ -75,19 +76,18 @@ return [
 ];
 ```
 
-There can be any number of configs including special ones: `dotenv`, `defines` и `params`. Configs are processed in the following order:
+There can be any number of configs including special ones: `dotenv`, `defines` . `params`. Configs are processed in the following order:
 
 - environment variables &mdash; `dotenv`;
 - constants &mdash; `defines`;
 - parameters &mdash; `params`;
 - all other configs, e.g.: `common`, `console`, `web`, ...
 
-Then values obtained in the former steps could be used for all the later ones.
-I.e. environment variables can be used to set constants. Constants and environment variables can be used to set parameters. And the whole set of parameters, constants and environment variables can be used in configs.
+Then the values obtained in the former steps can be used for all the later ones. i.e. environment variables can be used to set constants. Constants and environment variables can be used to set parameters. And the whole set of parameters, constants and environment variables can be used in the configs.
 
-And generally we're done! Composer-config-plugin just merges all the config arrays with function analogous to `yii\helpers\ArrayHelper::merge`. Configs are merged in the right order of course &mdash; considering requirements hierarchy &mdash; in the way that every package is merged after all of its dependencies and can override its values. I.e. upmost package has full control over the config and controls all the values and plugins only provide default values. On the whole the process repeats config assembling process in `yii2-app-advanced` just on the larger scale.
+And generally we're done! The Composer-config-plugin just merges all the config arrays like `yii\helpers\ArrayHelper::merge`. Configs are merged in the right order of course &mdash; considering the  requirements hierarchy &mdash; in the way that every package is merged according to its dependencies with the ability to override its values. i.e. the top most package has full control over the config. It controls all the values. The plugins only provide default values. On the whole, the process repeats the config assembling process in `yii2-app-advanced` just on a larger scale.
 
-To use assembled configs in application simply add these lines to `web/index.php`:
+To use the assembled configs in an application simply add these lines to `web/index.php`:
 
 ```php
 <?php
@@ -98,55 +98,64 @@ $config = require hiqdev\composer\config\Builder::path('web');
 
 You can find more information and examples as well as ask your questions at GitHub: [hiqdev/composer-config-plugin](https://github.com/hiqdev/composer-config-plugin).
 
-Here is an example of a simple plugin [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin). It shows advantages of this approach. To get Yandex.Metrika counter on your site it is only necessary to require the plugin and provide `yandexMetrika.id` parameter. And that's it! No need to copy-paste anything to your config, no need to add widget into layout &mdash; no need to touch your working code. Plugin is an entire piece of functionality which allows to extend system without making chages to existing code.
+Here is an example of a simple plugin [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin). It shows the advantages of this approach. To get Yandex.Metrika counter on your site it is only necessary to require the plugin and provide the `yandexMetrika.id` parameter. And that's it! 
+
+No need to:
+- copy-paste anything to your config. 
+- add widgets into the layout.
+- touch your working code. 
+
+The Plugin is an entire piece of functionality which allows you to extend the system without making changes to existing code.
 
 <img src="https://cdn.hiqdev.com/hiqdev/shtrih.png" align="right"/>
 
-&mdash; What? One can create a new feature and don't break old ones?!<br>
+&mdash; What? One can create a new feature and not break old ones?!<br>
 &mdash; Yes.<br>
 &mdash; Awesome! No need to write tests anymore?<br>
 &mdash; No... That will not pass...<br>
 
-In total, `composer-config-plugin` provides plugin system and enables reuse of smaller pieces of software. It's time to return to the main question &mdash; how to organize big reusable projects. Once again proposed solution: create project as a system of plugins organized in the proper hierarchy.
+In summary, the `composer-config-plugin` provides a plugin system  enabling the reuse of smaller pieces of software. 
+
+It's time to return to the main question &mdash; how to organize big reusable projects. Once again the proposed solution: Create a  project as a system of plugins organized in the proper hierarchy.
 
 ## Packages hiararchy
 
-Simpliest project structure is the following &mdash; our project requires framework and third party extensions with composer (I call *third party* those extensions that are not part of our project). So we have this simple packages (repositories) hierarchy:
+The simplest project structure is the following &mdash; our project requires a framework and third party extensions with composer (I call *third party* those extensions that are not part of our project). So we have this simple package (repositories) hierarchy:
 
-- project that has grown up from an application template;
-    - extensions;
+- A project that has grown up from an application template including;
+    - extensions, and a,
     - framework.
 
-I will not burden you with all the different variants of hierarchy that we've tried and rejected after practical operations. And here is the optimal hierarchy we've finally stick to:
+I will not burden you with all the different variants of this hierarchy that we've tried and rejected after practical operations. So  here is the optimal hierarchy we've finally decided to stick to:
 
 - *"root"*
     - plugins that are specific for this variant of project;
     - main project;
-        - plugins of project;
+        - plugins of the project;
         - *third-party* plugins;
         - basic project;
-            - plugins needed for basic project;
+            - plugins needed for the basic project;
             - framework.
 
-Hierarchy displays who requires whom, i.e. *"root"* requires main project, which in turn requires basic project, and basic project requires framework.
+This Hierarchy displays who, in a coding sense, `requires` whom, i.e. *"root"* `requires` the  main project, which in turn  `requires` the basic project, and the basic project then `requires` the framework.
 
 &mdash; Wow-wow! Easy! What's a "root" and "basic project"?
 
-Sorry, I've come up to all this myself and didn't find suitable terminology so I had to invent. I'll be grateful for better variants.
+Sorry, I've come up with all of this myself and perhaps didn't use suitable terms so I have had to improvize or invent a few terms. I'll be grateful for your suggestion of better variants of these terms.
 
-I call *"root"* the most external package that containts code, config and other files specifical for this particular installation of your project &mdash; things this installation is different from main project. Ideally it contains just a few files, more about it below.
+I call *"root"* the most external package that containts code, the config and other files specifically for this particular installation and that are unique to your project &mdash; things this installation distinguishes it from the main project. Ideally it contains just a few files. More about it below.
 
-*"Basic project"* (or basic application) is what `yii2-app-basic` turns into using this approach. I.e. it is reusable application basis implementing some basic functions and arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developped by a community like `yii2-app-basic`. We are developing HiSite, more about it below.
+*"Basic project"* (or basic application) is what `yii2-app-basic` turns into or develops into using this approach. i.e. it is a reusable base application that implements some basic functions arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developed by a community like `yii2-app-basic`. We are developing HiSite according to this method. More about it below.
 
-Thus packages form hierarchy of composition. An outer package uses inner one mostly reusing its behavior but redifining own specifics; *"root"* uses and specifies main project and so on: main project uses basic project; basic project &mdash; framework.
+Thus packages form the hierarchy of the composition. An outer package uses the inner one mostly by reusing its behavior but redefining its own specifics; *"root"* uses and specifies the  main project and so on: main project uses the basic project; basic project &mdash; framework.
 
 It's necessary to clarify that we are talking of code organization only, i.e. how to split code into packages/plugins.
-Architectural division of code into layers is independent of division info packages of course. But the can complement each outher.
-E.g. domain logic can be taken away into separate package to be reused between different projects.
+Architectural division of code into layers is independent of division info packages of course. But they can complement each other.
+e.g. domain logic can be separated into separate packages to be reused between different projects.
 
-&mdash; Uh-oh! Example needed!
+&mdash; Uh-oh! An Example is needed!
 
-For example you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. catalog. And sites differ in design and parameters. You could organize your code in packages forming hierarchy this way:
+For example, you create a lot of simple business card websites. Basic functions are the same for all sites but you offer paid features e.g. a catalog. And sites differ in design and parameters. You could organize your code in packages forming a hierarchy this way:
 
 - `business-card-no42.com` &mdash; *"root"*;
     - `myvendor/yii2-theme-cool` &mdash; this site specific plugin;
@@ -158,19 +167,19 @@ For example you create a lot of simple business card websites. Basic functions a
             - `yiisoft/yii2-swiftmail` &mdash; plugin required for basic project to work;
             - `yiisoft/yii2` &mdash; framework.
 
-Hope I didn't said anything new for you and everybody split their projects more or less in similar way.
-Or at least everybody understand that it is the way the code should be split into hierarchy of reusable packages.
-If not then you should consider it definetely. Don't put all your code in a single package copied over and over again. DRY!
-But I doubt you use "root". Now I'll try to argue its benefits to keep you code DRY.
-It splits reusable code from installation specific code.
+I hope I have not covered or said anything new to you and that everybody can split their projects more or less in a similar way.
+Or at least everybody understands the way the code is split into a hierarchy of reusable packages.
+If not then you should consider this carefully. Don't put all your code into a single package copied over and over again. DRY!
+But I doubt you will use "root". Now I'll try to argue its benefits to keep your code DRY.
+It separates reusable code from installation specific code.
 
 ## *"Root"*
 
-It's enough to put in the "root" just a couple of files tuned for this specific installation of project.
+It's adequate to put in the "root" just a couple of files fine tuned for the specific installation of this project.
 It is possible and preferable to succeed with just three files:
 
 - `.env` &mdash; environment variables, e.g.`ENV=prod`;
-- `composer.json` &mdash; require main project and it's specific prlugins;
+- `composer.json` &mdash; require main project and it's specific plugins;
 - `src/config/params.php` &mdash; password and options for project and plugins.
 
 You can put passwords in `.env` and then use it in `params.php` like this:
@@ -181,25 +190,25 @@ return [
 ];
 ```
 
-Considering `.env` portability parameters used by other (non PHP) technologies are best candidates to be put to `.env`.
+Considering `.env` portability parameters used by other (non PHP) technologies are the best candidates to be converted to `.env`.
 
 Of course one may and should put some configuration and even code into the *"root"*.
-But it has to be very specific for this particular installation and should not be copy pasted between installation.
-As soon as I see a copy-pasted code I catch it and move into some plugin.
+But it has to be very specific for this particular installation and should not need to be copied or pasted between installations.
+As soon as I see reusable copy-pasted code, I catch it and move it into some plugin.
 
-All the other files and directories needed for application to work, like `web/assets/`, `web/index.php` are standard and they should be created and chmoded with build tool or task runner.
+All the other files and directories needed for an application to work, like `web/assets/`, `web/index.php` are standard and they should be created and chmoded with a  build tool or task runner.
 We are reinventing [our own](https://hiqdev.com/packages/hidev) but this is quite another story.
 
-In fact *"root"* is `params-local.php` on steroids. It concentrates difference between specific project installation and generally used code. We create separate repository for "root" and save it to our private git-server, so we can commit there even secrets (but this is holy war topic). All the other packages are publicly available at GitHub. We commit `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
+In fact *"root"* is a `params-local.php` on steroids. It emphasizes the difference between a specific project installation and generally used code. We create a separate repository for the "root" and save it to our private git-server, so we can commit there even secrets (but this is a contentious topic). All the other packages are publicly available at GitHub. We commit the `composer.lock` file into the "root" and it enables us to move the project very easily &mdash; `composer create-project` (I know Docker is even better, but this is a topic for another article).
 
-&mdash; Can you be more specific? Show me the code finally!
+&mdash; Can you be more specific? Please show me the final code!
 
 ## HiSite and Asset Packagist
 
-One of *"basic application"* we develop is **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; that's a base for a typical website like `yii2-app-basic` but implemented as plugin that gives all advantages of code reuse over copy-pasting:
+One  *"basic application"* we developed is **HiSite** [hiqdev/hisite](https://github.com/hiqdev/hisite) &mdash; that's a base for a typical website like `yii2-app-basic` but implemented as a plugin it gives all the advantages of code reuse over copy-pasting:
 
 - you can base your project upon HiSite and get it's updates as it evolves;
-- you can change basic project for another basic project that is compatible but has more features.
+- you can change or adapt a basic project from another basic project that is compatible but has more features.
 
 *"Root"* template (or skeleton) is here &mdash; [hiqdev/hisite-template](https://github.com/hiqdev/hisite-template).
 
@@ -211,12 +220,12 @@ Hierarchy of dependencies looks like this:
     - basic project &mdash; [hiqdev/hisite](https://github.com/hiqdev/hisite);
         - framework &mdash; [yiisoft/yii2](https://github.com/yiisoft/yii2).
 
-In the [README](https://github.com/hiqdev/hisite-template) you can find how to setup the project on your side &mdash; easy enough: `composer create-project` plus configuration settings. Thanks to themes implemented as plugins and use of the theming library [hiqdev/yii2-thememanager]  you can change `yii2-theme-flat` to `yii2-theme-original` then run `composer update` and the site will change it's clothes to other theme. As simple as change single line in `composer.json`.
+In the [README](https://github.com/hiqdev/hisite-template) you can find out how to setup the project on your side &mdash; Simply: `composer create-project` plus configuration settings. Thanks to themes implemented as plugins and the use of the theming library [hiqdev/yii2-thememanager]  you can change `yii2-theme-flat` to `yii2-theme-original` then run `composer update` and the site will change it's clothes to the other theme. Similarily as simple as changing a  single line in `composer.json`.
 
-There is another real working project that can be used as example of this approach and it is completely available at GitHub.
-[Asset Packagist](https://asset-packagist.org/) is packagist-compatible repository that enables installation of Bower and NPM packages as native Composer packages.
+There is another real working project that can be used as an example of this approach and it is completely available at GitHub.
+[Asset Packagist](https://asset-packagist.org/) is a packagist-compatible repository that enables the installation of Bower and NPM packages as native Composer packages.
 
-Hierarchy of dependencies looks like this:
+The Hierarchy of dependencies looks like this:
 
 - *"root"* &mdash; [hiqdev/asset-packagist.dev](https://github.com/hiqdev/asset-packagist.dev);
     - theme plugin &mdash; [hiqdev/yii2-theme-original](https://github.com/hiqdev/yii2-theme-original);
@@ -228,13 +237,13 @@ You can find more information on how to deploy the project on your site in the [
 
 ## Let's sum it up
 
-The topic is huge. I had to skip many details. Hope I've managed to bring the general idea. Once again using defined terminology:
+This topic is huge. I had to skip many details. I hope I've managed to give you the general idea. Once again using defined terminology:
 
-- reuse code as plugins, i.e. code combined with configuration;
-- create project as hierarchy of plugins;
-- separate reusable part of project from specific installation with use of "root".
+- reuse code as plugins, i.e. code combined with the configuration;
+- create a project as a hierarchy of plugins;
+- separate the reusable part of the project from the specific installation with the use of "root".
 
-We've been using described approach about a year already. We've got best impressions &mdash; our hairs became smooth and silky, we divide and conquer, we create plugins simply and easily -
+We've been using this described approach for about a year already. We've created our best impression &mdash; our hairs became smooth and silky, we divided and conquered, we now create plugins simply and easily -
 [100+ already](https://hiqdev.com/pages/packages)
 and we are not going to stop. When we need a new functionality &mdash; we create a new plugin.
 
@@ -244,14 +253,14 @@ That's enough for today. Thank you for your attention. To be continued.
 ## P.S.
 
 I was inspired to write such a volume of text by a [series](http://fabien.potencier.org/symfony4-compose-applications.html) of [articles](http://fabien.potencier.org/symfony4-monolith-vs-micro.html) of [Fabien Potencier](http://fabien.potencier.org/) (Symfony's creator) about upcoming Symfony Flex.
-This new Symfony component will improve bundles system in the direction of automatic configuration which gives:
+This new Symfony component will improve the bundles system in the direction of automatic configuration which gives:
 
-> new way to create and evolve your applications with ease
+> a new way to create and evolve your applications with ease
 
 (c) Fabien Potencier
 
-So I'm not alone to consider mentioned questions very important for a framework.
+So I'm not alone in promoting the mentioned questions as being very important for a framework!
 
 ## P.P.S
 
-If you want to discuss please open issue in any of the mentioned GitHub repos.
+If you want to discuss please open an issue in any of the mentioned GitHub repos.
