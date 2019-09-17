@@ -8,7 +8,7 @@ title: Yii2 projects - An  alternative way to organise them
 
 <img src="https://cdn.hiqdev.com/hiqdev/3dpuzzle.png" align="right"/>
 
-How does one create a Yii2 project currently? I choose a template project: either basic or advanced, fork it, then edit and commit it, right there. Wham! I've copied and pasted it into my fork. 
+How does one create a Yii2 project currently? I choose a template project: either basic or advanced, fork it, then edit and commit it, right there. Wham! I've copied and pasted it into my fork.
 
 My project and the template I notice develop separately now. I do not get fixes to the template automatically into my project. And conversely or similarly my improvements that are specifically generated from my tasks will not be accepted into the `yii2-app-basic` template. This certainly poses the first problem with the current situation.
 
@@ -98,12 +98,12 @@ $config = require hiqdev\composer\config\Builder::path('web');
 
 You can find more information and examples as well as ask your questions at GitHub: [hiqdev/composer-config-plugin](https://github.com/hiqdev/composer-config-plugin).
 
-Here is an example of a simple plugin [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin). It shows the advantages of this approach. To get Yandex.Metrika counter on your site it is only necessary to require the plugin and provide the `yandexMetrika.id` parameter. And that's it! 
+Here is an example of a simple plugin [hiqdev/yii2-yandex-plugin](https://github.com/hiqdev/yii2-yandex-plugin). It shows the advantages of this approach. To get Yandex.Metrika counter on your site it is only necessary to require the plugin and provide the `yandexMetrika.id` parameter. And that's it!
 
 No need to:
-- copy-paste anything to your config. 
+- copy-paste anything to your config.
 - add widgets into the layout.
-- touch your working code. 
+- touch your working code.
 
 The Plugin is an entire piece of functionality which allows you to extend the system without making changes to existing code.
 
@@ -114,7 +114,7 @@ The Plugin is an entire piece of functionality which allows you to extend the sy
 &mdash; Awesome! No need to write tests anymore?<br>
 &mdash; No... That will not pass...<br>
 
-In summary, the `composer-config-plugin` provides a plugin system  enabling the reuse of smaller pieces of software. 
+In summary, the `composer-config-plugin` provides a plugin system  enabling the reuse of smaller pieces of software.
 
 It's time to return to the main question &mdash; how to organize big reusable projects. Once again the proposed solution: Create a  project as a system of plugins organized in the proper hierarchy.
 
