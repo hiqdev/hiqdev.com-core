@@ -12,9 +12,9 @@ How does one create a Yii2 project currently? I choose a template project: eithe
 
 My project and the template I notice develop separately now. I do not get fixes to the template automatically into my project. And conversely or similarly my improvements that are specifically generated from my tasks will not be accepted into the `yii2-app-basic` template. This certainly poses the first problem with the current situation.
 
-Currently how does a  Yii2 project evolve? Choose suitable extensions and plug them in with composer. Then I find the example config for the extension in it's README and copy this example into my application config. Oops... I notice I am copying and pasting again! This method causes problems, e.g. in a big project many extensions can be used &mdash; the application config becomes huge and unreadable. This is the second problem.
+Currently, how does a  Yii2 project evolve? Choose suitable extensions and plug them in with composer. Then I find the example config for the extension in it's README and copy this example into my application config. Oops... I notice I am copying and pasting again! This method causes problems, e.g. in a big project many extensions can be used &mdash; the application config becomes huge and unreadable. This is the second problem.
 
-Both these problems are covererd together here because they are closely related. The first one can be solved by separating reusable code and turning it into an extension. But then you've got a second problem &mdash; this extension needs configuring.
+Both these problems are covered together here because they are closely related. The first one can be solved by separating the reusable code and turning it into an extension. But then you've got a second problem &mdash; this extension needs configuring.
 
 These problems become more acute for repeated projects when you have to deploy many/several similar projects with big/small changes. But removing the copying and pasting of code will not hurt anyone.
 
@@ -34,10 +34,10 @@ I have to slow down here and define a plugin. Yii2 supports extensions and they 
 I've criticized the first option above. Now I'll analyse the second:
 
 - bootstrap is run near the start, but the `Application` object by that time has already been created and it's just too late to configure certain things;
-- it is particularly difficult to merge with the configuration file of the already created application since it is one progressively large file representing a progressively larger array of key-value pairs. You'll have to work not with a whole config file but with its constituent parts: components separately (and sometimes very non trivial), aliases separately, DI container, modules, params, `controllerMap`, ... (I tried &mdash; that's not going to work);
+- it is particularly difficult to merge with the configuration file of the already created application since it is one progressively large file representing a progressively larger array of key-value pairs. You'll have to work not with a whole config file but with its constituent parts: components separately (and sometimes very non-trivial), aliases separately, DI container, modules, params, `controllerMap`, ... (I tried &mdash; that's not going to work);
 - bootstrap is not lazy, it is run on every application request and if you have many such bootstraps they will hurt performance.
 
-After several iterations and trying several different variants I've come to a radical solution &mdash; assemble the config outside of the application before it starts. Hmm, sounds easy and obvious, but actually this concept is not new. It turns out that this concept is especially suited to assembling configs with a composer plugin. It will have convenient access to all information about project dependencies. This is how [composer-config-plugin](https://github.com/hiqdev/composer-config-plugin) was created.
+After several iterations and trying several different variants I've come to a radical solution &mdash; assemble the config outside of the application before it starts. Hmm, sounds easy and obvious, but actually this concept is not new. It turns out that this concept is especially suited to assembling configs with a composer plugin. It will have convenient access to all the information about project dependencies. This is how [composer-config-plugin](https://github.com/hiqdev/composer-config-plugin) was created.
 
 ## The New Composer Config Plugin
 
@@ -85,7 +85,7 @@ There can be any number of configs including special ones: `dotenv`, `defines` .
 
 Then the values obtained in the former steps can be used for all the later ones. i.e. environment variables can be used to set constants. Constants and environment variables can be used to set parameters. And the whole set of parameters, constants and environment variables can be used in the configs.
 
-And generally we're done! The Composer-config-plugin just merges all the config arrays like `yii\helpers\ArrayHelper::merge`. Configs are merged in the right order of course &mdash; considering the  requirements hierarchy &mdash; in the way that every package is merged according to its dependencies with the ability to override its values. i.e. the top most package has full control over the config. It controls all the values. The plugins only provide default values. On the whole, the process repeats the config assembling process in `yii2-app-advanced` just on a larger scale.
+And generally, we're done! The Composer-config-plugin just merges all the config arrays like `yii\helpers\ArrayHelper::merge`. Configs are merged in the right order of course &mdash; considering the  requirements hierarchy &mdash; in the way that every package is merged according to its dependencies with the ability to override its values. i.e. the topmost package has full control over the config. It controls all the values. The plugins only provide default values. On the whole, the process repeats the config assembling process in `yii2-app-advanced` just on a larger scale.
 
 To use the assembled configs in an application simply add these lines to `web/index.php`:
 
@@ -118,9 +118,9 @@ In summary, the `composer-config-plugin` provides a plugin system  enabling the 
 
 It's time to return to the main question &mdash; how to organize big reusable projects. Once again the proposed solution: Create a  project as a system of plugins organized in the proper hierarchy.
 
-## Packages hiararchy
+## Packages hierarchy
 
-The simplest project structure is the following &mdash; our project requires a framework and third party extensions with composer (I call *third party* those extensions that are not part of our project). So we have this simple package (repositories) hierarchy:
+The simplest project structure is the following &mdash; our project requires a framework and third-party extensions with composer (I call *third-party* those extensions that are not part of our project). So we have this simple package (repositories) hierarchy:
 
 - A project that has grown up from an application template including;
     - extensions, and a,
@@ -129,7 +129,7 @@ The simplest project structure is the following &mdash; our project requires a f
 I will not burden you with all the different variants of this hierarchy that we've tried and rejected after practical operations. So  here is the optimal hierarchy we've finally decided to stick to:
 
 - *"root"*
-    - plugins that are specific for this variant of project;
+    - plugins that are specific for this variant of the project;
     - main project;
         - plugins of the project;
         - *third-party* plugins;
@@ -141,9 +141,9 @@ This Hierarchy displays who, in a coding sense, `requires` whom, i.e. *"root"* `
 
 &mdash; Wow-wow! Easy! What's a "root" and "basic project"?
 
-Sorry, I've come up with all of this myself and perhaps didn't use suitable terms so I have had to improvize or invent a few terms. I'll be grateful for your suggestion of better variants of these terms.
+Sorry, I've come up with all of this myself and perhaps didn't use suitable terms so I have had to improvise or invent a few terms. I'll be grateful for your suggestion of better variants of these terms.
 
-I call *"root"* the most external package that containts code, the config and other files specifically for this particular installation and that are unique to your project &mdash; things this installation distinguishes it from the main project. Ideally it contains just a few files. More about it below.
+I call *"root"* the most external package that contains code, the config and other files specifically for this particular installation and that are unique to your project &mdash; things this installation distinguishes it from the main project. Ideally it contains just a few files. More about it below.
 
 *"Basic project"* (or basic application) is what `yii2-app-basic` turns into or develops into using this approach. i.e. it is a reusable base application that implements some basic functions arranged as a plugin. You don't have to create *"basic project"* yourself. It can be developed by a community like `yii2-app-basic`. We are developing HiSite according to this method. More about it below.
 
@@ -171,7 +171,7 @@ I hope I have not covered or said anything new to you and that everybody can spl
 Or at least everybody understands the way the code is split into a hierarchy of reusable packages.
 If not then you should consider this carefully. Don't put all your code into a single package copied over and over again. DRY!
 But I doubt you will use "root". Now I'll try to argue its benefits to keep your code DRY.
-It separates reusable code from installation specific code.
+It separates reusable code from installation-specific code.
 
 ## *"Root"*
 
@@ -179,7 +179,7 @@ It's adequate to put in the "root" just a couple of files fine tuned for the spe
 It is possible and preferable to succeed with just three files:
 
 - `.env` &mdash; environment variables, e.g.`ENV=prod`;
-- `composer.json` &mdash; require main project and it's specific plugins;
+- `composer.json` &mdash; require the main project and it's specific plugins;
 - `src/config/params.php` &mdash; password and options for project and plugins.
 
 You can put passwords in `.env` and then use it in `params.php` like this:
