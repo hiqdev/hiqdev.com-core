@@ -2,8 +2,8 @@ hipanel-core:
     name: hipanel-core
     description: 'HiPanel core package'
     forks: 10
-    stars: 28
-    watchers: 28
+    stars: 30
+    watchers: 30
     issues: 0
 yii2-higrid:
     name: yii2-higrid
@@ -37,8 +37,8 @@ hipanel-module-finance:
     name: hipanel-module-finance
     description: 'Finance Plugin for HiPanel'
     forks: 5
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 2
 hipanel-module-ticket:
     name: hipanel-module-ticket
@@ -53,7 +53,7 @@ hipanel-module-hosting:
     forks: 5
     stars: 3
     watchers: 3
-    issues: 1
+    issues: 2
 yii2-combo:
     name: yii2-combo
     description: 'Combo Widget for Yii 2'
@@ -79,8 +79,8 @@ hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
     forks: 6
-    stars: 23
-    watchers: 23
+    stars: 24
+    watchers: 24
     issues: 4
 hipanel-module-dashboard:
     name: hipanel-module-dashboard
@@ -149,8 +149,8 @@ yii2-hiart:
     name: yii2-hiart
     description: 'ActiveRecord for API'
     forks: 13
-    stars: 48
-    watchers: 48
+    stars: 51
+    watchers: 51
     issues: 2
 yii2-asset-adminlte:
     name: yii2-asset-adminlte
@@ -239,17 +239,17 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 12
-    stars: 8
-    watchers: 8
+    forks: 14
+    stars: 11
+    watchers: 11
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
     description: 'Stock Module for Hipanel'
     forks: 4
-    stars: 2
-    watchers: 2
-    issues: 3
+    stars: 3
+    watchers: 3
+    issues: 1
 yii2-asset-pnotify:
     name: yii2-asset-pnotify
     description: null
@@ -471,8 +471,8 @@ payment-icons:
     name: payment-icons
     description: 'Set of icons for payment systems and methods'
     forks: 6
-    stars: 22
-    watchers: 22
+    stars: 23
+    watchers: 23
     issues: 0
 hiqdev.github.io:
     name: hiqdev.github.io
@@ -625,8 +625,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 17
-    stars: 197
-    watchers: 197
+    stars: 199
+    watchers: 199
     issues: 27
 hipanel-rbac:
     name: hipanel-rbac
@@ -660,8 +660,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 19
-    stars: 87
-    watchers: 87
+    stars: 89
+    watchers: 89
     issues: 6
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -753,7 +753,7 @@ hisite-template:
     forks: 0
     stars: 13
     watchers: 13
-    issues: 0
+    issues: 1
 yii2-theme-agency:
     name: yii2-theme-agency
     description: 'Agency Theme for hiqdev/yii2-thememanager'
@@ -1089,7 +1089,7 @@ hiapi-directi:
     forks: 2
     stars: 3
     watchers: 3
-    issues: 1
+    issues: 0
 hipanel-module-integrations:
     name: hipanel-module-integrations
     description: 'Integrations management plugin for HiPanel'
@@ -1192,8 +1192,8 @@ yii2-daterangepicker:
     name: yii2-daterangepicker
     description: 'Date Range Picker widget for Yii2'
     forks: 1
-    stars: 6
-    watchers: 6
+    stars: 7
+    watchers: 7
     issues: 1
 hidev-phpstan:
     name: hidev-phpstan
@@ -1332,15 +1332,15 @@ hipanel-server-order:
     name: hipanel-server-order
     description: 'HiPanel Server Order'
     forks: 1
-    stars: 1
-    watchers: 1
+    stars: 3
+    watchers: 3
     issues: 0
 rdap:
     name: rdap
     description: "Registration Data Access Protocol –\_core domain objects"
     forks: 1
-    stars: 1
-    watchers: 1
+    stars: 2
+    watchers: 2
     issues: 0
 rdap-whois-proxy:
     name: rdap-whois-proxy
