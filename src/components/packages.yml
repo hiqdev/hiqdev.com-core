@@ -15,16 +15,16 @@ yii2-higrid:
 yii2-thememanager:
     name: yii2-thememanager
     description: 'Theme Manager for Yii 2'
-    forks: 3
-    stars: 21
-    watchers: 21
+    forks: 4
+    stars: 22
+    watchers: 22
     issues: 0
 hipanel-module-client:
     name: hipanel-module-client
     description: 'Client Plugin for HiPanel'
     forks: 3
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 2
 hipanel-module-domain:
     name: hipanel-module-domain
@@ -53,7 +53,7 @@ hipanel-module-hosting:
     forks: 5
     stars: 3
     watchers: 3
-    issues: 2
+    issues: 1
 yii2-combo:
     name: yii2-combo
     description: 'Combo Widget for Yii 2'
@@ -72,8 +72,8 @@ hipanel-module-server:
     name: hipanel-module-server
     description: 'Server Plugin for HiPanel'
     forks: 4
-    stars: 4
-    watchers: 4
+    stars: 5
+    watchers: 5
     issues: 0
 hidev:
     name: hidev
@@ -134,7 +134,7 @@ yii2-asset-flag-icon-css:
 yii2-asset-icheck:
     name: yii2-asset-icheck
     description: 'Yii 2 asset for bower iCheck'
-    forks: 1
+    forks: 0
     stars: 2
     watchers: 2
     issues: 0
@@ -226,9 +226,9 @@ hiam:
     name: hiam
     description: 'Identity and Access Management server providing OAuth2, multi-factor authentication and more'
     forks: 9
-    stars: 16
-    watchers: 16
-    issues: 0
+    stars: 18
+    watchers: 18
+    issues: 2
 yii2-hiam-authclient:
     name: yii2-hiam-authclient
     description: 'OAuth2 client for yii2 to login through HIAM server'
@@ -239,9 +239,9 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 14
-    stars: 11
-    watchers: 11
+    forks: 15
+    stars: 12
+    watchers: 12
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
@@ -624,10 +624,10 @@ hipanel-domain-checker:
 asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
-    forks: 17
-    stars: 199
-    watchers: 199
-    issues: 27
+    forks: 19
+    stars: 204
+    watchers: 204
+    issues: 23
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -659,7 +659,7 @@ hidev-nginx:
 composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
-    forks: 19
+    forks: 21
     stars: 89
     watchers: 89
     issues: 6
@@ -709,8 +709,8 @@ yii2-theme-flat:
     name: yii2-theme-flat
     description: 'Flat Theme for Yii2 projects'
     forks: 2
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 yii2-theme-twentyfifteen:
     name: yii2-theme-twentyfifteen
@@ -737,8 +737,8 @@ hipanel-site:
     name: hipanel-site
     description: 'Selling site for HiPanel'
     forks: 5
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 yii2-asset-hiqdev:
     name: yii2-asset-hiqdev
@@ -961,9 +961,9 @@ php-billing:
     name: php-billing
     description: 'PHP Billing Library'
     forks: 3
-    stars: 27
-    watchers: 27
-    issues: 1
+    stars: 29
+    watchers: 29
+    issues: 2
 php-units:
     name: php-units
     description: 'PHP Units of Measure Library'
@@ -996,8 +996,8 @@ billing-hiapi:
     name: billing-hiapi
     description: 'API for Billing'
     forks: 1
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 docker-php:
     name: docker-php
@@ -1023,7 +1023,7 @@ yii2-monitoring:
 yii2-yandex-metrika:
     name: yii2-yandex-metrika
     description: 'Yandex.Metrika counter for Yii2 applications'
-    forks: 1
+    forks: 2
     stars: 11
     watchers: 11
     issues: 0
@@ -1089,7 +1089,7 @@ hiapi-directi:
     forks: 2
     stars: 3
     watchers: 3
-    issues: 0
+    issues: 1
 hipanel-module-integrations:
     name: hipanel-module-integrations
     description: 'Integrations management plugin for HiPanel'
@@ -1170,7 +1170,7 @@ hiapi-certum:
 hipanel-client-debt:
     name: hipanel-client-debt
     description: 'Client Debt plugin for HiPanel'
-    forks: 1
+    forks: 2
     stars: 3
     watchers: 3
     issues: 0
@@ -1317,10 +1317,10 @@ hiapi-isp:
 omnipay-yandex-kassa:
     name: omnipay-yandex-kassa
     description: null
-    forks: 0
+    forks: 1
     stars: 1
     watchers: 1
-    issues: 0
+    issues: 2
 yii-demo.hiqdev.com:
     name: yii-demo.hiqdev.com
     description: yii-demo.hiqdev.com
@@ -1355,4 +1355,11 @@ rdap-server-example:
     forks: 1
     stars: 0
     watchers: 0
+    issues: 0
+session-keeper:
+    name: session-keeper
+    description: 'Session token theft detection'
+    forks: 0
+    stars: 3
+    watchers: 3
     issues: 0
