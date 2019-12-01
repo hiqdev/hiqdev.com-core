@@ -53,7 +53,7 @@ hipanel-module-hosting:
     forks: 5
     stars: 3
     watchers: 3
-    issues: 1
+    issues: 2
 yii2-combo:
     name: yii2-combo
     description: 'Combo Widget for Yii 2'
@@ -74,7 +74,7 @@ hipanel-module-server:
     forks: 4
     stars: 5
     watchers: 5
-    issues: 0
+    issues: 1
 hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
@@ -228,7 +228,7 @@ hiam:
     forks: 9
     stars: 18
     watchers: 18
-    issues: 2
+    issues: 1
 yii2-hiam-authclient:
     name: yii2-hiam-authclient
     description: 'OAuth2 client for yii2 to login through HIAM server'
@@ -240,8 +240,8 @@ hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
     forks: 15
-    stars: 12
-    watchers: 12
+    stars: 13
+    watchers: 13
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
@@ -393,10 +393,10 @@ omnipay-okpay:
 omnipay-paxum:
     name: omnipay-paxum
     description: 'Paxum plugin for PHP merchant library'
-    forks: 1
+    forks: 2
     stars: 1
     watchers: 1
-    issues: 0
+    issues: 1
 omnipay-qiwi:
     name: omnipay-qiwi
     description: 'Qiwi driver for Omnipay PHP payment library'
@@ -625,9 +625,9 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 19
-    stars: 204
-    watchers: 204
-    issues: 23
+    stars: 207
+    watchers: 207
+    issues: 4
 hipanel-rbac:
     name: hipanel-rbac
     description: 'RBAC implementation for HiPanel'
@@ -660,8 +660,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 21
-    stars: 89
-    watchers: 89
+    stars: 88
+    watchers: 88
     issues: 6
 hidev-hiqdev:
     name: hidev-hiqdev
