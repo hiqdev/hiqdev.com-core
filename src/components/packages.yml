@@ -9,9 +9,9 @@ yii2-higrid:
     name: yii2-higrid
     description: 'Yii 2 advanced grid'
     forks: 2
-    stars: 2
-    watchers: 2
-    issues: 1
+    stars: 3
+    watchers: 3
+    issues: 0
 yii2-thememanager:
     name: yii2-thememanager
     description: 'Theme Manager for Yii 2'
@@ -39,7 +39,7 @@ hipanel-module-finance:
     forks: 5
     stars: 7
     watchers: 7
-    issues: 2
+    issues: 0
 hipanel-module-ticket:
     name: hipanel-module-ticket
     description: 'Ticket Plugin for HiPanel'
@@ -65,8 +65,8 @@ yii2-collection:
     name: yii2-collection
     description: 'Basic Collection for Yii 2'
     forks: 3
-    stars: 5
-    watchers: 5
+    stars: 6
+    watchers: 6
     issues: 0
 hipanel-module-server:
     name: hipanel-module-server
@@ -78,7 +78,7 @@ hipanel-module-server:
 hidev:
     name: hidev
     description: 'Automation tool mixed with code generator for easier continuous development'
-    forks: 7
+    forks: 6
     stars: 26
     watchers: 26
     issues: 4
@@ -232,9 +232,9 @@ yii2-hiam-authclient:
 hipanel:
     name: hipanel
     description: 'Control panel for hosting, domains and more'
-    forks: 17
-    stars: 15
-    watchers: 15
+    forks: 18
+    stars: 14
+    watchers: 14
     issues: 0
 hipanel-module-stock:
     name: hipanel-module-stock
@@ -618,8 +618,8 @@ asset-packagist:
     name: asset-packagist
     description: 'Asset Packagist'
     forks: 19
-    stars: 218
-    watchers: 218
+    stars: 221
+    watchers: 221
     issues: 3
 hipanel-rbac:
     name: hipanel-rbac
@@ -653,8 +653,8 @@ composer-config-plugin:
     name: composer-config-plugin
     description: 'Composer plugin for config assembling'
     forks: 23
-    stars: 95
-    watchers: 95
+    stars: 96
+    watchers: 96
     issues: 7
 hidev-hiqdev:
     name: hidev-hiqdev
@@ -795,7 +795,7 @@ yii2-mfa:
     forks: 6
     stars: 9
     watchers: 9
-    issues: 3
+    issues: 2
 hipanel-com:
     name: hipanel-com
     description: 'hipanel.com site'
@@ -828,8 +828,8 @@ hiqdev.com-core:
     name: hiqdev.com-core
     description: 'hiqdev.com site'
     forks: 1
-    stars: 3
-    watchers: 3
+    stars: 4
+    watchers: 4
     issues: 0
 yii2-menus:
     name: yii2-menus
@@ -1031,8 +1031,8 @@ asset-packagist.dev:
     name: asset-packagist.dev
     description: 'Root project for Asset Packagist'
     forks: 4
-    stars: 11
-    watchers: 11
+    stars: 13
+    watchers: 13
     issues: 1
 yii2-hiart-librariesio:
     name: yii2-hiart-librariesio
@@ -1115,9 +1115,9 @@ yii2-export:
     name: yii2-export
     description: 'Data exporting to different formats for Yii2'
     forks: 2
-    stars: 1
-    watchers: 1
-    issues: 1
+    stars: 2
+    watchers: 2
+    issues: 0
 hiapi-namesuggestion:
     name: hiapi-namesuggestion
     description: 'hiAPI NameSuggestion.com plugin'
@@ -1191,10 +1191,10 @@ hidev-phpstan:
 docker-ci-images:
     name: docker-ci-images
     description: null
-    forks: 0
+    forks: 1
     stars: 0
     watchers: 0
-    issues: 0
+    issues: 1
 easygo-hipanel:
     name: easygo-hipanel
     description: 'EasyGo implementation of HiPanel'
