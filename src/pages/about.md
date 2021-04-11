@@ -30,8 +30,8 @@ Also we do web development and consulting.
 This site is made with [HiSite], [Pages module] and [Hyde theme].<br>
 The source is available on [GitHub](https://github.com/hiqdev/hiqdev.com-core).
 
-[projects]:     /projects
-[packages]:     /packages
+[projects]:     https://hiqdev.com/pages/projects
+[packages]:     https://hiqdev.com/pages/packages
 [HiPanel]:      /packages/hipanel/
 [HiDev]:        /packages/hidev/
 [HiSite]:       /packages/hisite/
